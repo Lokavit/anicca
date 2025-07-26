@@ -1,0 +1,60 @@
+name: Deploy Anicca Content to Monk Site
+
+on:
+  push:
+    branches:
+      - main # 當 Anicca 倉庫的 main 分支有新的 push 時觸發
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # 在最新的 Ubuntu 虛擬機上運行
+
+    steps:
+      - name: Checkout Anicca Content # 步驟 1: 拉取 Anicca (內容) 倉庫
+        uses: actions/checkout@v4
+        with:
+          repository: Lokavit/anicca # 指定內容倉庫
+          ref: main # 指定分支
+          path: anicca-content # 拉取到一個臨時目錄
+
+      - name: Setup Node.js # 步驟 2: 設置 Node.js 環境，用於運行 Markdown 渲染腳本
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # 建議使用最新的 LTS 版本
+
+      - name: Install Markdown Renderer # 步驟 3: 安裝 Markdown 渲染庫
+        run: |
+          npm install marked # 使用 marked.js 渲染 Markdown
+          # 如果需要其他工具，可以在這裡添加 npm install 命令
+
+      - name: Process Content and Generate HTML # 步驟 4: 處理 Markdown 並生成 HTML
+        run: node anicca-content/scripts/generate_html.js # 運行你的 JS 腳本來讀取、渲染 Markdown
+        env:
+          CONTENT_SOURCE_DIR: anicca-content # 傳遞內容源目錄給腳本
+          OUTPUT_HTML_DIR: generated_html_output # 腳本將輸出 HTML 到這個臨時目錄
+
+      - name: Checkout Monk Site Repository # 步驟 5: 拉取 monk (發布) 倉庫
+        uses: actions/checkout@v4
+        with:
+          repository: Lokavit/monk # 指定發布倉庫
+          ref: main # 發布到 monk 倉庫的 main 分支
+          path: monk-site-repo # 拉取到另一個臨時目錄
+          token: ${{ secrets.DEPLOY_TOKEN }} # 使用之前設置的密鑰
+
+      - name: Remove Old Articles # 步驟 6: 清理 monk 倉庫中舊的 articles 內容
+        run: |
+          rm -rf monk-site-repo/articles/* # 刪除 monk/articles 下所有內容
+          mkdir -p monk-site-repo/articles # 確保目錄存在
+
+      - name: Copy New Articles # 步驟 7: 將新生成的 HTML 內容複製到 monk 倉庫
+        run: |
+          cp -r generated_html_output/* monk-site-repo/articles/ # 複製所有生成的文件
+
+      - name: Commit and Push to Monk Site # 步驟 8: 提交並推送到 monk 倉庫
+        working-directory: ./monk-site-repo # 在 monk 倉庫的臨時目錄下執行 git 命令
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Automated content update from Anicca repository" || echo "No changes to commit"
+          git push
