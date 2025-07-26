@@ -1,0 +1,58 @@
+# 霹靂天啟
+
+
+### 詩序
+ `  死神再臨蕩武林，荒神染塵撼蒼穹  刀狂劍痴越頂峰，萬古長空不留名  今朝千葉欲傳奇，白蓮再現擋邪能  血榜橫禍造劫厄，天劍現世競群鋒`
+
+### 簡介
+>  當在北越天海第三根神柱斷裂時，雖神州表面無災害，實際上卻造成死國空間出現裂縫，造成兩隻最強的魖族：天狼星、閻王鎖同時趁機衝出，各自帶著一把死神的鐮刀進入人界，天狼星到孤星崖種下不折之花，後因吸取白蓮之氣而成長。閻王鎖為逼出死神，放出武林三寶傳言：羅喉戒璽、希望號角、不折之花，三者兼得，武林稱主。儒門最高學術組織，統領－太學主，教統－雅僧佛公子與六部執令皆是武林翹楚。因佛公子卸任教統重新改選，由太史侯、東方羿、曲懷觴三人角逐，最終竟由東方羿陰謀得逞成為學海新任教統。東方羿心機深沉，私底下與滅境邪靈之首未來之宰合作剷除所有反對勢力，但真正讓東方羿忌憚者，卻是學海最高的統領，消失武林數甲子的太學主。聖獅皇朝第一軍師：三面長城玉陽君，其真實身份竟是方城子，當初為了枉沙城百年奇招沙溶神法，假意欺騙火中雪與釋女華之感情，導致日盲族慘案並設計正亦邪、邪亦正導致兄弟反目，終練就沙溶神法，更積極介入羅喉戒璽之爭，意外察覺織語長心具備的帝王命格，在玉陽君推波助瀾下，織語長心戴上羅喉戒璽成為最新的武林真主，實現統御武林之野心。日盲族被滅後，殘民戮力密謀復仇，經大祭司測算下找到拯救日盲族的希望，竟是清香白蓮素還真的身影，眾人前往魔界迎回蓮花，孰料取回的卻是因魔氣所產生的影子：黑蓮，黑蓮逐漸孕育成形，成為日盲族認定的救世主「千葉傳奇」，帶領日盲族抗衡當前武林最強大的三股勢力：玉陽君與長心帶領的朱雀殿、東方羿的學海無涯、以及未來之宰龐大的邪靈大軍。而在黑暗的沼澤之內，一條頹喪的人影正默默閱讀一本來自死神的自傳「死國年紀」，究竟死神的傳說對武林的影響是什麼？朱雀殿、學海無涯與未來之宰三方勢力又將帶來什麼樣的變數？欲知精采後續，敬請期待霹靂國際多媒體二○○九年度鉅作【霹靂天啟】。
+
+### 目錄
+- [01.千葉傳奇](https://pilicreateworld.tw-blog.com/PILI/PILI52/01.HTM)
+- [02.恩仇結](https://pilicreateworld.tw-blog.com/PILI/PILI52/02.HTM)
+- [03.巨變](https://pilicreateworld.tw-blog.com/PILI/PILI52/03.HTM)
+- [04.一箭生機](https://pilicreateworld.tw-blog.com/PILI/PILI52/04.HTM)
+- [05.愛恨情仇‧不歸路](https://pilicreateworld.tw-blog.com/PILI/PILI52/05.HTM)
+- [06.傳奇‧傳奇](https://pilicreateworld.tw-blog.com/PILI/PILI52/06.HTM)
+- [07.驚世金言‧六銖衣](https://pilicreateworld.tw-blog.com/PILI/PILI52/07.HTM)
+- [08.死棋](https://pilicreateworld.tw-blog.com/PILI/PILI52/08.HTM)
+- [09.一語成真](https://pilicreateworld.tw-blog.com/PILI/PILI52/09.HTM)
+- [10.死神的故事](https://pilicreateworld.tw-blog.com/PILI/PILI52/10.HTM)
+- [11.雙龍鬥](https://pilicreateworld.tw-blog.com/PILI/PILI52/11.HTM)
+- [12.風拂鈴‧七神針](https://pilicreateworld.tw-blog.com/PILI/PILI52/12.HTM)
+- [13.死神交鋒](https://pilicreateworld.tw-blog.com/PILI/PILI52/13.HTM)
+- [14.血榜留名‧江湖留命](https://pilicreateworld.tw-blog.com/PILI/PILI52/14.HTM)
+- [15.炎峰鐵族](https://pilicreateworld.tw-blog.com/PILI/PILI52/15.HTM)
+- [16.正邪之極](https://pilicreateworld.tw-blog.com/PILI/PILI52/16.HTM)
+- [17.初見荒神威、再聞鳳凰鳴](https://pilicreateworld.tw-blog.com/PILI/PILI52/17.HTM)
+- [18.逆轉](https://pilicreateworld.tw-blog.com/PILI/PILI52/18.HTM)
+- [19.封神訣](https://pilicreateworld.tw-blog.com/PILI/PILI52/19.HTM)
+- [20.末日遊戲](https://pilicreateworld.tw-blog.com/PILI/PILI52/20.HTM)
+- [21.四關之禍](https://pilicreateworld.tw-blog.com/PILI/PILI52/21.HTM)
+- [22.末日驕陽](https://pilicreateworld.tw-blog.com/PILI/PILI52/22.HTM)
+- [23.無奈的刀劍](https://pilicreateworld.tw-blog.com/PILI/PILI52/23.HTM)
+- [24.真正的神威](https://pilicreateworld.tw-blog.com/PILI/PILI52/24.HTM)
+- [25.強者](https://pilicreateworld.tw-blog.com/PILI/PILI52/25.HTM)
+- [26.伏龍泣](https://pilicreateworld.tw-blog.com/PILI/PILI52/26.HTM)
+- [27.末日神話](https://pilicreateworld.tw-blog.com/PILI/PILI52/27.HTM)
+- [28.惡魔的動向](https://pilicreateworld.tw-blog.com/PILI/PILI52/28.HTM)
+- [29.雙蓮破四關](https://pilicreateworld.tw-blog.com/PILI/PILI52/29.HTM)
+- [30.無可撼動的力量](https://pilicreateworld.tw-blog.com/PILI/PILI52/30.HTM)
+- [31.聖戰名帖](https://pilicreateworld.tw-blog.com/PILI/PILI52/31.HTM)
+- [32.來自地獄的神話](https://pilicreateworld.tw-blog.com/PILI/PILI52/32.HTM)
+- [33.天劍蕩魔威](https://pilicreateworld.tw-blog.com/PILI/PILI52/33.HTM)
+- [34.漠刀‧絕塵](https://pilicreateworld.tw-blog.com/PILI/PILI52/34.HTM)
+- [35.萬古長恨](https://pilicreateworld.tw-blog.com/PILI/PILI52/35.HTM)
+- [36.真正的驕傲](https://pilicreateworld.tw-blog.com/PILI/PILI52/36.HTM)
+- [37.變色的俠影](https://pilicreateworld.tw-blog.com/PILI/PILI52/37.HTM)
+- [38.不敗之刀](https://pilicreateworld.tw-blog.com/PILI/PILI52/38.HTM)
+- [39.魔之劍‧劍之魔](https://pilicreateworld.tw-blog.com/PILI/PILI52/39.HTM)
+- [40.凋零的水晶](https://pilicreateworld.tw-blog.com/PILI/PILI52/40.HTM)
+- [41.宿敵之劍](https://pilicreateworld.tw-blog.com/PILI/PILI52/41.HTM)
+- [42.仇‧刀](https://pilicreateworld.tw-blog.com/PILI/PILI52/42.HTM)
+- [43.問天下誰是頂鋒](https://pilicreateworld.tw-blog.com/PILI/PILI52/43.HTM)
+- [44.一劍含恨](https://pilicreateworld.tw-blog.com/PILI/PILI52/44.HTM)
+- [45.白蓮誓願‧神鬼驚嘆](https://pilicreateworld.tw-blog.com/PILI/PILI52/45.HTM)
+- [46.一刀萬式](https://pilicreateworld.tw-blog.com/PILI/PILI52/46.HTM)
+- [47.滅境、滅境](https://pilicreateworld.tw-blog.com/PILI/PILI52/47.HTM)
+- [48.不敗神話](https://pilicreateworld.tw-blog.com/PILI/PILI52/48.HTM)

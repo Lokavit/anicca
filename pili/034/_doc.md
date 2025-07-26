@@ -1,0 +1,58 @@
+# 霹靂兵燹
+
+
+### 詩序
+ ` 妖神怒揚千丈波，魔刀現世染血路  雲渡山上梵天劫，腥風血雨武林途  `
+
+### 簡介
+>  當兵燹再起，戰禍不斷，不是生存，而是無止的殺戮。武林瞬息萬變，魔佛波旬肆虐蒼生，生靈塗炭，五蓮傳人一頁書與葉小釵，共同負起抗魔天命。當表面上戰禍不斷，暗處的危機正在慢慢滋長。兩大霸主犴妖神、九曲邪君，冥界勢力即將一統。重傷未癒的素還真，要如何力挽狂瀾？阻止這場無可停止的兵燹？
+
+### 目錄
+- [01.魔佛、聖者](https://pilicreateworld.tw-blog.com/PILI/PILI34/01.HTM)
+- [02.冥界一統](https://pilicreateworld.tw-blog.com/PILI/PILI34/02.HTM)
+- [03.死神的秘密‧痴海之毒](https://pilicreateworld.tw-blog.com/PILI/PILI34/03.HTM)
+- [04.陰陽客‧瞬息萬變](https://pilicreateworld.tw-blog.com/PILI/PILI34/04.HTM)
+- [05.面具下的真相](https://pilicreateworld.tw-blog.com/PILI/PILI34/05.HTM)
+- [06.危機密佈](https://pilicreateworld.tw-blog.com/PILI/PILI34/06.HTM)
+- [07.冥界絕刀](https://pilicreateworld.tw-blog.com/PILI/PILI34/07.HTM)
+- [08.長驅白馬越兵燹](https://pilicreateworld.tw-blog.com/PILI/PILI34/08.HTM)
+- [09.暗招、毒計](https://pilicreateworld.tw-blog.com/PILI/PILI34/09.HTM)
+- [10.邪能絕式‧陰陽極](https://pilicreateworld.tw-blog.com/PILI/PILI34/10.HTM)
+- [11.今生一敗](https://pilicreateworld.tw-blog.com/PILI/PILI34/11.HTM)
+- [12.掌中戲](https://pilicreateworld.tw-blog.com/PILI/PILI34/12.HTM)
+- [13.仇海狂浪](https://pilicreateworld.tw-blog.com/PILI/PILI34/13.HTM)
+- [14.謎局‧局中謎](https://pilicreateworld.tw-blog.com/PILI/PILI34/14.HTM)
+- [15.生死頃刻](https://pilicreateworld.tw-blog.com/PILI/PILI34/15.HTM)
+- [16.刀劍的宿命](https://pilicreateworld.tw-blog.com/PILI/PILI34/16.HTM)
+- [17.再現魔刀](https://pilicreateworld.tw-blog.com/PILI/PILI34/17.HTM)
+- [18.不止的戰禍、延燒的兵燹](https://pilicreateworld.tw-blog.com/PILI/PILI34/18.HTM)
+- [19.蒼魔刀‧宇風飄淚](https://pilicreateworld.tw-blog.com/PILI/PILI34/19.HTM)
+- [20.謎海尋岸](https://pilicreateworld.tw-blog.com/PILI/PILI34/20.HTM)
+- [21.宕月刀‧黑夜闇蹤](https://pilicreateworld.tw-blog.com/PILI/PILI34/21.HTM)
+- [22.狂劍、魔刀](https://pilicreateworld.tw-blog.com/PILI/PILI34/22.HTM)
+- [23.非道‧絕鳴劍曲](https://pilicreateworld.tw-blog.com/PILI/PILI34/23.HTM)
+- [24.火龍麒](https://pilicreateworld.tw-blog.com/PILI/PILI34/24.HTM)
+- [25.英雄淚](https://pilicreateworld.tw-blog.com/PILI/PILI34/25.HTM)
+- [26.連環逼殺](https://pilicreateworld.tw-blog.com/PILI/PILI34/26.HTM)
+- [27.末路](https://pilicreateworld.tw-blog.com/PILI/PILI34/27.HTM)
+- [28.藍色危機](https://pilicreateworld.tw-blog.com/PILI/PILI34/28.HTM)
+- [29.魔刀絕念](https://pilicreateworld.tw-blog.com/PILI/PILI34/29.HTM)
+- [30.刀劍易主](https://pilicreateworld.tw-blog.com/PILI/PILI34/30.HTM)
+- [31.劍者搏命](https://pilicreateworld.tw-blog.com/PILI/PILI34/31.HTM)
+- [32.魔鬼再生](https://pilicreateworld.tw-blog.com/PILI/PILI34/32.HTM)
+- [33.非魔狂魔‧王者之刀](https://pilicreateworld.tw-blog.com/PILI/PILI34/33.HTM)
+- [34.刀王謎](https://pilicreateworld.tw-blog.com/PILI/PILI34/34.HTM)
+- [35.神童現異象、瘋狂名劍師](https://pilicreateworld.tw-blog.com/PILI/PILI34/35.HTM)
+- [36.計中有計](https://pilicreateworld.tw-blog.com/PILI/PILI34/36.HTM)
+- [37.智冠群倫](https://pilicreateworld.tw-blog.com/PILI/PILI34/37.HTM)
+- [38.刀鋒強者](https://pilicreateworld.tw-blog.com/PILI/PILI34/38.HTM)
+- [39.詭變](https://pilicreateworld.tw-blog.com/PILI/PILI34/39.HTM)
+- [40.王者真身](https://pilicreateworld.tw-blog.com/PILI/PILI34/40.HTM)
+- [41.陰謀再生](https://pilicreateworld.tw-blog.com/PILI/PILI34/41.HTM)
+- [42.名劍、魔刀、奪天時](https://pilicreateworld.tw-blog.com/PILI/PILI34/42.HTM)
+- [43.天地不容](https://pilicreateworld.tw-blog.com/PILI/PILI34/43.HTM)
+- [44.天意](https://pilicreateworld.tw-blog.com/PILI/PILI34/44.HTM)
+- [45.勝敗](https://pilicreateworld.tw-blog.com/PILI/PILI34/45.HTM)
+- [46.天外南海波羅境](https://pilicreateworld.tw-blog.com/PILI/PILI34/46.HTM)
+- [47.復仇的王者](https://pilicreateworld.tw-blog.com/PILI/PILI34/47.HTM)
+- [48.亂世狂刀](https://pilicreateworld.tw-blog.com/PILI/PILI34/48.HTM)

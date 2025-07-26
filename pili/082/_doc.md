@@ -1,0 +1,56 @@
+# 霹靂兵烽決
+
+
+### 詩序
+ `  窮戰五巔禍未終，瘟鋒猂劫亂鴻蒙  名劍無缺挹天策，藐雲談月決兵烽 `
+
+### 簡介
+>  許久之前，出自深寰地宇的兩大勢力，異殃猂族、兵厄劍瘟曾以龐然之勢，欲侵入中原苦境。為阻魔禍浩劫，玉龍隱士岳雲深、恆山劍謫仙共商對策，由劍謫仙邀集萬殊一映青玉鏡、劍劫歧天人，與猂族之主、天地主宰，決一死戰，終在天火及時馳援下，驚險遏止魔禍。當年血決之地，從此稱為五巔之嶽。而今，魔火、墨殤促使猂劫再開，承繼劍謫仙天命的劍風雲，行蹤何在？他又能否再阻魔劫。苦境中原，連年戰火，兵燹延燒，致使中原百姓流離失所，長久以來，在百姓之中，口語流傳罕為人知之事，每逢戰亂，將聞災啼鳥之聲，災鳥啼厄，指引聖途，所謂的災啼鳥究竟是何來歷？顛沛流離的災民，究竟何去何從？背後隱藏的真相又是為何？劍瘟出，萬里折鋒，一段劍的故事，說不盡的江湖洶湧、武者悲歌。血色塔中，得到禍世雙鱗的風月主人，併合異天魔之力，欲解兵厄之封。劍瘟之厄將起，何人能阻？永旭之巔上，再見拔俗道姿，金鋒銳芒。屬於天嶼劍族的一段故事，將揭開名劍無名倦收天不為人知的過往，他與劍劫歧天人之間又是何種關係？玉川仙境天下坪，神秘奇人玉樞丹桂月無缺橫空出世，強勢阻止劍謫仙的計畫，他是正是邪？又將開啟何等傳奇？欲以殘存天火做最後一搏的玉龍隱士，卻感冷風死寂，侵覆玉龍居，掌死之智――欲天九宸藐烽雲驚現玉龍居，定判岳雲深死期之刻，玉龍隱士能否脫離死厄？欲行冥羽峽的靜濤君，出現眼前的藍衣醫者，鳴水非瀾挹天癒，是救贖、是殺劫？絕望的黑暗之刻，熟悉的月華身影乍現，脫俗仙子談無慾再渡紅塵，能否扭轉玉龍之劫，能否一阻猂禍劍瘟之厄？人、劍、戰火，交織一部江湖的歷史。何為天火？孰是五奇？武林之秘，誰人可解？猂殃劍瘟，殺戮兵禍；天下之亂，救贖何在？雙月爭輝，各領風騷；劍者癒者，天道殊途。 傳說再起，英雄新篇，且看――霹靂兵烽決！s
+
+### 目錄
+- [01.猂殃劍瘟](https://pilicreateworld.tw-blog.com/PILI/PILI82/01.HTM)
+- [02.欲天九宸藐烽雲](https://pilicreateworld.tw-blog.com/PILI/PILI82/02.HTM)
+- [03.恆山見謫仙‧玉川現桂宿](https://pilicreateworld.tw-blog.com/PILI/PILI82/03.HTM)
+- [04.玉樞丹桂月無缺](https://pilicreateworld.tw-blog.com/PILI/PILI82/04.HTM)
+- [05.劍瘟出‧萬里折鋒‧道影現‧一劍收天](https://pilicreateworld.tw-blog.com/PILI/PILI82/05.HTM)
+- [06.無雙第一幕：蝶夢春曉一覺清](https://pilicreateworld.tw-blog.com/PILI/PILI82/06.HTM)
+- [07.挹狂瀾‧收天鋒‧紅塵脫俗蹤](https://pilicreateworld.tw-blog.com/PILI/PILI82/07.HTM)
+- [08.智談烽雲](https://pilicreateworld.tw-blog.com/PILI/PILI82/08.HTM)
+- [09.意想不到的復仇者](https://pilicreateworld.tw-blog.com/PILI/PILI82/09.HTM)
+- [10.黃泉三千丈‧幽冥九天煉](https://pilicreateworld.tw-blog.com/PILI/PILI82/10.HTM)
+- [11.智逢敵手](https://pilicreateworld.tw-blog.com/PILI/PILI82/11.HTM)
+- [12.僰君魂‧血狼月](https://pilicreateworld.tw-blog.com/PILI/PILI82/12.HTM)
+- [13.驚變](https://pilicreateworld.tw-blog.com/PILI/PILI82/13.HTM)
+- [14.雙星劫](https://pilicreateworld.tw-blog.com/PILI/PILI82/14.HTM)
+- [15.變局‧變數‧變卦](https://pilicreateworld.tw-blog.com/PILI/PILI82/15.HTM)
+- [16.代天者‧行道人](https://pilicreateworld.tw-blog.com/PILI/PILI82/16.HTM)
+- [17.真正的猂劫](https://pilicreateworld.tw-blog.com/PILI/PILI82/17.HTM)
+- [18.瀝血無慾天](https://pilicreateworld.tw-blog.com/PILI/PILI82/18.HTM)
+- [19.全面洗牌‧希望之光](https://pilicreateworld.tw-blog.com/PILI/PILI82/19.HTM)
+- [20.風暴前夕](https://pilicreateworld.tw-blog.com/PILI/PILI82/20.HTM)
+- [21.兵禍劔宿‧天劍非天](https://pilicreateworld.tw-blog.com/PILI/PILI82/21.HTM)
+- [22.怒月動天罡](https://pilicreateworld.tw-blog.com/PILI/PILI82/22.HTM)
+- [23.賭命](https://pilicreateworld.tw-blog.com/PILI/PILI82/23.HTM)
+- [24.決殺令](https://pilicreateworld.tw-blog.com/PILI/PILI82/24.HTM)
+- [25.烽雲策‧月決](https://pilicreateworld.tw-blog.com/PILI/PILI82/25.HTM)
+- [26.烽火競天](https://pilicreateworld.tw-blog.com/PILI/PILI82/26.HTM)
+- [27.誰與爭鋒](https://pilicreateworld.tw-blog.com/PILI/PILI82/27.HTM)
+- [28.月非月‧天非天](https://pilicreateworld.tw-blog.com/PILI/PILI82/28.HTM)
+- [29.撥雲破翳](https://pilicreateworld.tw-blog.com/PILI/PILI82/29.HTM)
+- [30.千年只一現‧一劍狂千年](https://pilicreateworld.tw-blog.com/PILI/PILI82/30.HTM)
+- [31.敇天玄魁‧逆天變](https://pilicreateworld.tw-blog.com/PILI/PILI82/31.HTM)
+- [32.帝心難測](https://pilicreateworld.tw-blog.com/PILI/PILI82/32.HTM)
+- [33.為何而戰](https://pilicreateworld.tw-blog.com/PILI/PILI82/33.HTM)
+- [34.決天之境](https://pilicreateworld.tw-blog.com/PILI/PILI82/34.HTM)
+- [35.星墜之篇](https://pilicreateworld.tw-blog.com/PILI/PILI82/35.HTM)
+- [36.為君無悔](https://pilicreateworld.tw-blog.com/PILI/PILI82/36.HTM)
+- [37.天道崩殂](https://pilicreateworld.tw-blog.com/PILI/PILI82/37.HTM)
+- [38.今生長恨無絕期](https://pilicreateworld.tw-blog.com/PILI/PILI82/38.HTM)
+- [39.血債‧血還](https://pilicreateworld.tw-blog.com/PILI/PILI82/39.HTM)
+- [40.血色的結局](https://pilicreateworld.tw-blog.com/PILI/PILI82/40.HTM)
+- [41.情義無悔‧君心難測](https://pilicreateworld.tw-blog.com/PILI/PILI82/41.HTM)
+- [42.劫臨天下](https://pilicreateworld.tw-blog.com/PILI/PILI82/42.HTM)
+- [43.龍琴破軍決荒禘](https://pilicreateworld.tw-blog.com/PILI/PILI82/43.HTM)
+- [44.癒天鋒‧鳳翥劫‧異殃九宸禍](https://pilicreateworld.tw-blog.com/PILI/PILI82/44.HTM)
+- [45.競天決](https://pilicreateworld.tw-blog.com/PILI/PILI82/45.HTM)
+- [46.傾天烽雲一祇終](https://pilicreateworld.tw-blog.com/PILI/PILI82/46.HTM)

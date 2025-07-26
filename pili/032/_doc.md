@@ -1,0 +1,50 @@
+# 霹靂異數之龍圖霸業
+
+
+### 詩序
+ `  `
+
+### 簡介
+>  【引靈山】一役之後，素還真瀕死，一頁書被禁，天策真龍正式稱霸中原，正道武林面臨極度頹危，所幸照世明燈等正義人士盡力支撐，試救黎民百姓於水火之中。但此時魔劍道伸出魔掌，欲與天策真龍一爭中原版圖，西疆聖靈界線將被突破，十七萬魔魘即將兵進中原，暗中更有神祕的妖刀界與陰詭的坤靈界蠢蠢欲動；奇人畢現，異數再生，各方勢力來勢洶洶，照世明燈等人又與天策真龍的勢力結合，風波不斷的武林又會出現什麼樣的局面？
+
+### 目錄
+- [01.百年劍痕、紅塵禁招](https://pilicreateworld.tw-blog.com/PILI/PILI32/01.HTM)
+- [02.燃眉之燈](https://pilicreateworld.tw-blog.com/PILI/PILI32/02.HTM)
+- [03.雙線生機](https://pilicreateworld.tw-blog.com/PILI/PILI32/03.HTM)
+- [04.情劍、義鋒、血路長](https://pilicreateworld.tw-blog.com/PILI/PILI32/04.HTM)
+- [05.花妖](https://pilicreateworld.tw-blog.com/PILI/PILI32/05.HTM)
+- [06.解不開的情仇](https://pilicreateworld.tw-blog.com/PILI/PILI32/06.HTM)
+- [07.雙龍會](https://pilicreateworld.tw-blog.com/PILI/PILI32/07.HTM)
+- [08.決戰時刻](https://pilicreateworld.tw-blog.com/PILI/PILI32/08.HTM)
+- [09.王者悲歌](https://pilicreateworld.tw-blog.com/PILI/PILI32/09.HTM)
+- [10.連環戰術](https://pilicreateworld.tw-blog.com/PILI/PILI32/10.HTM)
+- [11.用兵如神](https://pilicreateworld.tw-blog.com/PILI/PILI32/11.HTM)
+- [12.極招](https://pilicreateworld.tw-blog.com/PILI/PILI32/12.HTM)
+- [13.惡魔之心](https://pilicreateworld.tw-blog.com/PILI/PILI32/13.HTM)
+- [14.暗流四伏瓊華宴](https://pilicreateworld.tw-blog.com/PILI/PILI32/14.HTM)
+- [15.孤舟劍魂](https://pilicreateworld.tw-blog.com/PILI/PILI32/15.HTM)
+- [16.紅顏恨](https://pilicreateworld.tw-blog.com/PILI/PILI32/16.HTM)
+- [17.江河夜雨一孤鴻](https://pilicreateworld.tw-blog.com/PILI/PILI32/17.HTM)
+- [18.弔黃泉‧畫筆死咒](https://pilicreateworld.tw-blog.com/PILI/PILI32/18.HTM)
+- [19.妖刀、魔劍、獨遺恨](https://pilicreateworld.tw-blog.com/PILI/PILI32/19.HTM)
+- [20.殺劫臨身](https://pilicreateworld.tw-blog.com/PILI/PILI32/20.HTM)
+- [21.沙舟乍現、真相大白](https://pilicreateworld.tw-blog.com/PILI/PILI32/21.HTM)
+- [22.犧牲](https://pilicreateworld.tw-blog.com/PILI/PILI32/22.HTM)
+- [23.一點破玄機](https://pilicreateworld.tw-blog.com/PILI/PILI32/23.HTM)
+- [24.謎海尋岸](https://pilicreateworld.tw-blog.com/PILI/PILI32/24.HTM)
+- [25.畫裡乾坤](https://pilicreateworld.tw-blog.com/PILI/PILI32/25.HTM)
+- [26.真非真](https://pilicreateworld.tw-blog.com/PILI/PILI32/26.HTM)
+- [27.天忌](https://pilicreateworld.tw-blog.com/PILI/PILI32/27.HTM)
+- [28.亦真非真定風愁](https://pilicreateworld.tw-blog.com/PILI/PILI32/28.HTM)
+- [29.怒燄之風](https://pilicreateworld.tw-blog.com/PILI/PILI32/29.HTM)
+- [30.全面追殺](https://pilicreateworld.tw-blog.com/PILI/PILI32/30.HTM)
+- [31.逼命瞬間](https://pilicreateworld.tw-blog.com/PILI/PILI32/31.HTM)
+- [32.怒動殺戒](https://pilicreateworld.tw-blog.com/PILI/PILI32/32.HTM)
+- [33.萬夫莫敵](https://pilicreateworld.tw-blog.com/PILI/PILI32/33.HTM)
+- [34.全軍出動](https://pilicreateworld.tw-blog.com/PILI/PILI32/34.HTM)
+- [35.落花之淚](https://pilicreateworld.tw-blog.com/PILI/PILI32/35.HTM)
+- [36.師徒情深](https://pilicreateworld.tw-blog.com/PILI/PILI32/36.HTM)
+- [37.悲情劍路](https://pilicreateworld.tw-blog.com/PILI/PILI32/37.HTM)
+- [38.絕處逢音](https://pilicreateworld.tw-blog.com/PILI/PILI32/38.HTM)
+- [39.刀鋒淚](https://pilicreateworld.tw-blog.com/PILI/PILI32/39.HTM)
+- [40.七星匯聚‧天下無敵](https://pilicreateworld.tw-blog.com/PILI/PILI32/40.HTM)

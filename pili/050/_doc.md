@@ -1,0 +1,56 @@
+# 霹靂神州II之蒼玄泣
+
+
+### 詩序
+ `  萬血邪籙，開啟神州之柱  識界玄貘，變化天地之序  紅樓劍閣，論定劍鋒之最  棄天魔帝，造就毀滅之端 `
+
+### 簡介
+>  由東瀛將領犬若丸進行的開疆局，在中原達到成效，神鶴佐木最後被素還真喚醒，也加入中原陣線，但東瀛方面卻動用最強的神風營，派出中將京極鬼彥，帶領神風營大將發動全面性的侵略行動。在六禍蒼龍、問天譴、神鶴佐木，全面抗衡下，素還真最後順利逼退東瀛大軍，並且擬定和平協議書，呈報東瀛天皇，終止了橫跨三檔的中日之戰，換來了一段兩國之間的和平。東瀛方面，百世經綸一頁書以中原和平為出發點，挑戰軍神，希望軍神敗北之後，可以停止攻略中原的行動。一頁書兩戰軍神，最後終於打敗源武藏。而為了對朝政有所交代，莫召奴詐死，軍神聯合所有大臣，聯名發動停戰的書信上報天皇。軍神辭去職務，跟莫召奴以及淵姬一同離開東瀛退隱去。無奈軍神退隱，一直以軍神為挑戰目標的拳皇，以及畢生追求至強一招的劍聖，卻同時失去動力，兩人要把軍神找出來。天皇最後下令神風營必須有人挺身而出，於是舉辦比武大會，重新選出新任的軍神。萬血邪籙開啟，第一根神州支柱的位置即將曝光，關係到神州存亡的四根神柱，素還真要如何找回其他消失已久的三本寶典挽回頹勢？銀鍠朱武又要如何開啟魔界的毀滅？暗藏在識界的黑暗勢力，蠢蠢欲動。武林面臨前所未有的末日之災，欲知精彩後續，請期待霹靂國際多媒體二○○八年度鉅作─【霹靂神州II之蒼玄泣】。
+
+### 目錄
+- [01.天關再現](https://pilicreateworld.tw-blog.com/PILI/PILI50/01.HTM)
+- [02.滅門慘案](https://pilicreateworld.tw-blog.com/PILI/PILI50/02.HTM)
+- [03.劍與拳](https://pilicreateworld.tw-blog.com/PILI/PILI50/03.HTM)
+- [04.不二做](https://pilicreateworld.tw-blog.com/PILI/PILI50/04.HTM)
+- [05.至強交鋒](https://pilicreateworld.tw-blog.com/PILI/PILI50/05.HTM)
+- [06.永眠](https://pilicreateworld.tw-blog.com/PILI/PILI50/06.HTM)
+- [07.絕劍](https://pilicreateworld.tw-blog.com/PILI/PILI50/07.HTM)
+- [08.謎蹤](https://pilicreateworld.tw-blog.com/PILI/PILI50/08.HTM)
+- [09.抉擇](https://pilicreateworld.tw-blog.com/PILI/PILI50/09.HTM)
+- [10.孽角](https://pilicreateworld.tw-blog.com/PILI/PILI50/10.HTM)
+- [11.消逝的堅持](https://pilicreateworld.tw-blog.com/PILI/PILI50/11.HTM)
+- [12.浴血不倒英雄骨](https://pilicreateworld.tw-blog.com/PILI/PILI50/12.HTM)
+- [13.險中險](https://pilicreateworld.tw-blog.com/PILI/PILI50/13.HTM)
+- [14.神秘的黑狗兄](https://pilicreateworld.tw-blog.com/PILI/PILI50/14.HTM)
+- [15.最後一劍](https://pilicreateworld.tw-blog.com/PILI/PILI50/15.HTM)
+- [16.死亡約定](https://pilicreateworld.tw-blog.com/PILI/PILI50/16.HTM)
+- [17.一步蒼穹任人狂](https://pilicreateworld.tw-blog.com/PILI/PILI50/17.HTM)
+- [18.紅樓劍閣](https://pilicreateworld.tw-blog.com/PILI/PILI50/18.HTM)
+- [19.北窗伏龍](https://pilicreateworld.tw-blog.com/PILI/PILI50/19.HTM)
+- [20.武林公敵](https://pilicreateworld.tw-blog.com/PILI/PILI50/20.HTM)
+- [21.驚濤駭浪](https://pilicreateworld.tw-blog.com/PILI/PILI50/21.HTM)
+- [22.毒陣](https://pilicreateworld.tw-blog.com/PILI/PILI50/22.HTM)
+- [23.浩劫神州](https://pilicreateworld.tw-blog.com/PILI/PILI50/23.HTM)
+- [24.計中計](https://pilicreateworld.tw-blog.com/PILI/PILI50/24.HTM)
+- [25.奸雄、霸道](https://pilicreateworld.tw-blog.com/PILI/PILI50/25.HTM)
+- [26.驚世劍鬥](https://pilicreateworld.tw-blog.com/PILI/PILI50/26.HTM)
+- [27.不敗之劍](https://pilicreateworld.tw-blog.com/PILI/PILI50/27.HTM)
+- [28.斷情‧斷心‧斷風塵](https://pilicreateworld.tw-blog.com/PILI/PILI50/28.HTM)
+- [29.無情的劍、多情的人](https://pilicreateworld.tw-blog.com/PILI/PILI50/29.HTM)
+- [30.黑羽‧恨長風](https://pilicreateworld.tw-blog.com/PILI/PILI50/30.HTM)
+- [31.浴血奮戰](https://pilicreateworld.tw-blog.com/PILI/PILI50/31.HTM)
+- [32.無悔之劍](https://pilicreateworld.tw-blog.com/PILI/PILI50/32.HTM)
+- [33.蓮心‧愁雨‧鳳凰鳴](https://pilicreateworld.tw-blog.com/PILI/PILI50/33.HTM)
+- [34.謎團](https://pilicreateworld.tw-blog.com/PILI/PILI50/34.HTM)
+- [35.造反](https://pilicreateworld.tw-blog.com/PILI/PILI50/35.HTM)
+- [36.枕中的天書](https://pilicreateworld.tw-blog.com/PILI/PILI50/36.HTM)
+- [37.夜變](https://pilicreateworld.tw-blog.com/PILI/PILI50/37.HTM)
+- [38.失去鋒芒的神劍](https://pilicreateworld.tw-blog.com/PILI/PILI50/38.HTM)
+- [39.歲月無情](https://pilicreateworld.tw-blog.com/PILI/PILI50/39.HTM)
+- [40.說不出的名字](https://pilicreateworld.tw-blog.com/PILI/PILI50/40.HTM)
+- [41.紅樓遺恨](https://pilicreateworld.tw-blog.com/PILI/PILI50/41.HTM)
+- [42.情、義、爭](https://pilicreateworld.tw-blog.com/PILI/PILI50/42.HTM)
+- [43.戰神](https://pilicreateworld.tw-blog.com/PILI/PILI50/43.HTM)
+- [44.造化弄神更弄人](https://pilicreateworld.tw-blog.com/PILI/PILI50/44.HTM)
+- [45.絕望](https://pilicreateworld.tw-blog.com/PILI/PILI50/45.HTM)
+- [46.棄天下凡塵](https://pilicreateworld.tw-blog.com/PILI/PILI50/46.HTM)

@@ -1,0 +1,58 @@
+# 霹靂神州III之天罪
+
+
+### 詩序
+ `  劫造荒宇末路，悲嘆蒼生無語  神州沉葬雙柱，卸骨血問天罪 `
+
+### 簡介
+>  萬血邪籙開啟，導致神州支柱的存亡成為眾矢之的，明聖天書、俠道追溯、魔寶大典，關係著另外三根支柱的關鍵位置，瞬間，魔界大軍、中原正道、識界人馬三方勢力為了三本天書展開了一場激烈的爭奪戰。魔界之主銀鍠朱武在第一根神柱摧毀之後，了解到神州的破壞非同小可。魔界之神棄天帝不僅具有毀天滅地之能，更以毀滅世界為最終目的，而在這當中自己只是顆被利用的棋子。銀鍠朱武毅然決定親自阻止棄天帝的腳步，與赭杉軍等眾人聯手捍衛神州。紅樓劍閣再現，引動劍界頂峰之爭。劍聖柳生劍影、任劍誰、不二做、西門寒照等劍界翹楚，紛紛參與這場鋒海盛會。殊不知神秘的劍閣中竟然暗藏著恐怖陰謀，無數劍客枉死於劍閣的殘酷門規。藉著東宮神璽的協助，劍聖成功的打敗了劍閣之主曌雲裳。但卻也讓曌雲裳陷入瘋狂狀態，最終竟為棄天帝所利用，砍斷第二根神柱。此一來不僅造成神州二度災害，並因而幫助棄天帝打破空間束縛，使得末日之神再度降臨大地。中原群俠面臨有史以來最大的威脅，究竟神州的存續將寄於何人之手？未來的希望又何在？欲知精彩後續，請看霹靂神州三之【天罪】。
+
+### 目錄
+- [01.天罰](https://pilicreateworld.tw-blog.com/PILI/PILI51/01.HTM)
+- [02.末世悲歌](https://pilicreateworld.tw-blog.com/PILI/PILI51/02.HTM)
+- [03.毀天滅地](https://pilicreateworld.tw-blog.com/PILI/PILI51/03.HTM)
+- [04.魔之狂‧狂之魔](https://pilicreateworld.tw-blog.com/PILI/PILI51/04.HTM)
+- [05.孽斬](https://pilicreateworld.tw-blog.com/PILI/PILI51/05.HTM)
+- [06.血仇、風起、不死鳥](https://pilicreateworld.tw-blog.com/PILI/PILI51/06.HTM)
+- [07.黑暗之主](https://pilicreateworld.tw-blog.com/PILI/PILI51/07.HTM)
+- [08.絕望的一戰](https://pilicreateworld.tw-blog.com/PILI/PILI51/08.HTM)
+- [09.頂峰再會](https://pilicreateworld.tw-blog.com/PILI/PILI51/09.HTM)
+- [10.逼殺](https://pilicreateworld.tw-blog.com/PILI/PILI51/10.HTM)
+- [11.退無可退](https://pilicreateworld.tw-blog.com/PILI/PILI51/11.HTM)
+- [12.情義兩難](https://pilicreateworld.tw-blog.com/PILI/PILI51/12.HTM)
+- [13.生死交關](https://pilicreateworld.tw-blog.com/PILI/PILI51/13.HTM)
+- [14.火之極](https://pilicreateworld.tw-blog.com/PILI/PILI51/14.HTM)
+- [15.五濁惡世](https://pilicreateworld.tw-blog.com/PILI/PILI51/15.HTM)
+- [16.雙天會](https://pilicreateworld.tw-blog.com/PILI/PILI51/16.HTM)
+- [17.逆天之擊](https://pilicreateworld.tw-blog.com/PILI/PILI51/17.HTM)
+- [18.龍神之燄](https://pilicreateworld.tw-blog.com/PILI/PILI51/18.HTM)
+- [19.滅天之法](https://pilicreateworld.tw-blog.com/PILI/PILI51/19.HTM)
+- [20.孤注一擲](https://pilicreateworld.tw-blog.com/PILI/PILI51/20.HTM)
+- [21.道之極義](https://pilicreateworld.tw-blog.com/PILI/PILI51/21.HTM)
+- [22.天命](https://pilicreateworld.tw-blog.com/PILI/PILI51/22.HTM)
+- [23.半個死神](https://pilicreateworld.tw-blog.com/PILI/PILI51/23.HTM)
+- [24.血緣](https://pilicreateworld.tw-blog.com/PILI/PILI51/24.HTM)
+- [25.神之道](https://pilicreateworld.tw-blog.com/PILI/PILI51/25.HTM)
+- [26.犧牲](https://pilicreateworld.tw-blog.com/PILI/PILI51/26.HTM)
+- [27.烈士英魂](https://pilicreateworld.tw-blog.com/PILI/PILI51/27.HTM)
+- [28.情‧痴](https://pilicreateworld.tw-blog.com/PILI/PILI51/28.HTM)
+- [29.不朽的神兵](https://pilicreateworld.tw-blog.com/PILI/PILI51/29.HTM)
+- [30.一絲懸命](https://pilicreateworld.tw-blog.com/PILI/PILI51/30.HTM)
+- [31.死神遺產](https://pilicreateworld.tw-blog.com/PILI/PILI51/31.HTM)
+- [32.死亡截影](https://pilicreateworld.tw-blog.com/PILI/PILI51/32.HTM)
+- [33.道隱開天卷](https://pilicreateworld.tw-blog.com/PILI/PILI51/33.HTM)
+- [34.生死關鍵](https://pilicreateworld.tw-blog.com/PILI/PILI51/34.HTM)
+- [35.價值](https://pilicreateworld.tw-blog.com/PILI/PILI51/35.HTM)
+- [36.天下奇書](https://pilicreateworld.tw-blog.com/PILI/PILI51/36.HTM)
+- [37.全面封殺](https://pilicreateworld.tw-blog.com/PILI/PILI51/37.HTM)
+- [38.長嘆問劍一狂人](https://pilicreateworld.tw-blog.com/PILI/PILI51/38.HTM)
+- [39.真正的勝者](https://pilicreateworld.tw-blog.com/PILI/PILI51/39.HTM)
+- [40.新仇舊恨](https://pilicreateworld.tw-blog.com/PILI/PILI51/40.HTM)
+- [41.真正的黑手](https://pilicreateworld.tw-blog.com/PILI/PILI51/41.HTM)
+- [42.意外的答案](https://pilicreateworld.tw-blog.com/PILI/PILI51/42.HTM)
+- [43.天意](https://pilicreateworld.tw-blog.com/PILI/PILI51/43.HTM)
+- [44.死神的遊戲](https://pilicreateworld.tw-blog.com/PILI/PILI51/44.HTM)
+- [45.幕前幕後](https://pilicreateworld.tw-blog.com/PILI/PILI51/45.HTM)
+- [46.神鬼之能](https://pilicreateworld.tw-blog.com/PILI/PILI51/46.HTM)
+- [47.殺手的代價](https://pilicreateworld.tw-blog.com/PILI/PILI51/47.HTM)
+- [48.致命一擊](https://pilicreateworld.tw-blog.com/PILI/PILI51/48.HTM)
