@@ -11,7 +11,7 @@ draft: false
 ```bash
 sudo pacman -S nodejs
 sudo pacman -S npm
-# 裝載全局安裝包時
+# 裝載全域性安裝包時
 sudo npm install packaheName -g
 ```
 
@@ -19,13 +19,13 @@ sudo npm install packaheName -g
 
 ## Win10
 
-由于环境无法运行`nextjs`项目，对 nvm 及 node 升级。win 系统下，只能去官网下载`node-v18.15.0-x64.msi`。安装之后，原有 nvm 无法 use 最新安装的 node。需在系统内将所有 node、npm、nvm 相关清除。
+由於環境無法執行`nextjs`專案，對 nvm 及 node 升級。win 系統下，只能去官網下載`node-v18.15.0-x64.msi`。安裝之後，原有 nvm 無法 use 最新安裝的 node。需在系統內將所有 node、npm、nvm 相關清除。
 
-### 清除步骤：
+### 清除步驟：
 
-- 1.使用 win10 工具卸载 nodejs
-- 2.运行 npm cache clean --force
-- 3.在电脑中清除以下文件及文件夹
+- 1.使用 win10 工具解除安裝 nodejs
+- 2.執行 npm cache clean --force
+- 3.在電腦中清除以下檔案及資料夾
 
 ```
 C:\Program Files (x86)\Nodejs
@@ -36,21 +36,21 @@ C:\Users\{User}\.npmrc (and possibly check for that without the . prefix too)
 C:\Users\{User}\AppData\Local\Temp\npm-\*
 ```
 
-## 安装新的 nvm
+## 安裝新的 nvm
 
-- `github`上搜索`nvm-windows`,下载安装，当前为`1.1.10`。
-- 安装过程中，其自动安装`nodejs`，当前为`18.15.0`。
-- 亦自动安装了`npm`,当前为 9.5.0。
-- 使用`nvm use 18.15.0`,可见使用成功。
+- `github`上搜索`nvm-windows`,下載安裝，當前為`1.1.10`。
+- 安裝過程中，其自動安裝`nodejs`，當前為`18.15.0`。
+- 亦自動安裝了`npm`,當前為 9.5.0。
+- 使用`nvm use 18.15.0`,可見使用成功。
 
-## 测试
+## 測試
 
-用出现问题的`nextjs`项目做测试
+用出現問題的`nextjs`專案做測試
 
 ```bash
-# 运行nextjs的创建项目命令，提示更新npm
+# 執行nextjs的建立專案命令，提示更新npm
 $ npm install -g npm@9.6.4
-# 再次运行nextjs相关，创建nextjs项目
+# 再次執行nextjs相關，建立nextjs專案
 ```
 
 ---
@@ -59,140 +59,140 @@ $ npm install -g npm@9.6.4
 
 `Node Version Manager（Node 版本管理器）`
 
-- [下载 nvm 包 exe 版本](https://github.com/coreybutler/nvm-windows/releases)
-- 设置装载路径`C:\dev`
-- 设置`nodejs`文件夹路径`C:\dev\nodejs`
+- [下載 nvm 包 exe 版本](https://github.com/coreybutler/nvm-windows/releases)
+- 設定裝載路徑`C:\dev`
+- 設定`nodejs`資料夾路徑`C:\dev\nodejs`
 
 ```bash
 # C:\dev\nvm\settings.txt
-root: C:\dev\nvm  # nvm.exe所在目录
-path: C:\dev\nodejs # 存放指向node版本的快捷方式，使用nvm的过程中会自动生成。一般写的时候与nvm同级。
-# 以上为原有内容，在后面追加以下内容：
-arch: 64  # 当前操作系统位数
+root: C:\dev\nvm  # nvm.exe所在目錄
+path: C:\dev\nodejs # 存放指向node版本的快捷方式，使用nvm的過程中會自動生成。一般寫的時候與nvm同級。
+# 以上為原有內容，在後面追加以下內容：
+arch: 64  # 當前作業系統位數
 proxy: none # 代理
-node_mirror: http://npm.taobao.org/mirrors/node/ #淘宝镜像
-npm_mirror: https://npm.taobao.org/mirrors/npm/ #淘宝镜像
+node_mirror: http://npm.taobao.org/mirrors/node/ #淘寶映象
+npm_mirror: https://npm.taobao.org/mirrors/npm/ #淘寶映象
 ```
 
 ```bash
-# 查看电脑环境变量，会看到如下信息：
+# 檢視電腦環境變數，會看到如下資訊：
 NVM_HOME	    C:\dev\nvm
 NVM_SYMLINK    C:\dev\nodejs
 PATH    追加    %NVM_HOME%;%NVM_SYMLINK%
 ```
 
-# 装载 nodejs
+# 裝載 nodejs
 
-`可装载多个版本`
+`可裝載多個版本`
 
 ```bash
-nvm # 会显示版本号，及一堆命令，表示成功
-nvm install  <version> # 装载node，指定版本号
-nvm install latest # 装载nodejs的最新版本
+nvm # 會顯示版本號，及一堆命令，表示成功
+nvm install  <version> # 裝載node，指定版本號
+nvm install latest # 裝載nodejs的最新版本
 nvm use 10.12.0  # 使用nodejs的10.12.0版本
-Now using node v10.12.0 (64-bit)  # 设置成功
-node -v  # 查看nodejs的当前版本 v10.12.0
-npm -v  # 查看npm的当前版本 6.4.1
+Now using node v10.12.0 (64-bit)  # 設定成功
+node -v  # 檢視nodejs的當前版本 v10.12.0
+npm -v  # 檢視npm的當前版本 6.4.1
 ```
 
 # 常用操作命令
 
 ```bash
 # ===== npm link ===== #
-cd scratch-vm # 以该库为例
-npm link # 将以上项目link到全局
-# 在需要用到该库的项目根目录下，如：
+cd scratch-vm # 以該庫為例
+npm link # 將以上專案link到全域性
+# 在需要用到該庫的專案根目錄下，如：
 cd scratch-gui
-npm link scratch-vm # 将库链接到此项目
+npm link scratch-vm # 將庫連結到此專案
 
 # ===== npm update ===== #
-npm outdated # 查看包版本信息
+npm outdated # 檢視包版本資訊
 # 更新本地 package
 npm update <package-name>
 npm update # 更新所有
 
-# ===== npm -g 较少使用，通常为装载带命令的cli等 ===== #
-npm install -g <package> # 装载全局包命令
-npm update -g <package> # 更新全局装载的包
-npm update -g # 更新所有全局包
-npm uninstall -g <package> # 卸载全局装载的包
+# ===== npm -g 較少使用，通常為裝載帶命令的cli等 ===== #
+npm install -g <package> # 裝載全域性包命令
+npm update -g <package> # 更新全域性裝載的包
+npm update -g # 更新所有全域性包
+npm uninstall -g <package> # 解除安裝全域性裝載的包
 
-# ===== npm 按需装载 项目中操作 ===== #
-npm install <package_name> # 通常以下后缀择其一
-npm install --save  # 用于生产环境的安装包
-npm install --save-dev  # 用于开发环境的安装包
-# -S, --save: dependencies. 生产依赖
-# -D, --save-dev: devDependencies. 开发依赖
-# -O, --save-optional: optionalDependencies.可选依赖
+# ===== npm 按需裝載 專案中操作 ===== #
+npm install <package_name> # 通常以下字尾擇其一
+npm install --save  # 用於生產環境的安裝包
+npm install --save-dev  # 用於開發環境的安裝包
+# -S, --save: dependencies. 生產依賴
+# -D, --save-dev: devDependencies. 開發依賴
+# -O, --save-optional: optionalDependencies.可選依賴
 
-# ===== npm 发布包 ===== #
-# 设置npm镜像
+# ===== npm 釋出包 ===== #
+# 設定npm映象
 npm config set registry http://registry.npmjs.org
-npm login # 登入命令，输入帐号密码邮箱
+npm login # 登入命令，輸入帳號密碼郵箱
 # 登入成功
-Logged in as 用户名 on http://registry.npmjs.org/.
-npm publish # 将npm包发布带npm上
+Logged in as 使用者名稱 on http://registry.npmjs.org/.
+npm publish # 將npm包釋出帶npm上
 npm logout # 登出
-# 设置回淘宝镜像
+# 設定回淘寶映象
 npm config set registry https://registry.npm.taobao.org
-npm config get registry # 查看当前镜像
+npm config get registry # 檢視當前映象
 
-# ===== npm 删除包 ===== #
-npm unpublish --force # 强制删除
-npm unpublish react-rupa@1.0.1 # 指定版本号
-npm deprecate # 某些情况
+# ===== npm 刪除包 ===== #
+npm unpublish --force # 強制刪除
+npm unpublish react-rupa@1.0.1 # 指定版本號
+npm deprecate # 某些情況
 
-# ===== npm 发布包 其它相关 ===== #
-touch .gitignore # 提交到github的过滤文件
-touch .npmignore # 提交到npm的过滤文件
+# ===== npm 釋出包 其它相關 ===== #
+touch .gitignore # 提交到github的過濾檔案
+touch .npmignore # 提交到npm的過濾檔案
 ```
 
 ---
 
 # fileDisplay
 
-- 递归遍历文件夹中所有文件
+- 遞迴遍歷資料夾中所有檔案
 
 ```js
-const path = require("path"); // 路径
-const fs = require("fs"); // 文件系统
-// 一个路径或路径片段解析成一个绝对路径，返回解析后的路径字符串
-const filePath = path.resolve("src"); // 本地文件，从根盘符至指定文件夹的绝对路径
-const pathDist = "./dist"; // 编译完输出的html文件的文件夹
+const path = require("path"); // 路徑
+const fs = require("fs"); // 檔案系統
+// 一個路徑或路徑片段解析成一個絕對路徑，返回解析後的路徑字串
+const filePath = path.resolve("src"); // 本地檔案，從根磁碟機代號至指定資料夾的絕對路徑
+const pathDist = "./dist"; // 編譯完輸出的html檔案的資料夾
 
 fileDisplay(filePath); //
 
 /**
- * 使用递归实现遍历文件夹中所有文件
- * @param {*} filePath 需遍历的文件夹
+ * 使用遞迴實現遍歷資料夾中所有檔案
+ * @param {*} filePath 需遍歷的資料夾
  */
 function fileDisplay(filePath) {
-  // 读取目录下面的文件，返回目录下的文件列表对象，如果传入的是个文件，返回这个文件
+  // 讀取目錄下面的檔案，返回目錄下的檔案列表物件，如果傳入的是個檔案，返回這個檔案
   fs.readdir(filePath, (err, files) => {
     if (err) return;
     files.forEach((filename) => {
-      // 获取当前文件的绝对路径 ，本地的话，针对于磁盘
+      // 獲取當前檔案的絕對路徑 ，本地的話，針對於磁碟
       let fileDir = path.join(filePath, filename);
-      // 根据文件路径，获取文件信息，返回一个 fs.Stats对象
+      // 根據檔案路徑，獲取檔案資訊，返回一個 fs.Stats物件
       fs.stat(fileDir, (error, stats) => {
         if (error) return;
-        // 如果是文件夹，继续向下遍历
+        // 如果是資料夾，繼續向下遍歷
         if (stats.isDirectory()) {
-          // 过滤掉 include 文件夹 不处理
+          // 過濾掉 include 資料夾 不處理
           if (fileDir.includes("include")) return;
-          fileDisplay(fileDir); // 调用递归，继续向下遍历文件夹及文件
+          fileDisplay(fileDir); // 呼叫遞迴，繼續向下遍歷資料夾及檔案
         }
-        // 如果是文件， 需要进行某些操作
+        // 如果是檔案， 需要進行某些操作
         if (stats.isFile()) {
-          // 处理文件名，剩下文件扩展名，含句点 , 找出 .html文件
+          // 處理檔名，剩下副檔名，含句點 , 找出 .html檔案
           if (path.extname(filename) == ".html") {
             compileHTML(fileDir, filename, filePath, pathDist);
           }
           if (path.extname(filename) == ".css") {
-            console.log("CSS文件");
+            console.log("CSS檔案");
           }
           if (path.extname(filename) == ".js") {
-            console.log("JS文件");
+            console.log("JS檔案");
           }
         }
       });
@@ -203,37 +203,37 @@ function fileDisplay(filePath) {
 
 # compileHTML
 
-`该方式似乎已不可取，因标准弃用`
+`該方式似乎已不可取，因標準棄用`
 
-- 可指定过滤文件夹，可分辨处理逻辑
+- 可指定過濾資料夾，可分辨處理邏輯
 
 ```js
-/*文件结构示例
-  源代码: 
+/*檔案結構示例
+  原始碼: 
     src/views/demo.html  
     src/views/include/header.html
-  编译后: 
+  編譯後: 
     dist/views/demo.html
  */
 /**
- * 编译HTML文件 (如在每个有 import页面，加上 header.html和footer.html)
- * @param {*} fileDir 当前文件绝对路径
- * @param {*} filename 文件名，带后缀名
- * @param {*} src 相对路径 [src]源码
- * @param {*} dist  输出文件时，所需的根路径[docs/dist]
+ * 編譯HTML檔案 (如在每個有 import頁面，加上 header.html和footer.html)
+ * @param {*} fileDir 當前檔案絕對路徑
+ * @param {*} filename 檔名，帶字尾名
+ * @param {*} src 相對路徑 [src]原始碼
+ * @param {*} dist  輸出檔案時，所需的根路徑[docs/dist]
  */
 function compileHTML(fileDir, filename, src, dist) {
-  // 读取文件  readFile带有回调 ，readFileSync 不带回调
+  // 讀取檔案  readFile帶有回撥 ，readFileSync 不帶回調
   fs.readFile(fileDir, "utf-8", (err, data) => {
     let dataReplace = data.replace(
       /<link\srel="import"\shref="(.*)">/gi,
       (matchs, m1) => {
-        // 返回读取的文件内容
+        // 返回讀取的檔案內容
         return fs.readFileSync(path.join(src, m1), "utf-8");
       }
     );
     fs.writeFile(dist + "/views/" + filename, dataReplace, "utf-8", (err) => {
-      if (err) return console.log("文件写入错误 ERROR:", err);
+      if (err) return console.log("檔案寫入錯誤 ERROR:", err);
     });
   });
 }
@@ -241,52 +241,52 @@ function compileHTML(fileDir, filename, src, dist) {
 
 ---
 
-# 搭建可访问本地文件的服务器
+# 搭建可訪問本地檔案的伺服器
 
-- 同步读取及异步读取
+- 同步讀取及非同步讀取
 
 ```js
-const http = require("http"); // http模块
-const fs = require("fs"); // 文件系统
+const http = require("http"); // http模組
+const fs = require("fs"); // 檔案系統
 const url = require("url"); // url
-const path = require("path"); // 路径
+const path = require("path"); // 路徑
 
 const HOST = "127.0.0.1"; // http://127.0.0.1
-const PORT = 1113; // 端口号
+const PORT = 1113; // 埠號
 
 /**
- * http模块提供了createServer函数,这个函数会返回一个对象，将返回的对象赋值给server。
- * request:接收到的数据
- * response:响应数据
- * 通常使用response.write方法向前端返回数据，该方法可调用多次，返回的数据会被拼接到一起。
- * 必须调用response.end方法结束请求，否则前端会一直处于等待状态，该方法也可以用来向前端返回数据
+ * http模組提供了createServer函式,這個函式會返回一個物件，將返回的物件賦值給server。
+ * request:接收到的資料
+ * response:響應資料
+ * 通常使用response.write方法向前端返回資料，該方法可呼叫多次，返回的資料會被拼接到一起。
+ * 必須呼叫response.end方法結束請求，否則前端會一直處於等待狀態，該方法也可以用來向前端返回資料
  */
 const server = http.createServer((request, response) => {
   /**
-   * __dirname是全局变量,可以直接获取。表示当前执行脚本所在的目录。（这里是D:\Git\……）
-   * path.join方法，拼接目录地址
-   * staticPath拼接后的目录地址，为了跳到自己项目所在那个目录。（这里是D:\Git\……\view）
+   * __dirname是全域性變數,可以直接獲取。表示當前執行指令碼所在的目錄。（這裡是D:\Git\……）
+   * path.join方法，拼接目錄地址
+   * staticPath拼接後的目錄地址，為了跳到自己專案所在那個目錄。（這裡是D:\Git\……\view）
    */
   const staticPath = path.join(__dirname, "view");
   /**
-   * request.url请求的链接（这里输出的是/index.html）
-   * url.parse方法，解析请求的url，解决链接"\"和"/"的差异问题。
-   * 解析后的request.url是个对象。
+   * request.url請求的連結（這裡輸出的是/index.html）
+   * url.parse方法，解析請求的url，解決連結"\"和"/"的差異問題。
+   * 解析後的request.url是個物件。
    */
   const pathObj = url.parse(request.url, true);
 
-  // 如果没有后缀，默认显示 index.html
+  // 如果沒有後綴，預設顯示 index.html
   if (pathObj.pathname == "/") pathObj.pathname += "index.html";
 
   /**
-   * 从解析后的对象中获取到pathname(这里pathObj.pathname是/index.html)
-   * path.join方法，拼接完整项目目录地址。
+   * 從解析後的物件中獲取到pathname(這裡pathObj.pathname是/index.html)
+   * path.join方法，拼接完整專案目錄地址。
    */
   const filePath = path.join(staticPath, pathObj.pathname);
   /**
-   * fileContent拼接后的项目目录名字（这里是 D:\Git\……\view\index.html）
-   * fs.readFile 方法，异步读取文件数据
-   * 读取拼接完整后的目录中的文件， 'binary'表示二进制方式读取
+   * fileContent拼接後的專案目錄名字（這裡是 D:\Git\……\view\index.html）
+   * fs.readFile 方法，非同步讀取檔案資料
+   * 讀取拼接完整後的目錄中的檔案， 'binary'表示二進位制方式讀取
    */
   fs.readFile(filePath, "binary", (err, fileContent) => {
     if (err) {
@@ -300,21 +300,21 @@ const server = http.createServer((request, response) => {
   });
 
   /**
-   * fileContent拼接后的项目目录名字（这里是 D:\Git\……\view\index.html）
-   * fs.readFileSync方法，同步读取文件信息
-   * 读取拼接完整后的目录中的文件， 'binary'表示二进制方式读取
+   * fileContent拼接後的專案目錄名字（這裡是 D:\Git\……\view\index.html）
+   * fs.readFileSync方法，同步讀取檔案資訊
+   * 讀取拼接完整後的目錄中的檔案， 'binary'表示二進位制方式讀取
    */
   const fileContent = fs.readFileSync(filePath, "binary");
   response.write(fileContent, "binary");
   response.end();
 });
-// 指定服务器端口号，打开地址时，服务器会接收数据，并且响应数据
+// 指定伺服器埠號，開啟地址時，伺服器會接收資料，並且響應資料
 server.listen(PORT, (err) => {
   if (err) {
     console.log("ERRPR:", err);
     throw err;
   }
-  console.log(`服务器已启动: ${HOST}:${PORT}`);
+  console.log(`伺服器已啟動: ${HOST}:${PORT}`);
 });
 ```
 
@@ -322,18 +322,18 @@ server.listen(PORT, (err) => {
 
 ```js
 /**
- * run.js 使用: $ node run 启动，点击url
+ * run.js 使用: $ node run 啟動，點選url
  */
-const fs = require("fs"); // 文件系统
+const fs = require("fs"); // 檔案系統
 const http = require("http"); // HTTP
-const path = require("path"); // 路径
+const path = require("path"); // 路徑
 
 const HOST = "http://localhost"; // http://127.0.0.1
-const POST = 1111; // 端口号
+const POST = 1111; // 埠號
 
 const FAVICON = path.join(__dirname, "asset", "favicon.ico");
 
-// 多用途互联网邮件扩展类型 用于写入响应头
+// 多用途網際網路郵件擴充套件型別 用於寫入響應頭
 const MIMETYPE = {
   css: "text/css",
   html: "text/html",
@@ -344,7 +344,7 @@ const MIMETYPE = {
   json: "application/json",
   ttf: "application/x-font-ttf",
   txt: "text/plain",
-  // 以下暂未用到
+  // 以下暫未用到
   // 'gif': 'image/gif',
   // 'jpeg': 'image/jpeg',
   // 'webp': 'image/webp',
@@ -361,36 +361,36 @@ const MIMETYPE = {
 };
 
 /**
- *  创建一个服务
- * request： 请求变量 ，客户端请求服务器
- * response： 响应变量，服务器响应客户端
+ *  建立一個服務
+ * request： 請求變數 ，客戶端請求伺服器
+ * response： 響應變數，伺服器響應客戶端
  */
 const server = http.createServer((request, response) => {
-  // 文件路径 输出 index.html  以及 ./xxx/xxx/xxx
+  // 檔案路徑 輸出 index.html  以及 ./xxx/xxx/xxx
   let fileURL = request.url === "/" ? "index.html" : "." + request.url;
-  // 判断文件是否存在
+  // 判斷檔案是否存在
   if (fs.existsSync(fileURL)) {
-    // path.extname  返回 path 的扩展名 ，没有则返回空字符串  // 返回 .js .html
-    let ext = path.extname(fileURL).slice(1); // 得到 文件后缀名，去掉点,用来判断用哪个响应头
-    // 读取文件 返回 path(文件名或文件描述符) 的内容
+    // path.extname  返回 path 的副檔名 ，沒有則返回空字串  // 返回 .js .html
+    let ext = path.extname(fileURL).slice(1); // 得到 檔案字尾名，去掉點,用來判斷用哪個響應頭
+    // 讀取檔案 返回 path(檔名或檔案描述符) 的內容
     let file = fs.readFileSync(fileURL);
-    let contentType = MIMETYPE[ext] || "text/plain"; // 获取内容类型,用于写入响应头
-    // 向请求发送响应头
+    let contentType = MIMETYPE[ext] || "text/plain"; // 獲取內容型別,用於寫入響應頭
+    // 向請求傳送響應頭
     response.writeHead(200, {
       "Content-Type": contentType,
     });
-    // if (request.url == "/favicon.ico") continue; // 跳过加载 favicon.ico
-    response.write(file); // 写入响应变量中
-    response.end(); // 结束读写操作
+    // if (request.url == "/favicon.ico") continue; // 跳過載入 favicon.ico
+    response.write(file); // 寫入響應變數中
+    response.end(); // 結束讀寫操作
   }
-  // 如果是找不到的页面，跳转到404
+  // 如果是找不到的頁面，跳轉到404
   else {
     let errorHTML = fs.readFileSync("./src/404.html");
     response.writeHead(404, {
       "Content-Type": "text/html",
     });
     response.write(errorHTML);
-    response.end(); // 结束读写操作
+    response.end(); // 結束讀寫操作
   }
 });
 
@@ -399,89 +399,89 @@ server.listen(POST, (err) => {
     console.log("ERRPR:", err);
     throw err;
   }
-  console.log(`服务器已启动，端口号为:${POST}  ${HOST}:${POST}`);
+  console.log(`伺服器已啟動，埠號為:${POST}  ${HOST}:${POST}`);
 });
 ```
 
-# 搭建本地服务器 简易版
+# 搭建本地伺服器 簡易版
 
 ```js
-const http = require("http"); // http模块
+const http = require("http"); // http模組
 const HOST = "127.0.0.1"; // http://127.0.0.1
-const PORT = 1113; // 端口号
+const PORT = 1113; // 埠號
 
 /**
- * http模块提供了createServer函数,这个函数会返回一个对象，将返回的对象赋值给server。
- * request:接收到的数据
- * response:响应数据
+ * http模組提供了createServer函式,這個函式會返回一個物件，將返回的物件賦值給server。
+ * request:接收到的資料
+ * response:響應資料
  */
 const server = http.createServer((request, response) => {
-  //设置响应的头部。状态值 content-Type 响应数据内容的类型
+  //設定響應的頭部。狀態值 content-Type 響應資料內容的型別
   response.writeHead(200, {
     "Content-Type": "text-plain; charset=utf-8",
   });
-  // response.write("写入响应的内容"); // 响应内容 ,当启动服务器后，该内容写入页面上
-  response.end("写入响应的内容"); // 写在这里也行，效果同上
+  // response.write("寫入響應的內容"); // 響應內容 ,當啟動伺服器後，該內容寫入頁面上
+  response.end("寫入響應的內容"); // 寫在這裡也行，效果同上
 });
-// 指定服务器端口号，打开地址时，服务器会接收数据，并且响应数据
+// 指定伺服器埠號，開啟地址時，伺服器會接收資料，並且響應資料
 server.listen(PORT, (err) => {
   if (err) {
     console.log("ERRPR:", err);
     throw err;
   }
-  console.log(`服务器已启动: ${HOST}:${PORT}`);
+  console.log(`伺服器已啟動: ${HOST}:${PORT}`);
 });
 ```
 
 ---
 
-一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。
+一個基於 Chrome V8 引擎的 JavaScript 執行環境。Node.js 使用了一個事件驅動、非阻塞式 I/O 的模型，使其輕量又高效。
 
-Node 支持 WebAssembly
+Node 支援 WebAssembly
 
-## 优化角色获取创建等请求操作，带路由方式
+## 最佳化角色獲取建立等請求操作，帶路由方式
 
 ```js
 // api/role.js
-/** 角色相关 API */
+/** 角色相關 API */
 
 const fs = require("fs");
-// JSON文件路径
+// JSON檔案路徑
 const fileJSON = "D:/Git/Lokavit/Satya/Concept/role/roleback.json";
 
 const roleAPI = {
   /**
-   * 创建字段为 '/create'的方法
-   * 用于稍后处理POST方式提交过来的数据，后续操作亦在内中
-   * 此处只写函数名，具体实现罗列在下方。
+   * 建立欄位為 '/create'的方法
+   * 用於稍後處理POST方式提交過來的資料，後續操作亦在內中
+   * 此處只寫函式名，具體實現羅列在下方。
    */
   "/create": createRole,
   "/getrole": getRoles,
   "/getroleinfo": getRoleInfo,
 };
 
-/** 获取角色列表 */
+/** 獲取角色列表 */
 function getRoles(request, response) {
-  // 读取JSON
+  // 讀取JSON
   fs.readFile(fileJSON, (error, buffer) => {
     const roles = JSON.parse(buffer.toString());
-    // 写入响应头
+    // 寫入響應頭
     response.writeHead(200, {
-      // 内容类型: 指定字符编码，防止乱码
+      // 內容型別: 指定字元編碼，防止亂碼
       "Content-Type": "text/plain;charset=utf-8",
     });
-    // 把读取到的JSON文件内容写入响应。必须转换
+    // 把讀取到的JSON檔案內容寫入響應。必須轉換
     response.write(JSON.stringify(roles));
     response.end();
   });
 }
 
-/** 获取指定角色信息详情 */
+/** 獲取指定角色資訊詳情 */
 function getRoleInfo(request, response) {
-  console.log("请求携带的参数 query:", request.query);
-  /** 读取JSON
-   * 参数一：读取的文件路径
-   * 参数二：回调函数。其中参数一为error对象(为null表示成功)，参数二为数据(可为<string>|<Buffer>)
+  console.log("請求攜帶的引數 query:", request.query);
+  /** 讀取JSON
+   * 引數一：讀取的檔案路徑
+   * 引數二：回撥函式。其中引數一為error物件(為null表示成功)，引數二為資料(可為<string>|<Buffer>)
    */
   // fs.readFile(`./${request.url}`, (error, buffer) => {
   fs.readFile(fileJSON, (error, buffer) => {
@@ -489,78 +489,78 @@ function getRoleInfo(request, response) {
     const temp = roles.find((item) => item.name == request.query.rolename);
     console.log("TEMP:", temp);
 
-    // 写入响应头
+    // 寫入響應頭
     response.writeHead(200, {
-      // 内容类型: 指定字符编码，防止乱码
+      // 內容型別: 指定字元編碼，防止亂碼
       "Content-Type": "text/plain;charset=utf-8",
     });
 
     if (!temp) {
       response.write(
         JSON.stringify({
-          msg: "输入有误",
+          msg: "輸入有誤",
         })
       );
       response.end();
     } else {
-      // 向前端返回数据，该方法可调用多次，返回的数据会被拼接到一起
-      // 把读取到的JSON文件内容写入响应。必须转换
+      // 向前端返回資料，該方法可呼叫多次，返回的資料會被拼接到一起
+      // 把讀取到的JSON檔案內容寫入響應。必須轉換
       response.write(JSON.stringify(temp));
       response.end();
     }
   });
 }
 
-/** 创建新角色 */
+/** 建立新角色 */
 function createRole(request, response, data) {
-  //  读取JSON
+  //  讀取JSON
   fs.readFile(fileJSON, (error, buffer) => {
     const roles = JSON.parse(buffer.toString());
-    // 从读取的JSON中，遍历判断是否有重复名字的对象
+    // 從讀取的JSON中，遍歷判斷是否有重複名字的物件
     const nameIndex = roles.findIndex((item) => {
       return data.name === item.name;
     });
     if (nameIndex > 0) {
-      // 写入响应头
+      // 寫入響應頭
       response.writeHead(200, {
-        // 内容类型: 指定字符编码，防止乱码
+        // 內容型別: 指定字元編碼，防止亂碼
         "Content-Type": "text/plain;charset=utf-8",
       });
-      // 把读取到的JSON文件内容写入响应。必须转换
+      // 把讀取到的JSON檔案內容寫入響應。必須轉換
       response.write(
         JSON.stringify({
-          msg: "角色名重复",
+          msg: "角色名重複",
         })
       );
       response.end();
     } else {
-      roles.push(data); // 前台来的数据，加到 数据集中,用于写入JSON文件
+      roles.push(data); // 前臺來的資料，加到 資料集中,用於寫入JSON檔案
       /**
-       * 向文件写入信息，若文件不存在，则自动创建。 把JSON以字符串形式写入
-       * 参数一：写入的文件路径
-       * 参数二：写入内容(可为<string> | <Buffer> | <TypedArray> | <DataView>)
-       * 参数三：回调函数，传入数据为error对象，其为null表示成功。
+       * 向檔案寫入資訊，若檔案不存在，則自動建立。 把JSON以字串形式寫入
+       * 引數一：寫入的檔案路徑
+       * 引數二：寫入內容(可為<string> | <Buffer> | <TypedArray> | <DataView>)
+       * 引數三：回撥函式，傳入資料為error物件，其為null表示成功。
        */
       fs.writeFile(fileJSON, JSON.stringify(roles), () => {
-        // 写入响应头
+        // 寫入響應頭
         response.writeHead(200, {
-          // 内容类型: 指定字符编码，防止乱码
+          // 內容型別: 指定字元編碼，防止亂碼
           "Content-Type": "text/plain;charset=utf-8",
-          // 允许跨域
+          // 允許跨域
           "Access-Control-Allow-Origin": "http://localhost:1111",
         });
-        // 把读取到的JSON文件内容写入响应。必须转换
+        // 把讀取到的JSON檔案內容寫入響應。必須轉換
         response.write(
           JSON.stringify({
-            msg: "写入成功",
+            msg: "寫入成功",
           })
         );
-        console.log(`文件写入成功`);
+        console.log(`檔案寫入成功`);
         response.end();
       });
     }
   });
-  console.log("创建角色：！！！！ data:", data);
+  console.log("建立角色：！！！！ data:", data);
 }
 
 module.exports = {
@@ -572,7 +572,7 @@ module.exports = {
 // api/routes.js
 /**
  * 路由表 API
- * 解构所有模块 API
+ * 解構所有模組 API
  */
 const { roleAPI } = require("./role");
 
@@ -593,57 +593,57 @@ const urlParse = require("url").parse;
 const { routes } = require("./api/routes"); // 路由表 API
 
 /**
- * 路由表函数
- * @param {*} request 请求体
- * @param {*} response 响应体
+ * 路由表函式
+ * @param {*} request 請求體
+ * @param {*} response 響應體
  */
 function route(request, response) {
-  // 在 request对象中，可以获取请求URL，通过URL判断请求的资源
-  console.log(`请求方式:${request.method},请求的URL:${request.url}`); // URL:/
-  // 使用url.parse解析get数据
+  // 在 request物件中，可以獲取請求URL，透過URL判斷請求的資源
+  console.log(`請求方式:${request.method},請求的URL:${request.url}`); // URL:/
+  // 使用url.parse解析get資料
   let { pathname, query } = urlParse(request.url, true);
-  // 输出结果为：/getrole  QUERY: [Object: null prototype] {}
-  console.log(`路由表中参数:${pathname}`, "QUERY:", query);
+  // 輸出結果為：/getrole  QUERY: [Object: null prototype] {}
+  console.log(`路由表中引數:${pathname}`, "QUERY:", query);
 
   /**
-   *  如果有，路由表API对象中，pathname属性
+   *  如果有，路由表API物件中，pathname屬性
    */
   if (routes[pathname]) {
-    // 如果是 POST 请求
+    // 如果是 POST 請求
     if (request.method == "POST") {
-      // request 的监听方法 data事件 ,
-      let bufferArray = []; // 用于存储data事件获取的Buffer数据
+      // request 的監聽方法 data事件 ,
+      let bufferArray = []; // 用於儲存data事件獲取的Buffer資料
       request.on("data", (buffer) => {
-        bufferArray.push(buffer); // 将buffer数据存储在数据中
+        bufferArray.push(buffer); // 將buffer資料儲存在資料中
       });
-      // 等到数据接收完之后，end 事件触发
+      // 等到資料接收完之後，end 事件觸發
       request.on("end", () => {
-        // Buffer 类是一个全局变量，使用时无需 require('buffer').Buffer。
-        // Buffer.concat方法用于合并Buffer数组。
+        // Buffer 類是一個全域性變數，使用時無需 require('buffer').Buffer。
+        // Buffer.concat方法用於合併Buffer陣列。
         let buffer = Buffer.concat(bufferArray);
-        // 已知Buffer数据只是字符串，则可以直接用toString将其转换成字符串。
+        // 已知Buffer資料只是字串，則可以直接用toString將其轉換成字串。
         postData = JSON.parse(buffer.toString());
-        // 执行 routes(路由表API)中， 当前 pathname的函数,并将所有参数传过去
+        // 執行 routes(路由表API)中， 當前 pathname的函式,並將所有引數傳過去
         routes[pathname](request, response, postData);
       });
     }
-    // 如果是 POST 请求
+    // 如果是 POST 請求
     if (request.method == "GET") {
-      request.query = query; // 请求携带的参数。
-      console.log("GET请求，参数:", request.query);
-      // 执行 routes(路由表API)中， 当前 pathname的函数,并将所有参数传过去
+      request.query = query; // 請求攜帶的引數。
+      console.log("GET請求，引數:", request.query);
+      // 執行 routes(路由表API)中， 當前 pathname的函式,並將所有引數傳過去
       routes[pathname](request, response);
     }
   }
 
-  // GET / 返回 index.html主页面内容
+  // GET / 返回 index.html主頁面內容
   if (pathname == "/") {
     pathname += "index.html"; // 指向 index.html
     fs.readFile(`.${pathname}`, (error, buffer) => {
       if (error) response.writeHead(400);
-      // 向前端返回数据，该方法可调用多次，返回的数据会被拼接到一起
+      // 向前端返回資料，該方法可呼叫多次，返回的資料會被拼接到一起
       else response.write(buffer);
-      // 注：必须调用该方法结束请求，否则前端一直处于等待状态，亦可向前端返回数据
+      // 注：必須呼叫該方法結束請求，否則前端一直處於等待狀態，亦可向前端返回資料
       response.end();
     });
   }
@@ -656,36 +656,36 @@ module.exports = {
 
 ```js
 // Server.js
-const http = require("http"); // 内置 http模块
-// const childProcess = require('child_process'); // 内置模块，用于设置默认浏览器打开URL
+const http = require("http"); // 內建 http模組
+// const childProcess = require('child_process'); // 內建模組，用於設定預設瀏覽器開啟URL
 
 const HOST = "localhost"; // 域
-const PORT = "1111"; // 端口号
+const PORT = "1111"; // 埠號
 
-/** 启动服务器 */
+/** 啟動伺服器 */
 function start(route) {
   /**
-   * 创建一个服务器
-   * @param {*} request 请求体
-   * @param {*} response 响应体
+   * 建立一個伺服器
+   * @param {*} request 請求體
+   * @param {*} response 響應體
    */
   function onRequest(request, response) {
     /**
-     * 路由函数 (请求体，响应体)
-     * 该函数为 router.js模块中函数
+     * 路由函式 (請求體，響應體)
+     * 該函式為 router.js模組中函式
      */
     route(request, response);
   }
   /**
-   * 创建一个服务器
-   * onRequest: 上一步的函数
+   * 建立一個伺服器
+   * onRequest: 上一步的函式
    */
   http
     .createServer(onRequest)
-    // 开启监听
+    // 開啟監聽
     .listen(PORT, () => {
-      console.log(`服务器启动成功:${HOST}:${PORT}`);
-      // 使用默认浏览器打开
+      console.log(`伺服器啟動成功:${HOST}:${PORT}`);
+      // 使用預設瀏覽器開啟
       // childProcess.exec(`start http://${HOST}:${PORT}/`);
     });
 }
@@ -697,7 +697,7 @@ module.exports = {
 
 ```js
 // index.js
-// 主文件。启动服务器
+// 主檔案。啟動伺服器
 const server = require("./server");
 const router = require("./router");
 
@@ -712,47 +712,47 @@ server.start(router.route);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>页面触发GET角色，GET指定角色，POST新建角色</title>
+    <title>頁面觸發GET角色，GET指定角色，POST新建角色</title>
   </head>
 
   <body>
     名字：<input type="text" name="name" id="name" /><br />
-    信息：<input type="text" name="info" id="info" /><br />
+    資訊：<input type="text" name="info" id="info" /><br />
     <input type="button" value="新增" id="create" />
-    <input type="button" value="获取" id="getrole" />
-    <input type="button" value="获取单个角色" id="getroleinfo" />
+    <input type="button" value="獲取" id="getrole" />
+    <input type="button" value="獲取單個角色" id="getroleinfo" />
 
     <p id="roles"></p>
     <p id="roles_info"></p>
 
     <script>
-      // 获取单个角色
+      // 獲取單個角色
       document
         .querySelector("#getroleinfo")
         .addEventListener("click", async function () {
           let name = "satya";
           const response = await fetch(`/getrole/${name}`);
           const result = await response.json();
-          console.log("单个角色信息：", result);
-          // 获取单个角色信息， 将其显示在 p标签区域
+          console.log("單個角色資訊：", result);
+          // 獲取單個角色資訊， 將其顯示在 p標籤區域
           let roleShow = document.querySelector("#roles_info");
           roleShow.innerHTML = JSON.stringify(result);
         });
-      // 获取所有角色信息
+      // 獲取所有角色資訊
       document
         .querySelector("#getrole")
         .addEventListener("click", async function () {
           // const response = await fetch(`/getrole?name=${document.querySelector('#name').value}&info=${document.querySelector('#info').value}`)
-          // 获取当前所有角色
+          // 獲取當前所有角色
           const response = await fetch(`/getrole`);
           const result = await response.json();
 
-          // 测试获取角色信息， 将其显示在 p标签区域
+          // 測試獲取角色資訊， 將其顯示在 p標籤區域
           let roleShow = document.querySelector("#roles");
           roleShow.innerHTML = JSON.stringify(result);
           console.log(result);
         });
-      // 登录
+      // 登入
       document
         .querySelector("#create")
         .addEventListener("click", async function () {
@@ -772,16 +772,16 @@ server.start(router.route);
 </html>
 ```
 
-## nodejs 读取本地文件
+## nodejs 讀取本地檔案
 
 ```js
 /** requestHandlers.js */
-// 处理HTTP请求
-const querystring = require("querystring"); // 处理URL中的查询字符串
+// 處理HTTP請求
+const querystring = require("querystring"); // 處理URL中的查詢字串
 const fs = require("fs");
 
 function getText(response) {
-  var text = "输出text";
+  var text = "輸出text";
   console.log(text);
   response.writeHead(200, {
     "Content-Type": "text/plain;charset=UTF-8",
@@ -835,7 +835,7 @@ function getBigImage(response) {
   });
 }
 
-// 后追加 获取JSON文件
+// 後追加 獲取JSON檔案
 function getJSON(response) {
   console.log("getJSON");
   // fs.readFile("./images/avatar.jpg", "binary", function(error, file) {
@@ -911,13 +911,13 @@ exports.get = get;
 exports.hello = hello;
 
 /** router.js */
-// 将HTTP请求转发给处理函数(requestHandlers.js)
+// 將HTTP請求轉發給處理函式(requestHandlers.js)
 function route(pathname, request, handle, response) {
   console.log("route for " + pathname);
   if (typeof handle[pathname] === "function") {
     handle[pathname](request, response);
   } else {
-    console.log(`未找到请求处理程序:${pathname}`);
+    console.log(`未找到請求處理程式:${pathname}`);
     response.writeHead(404, {
       "Content-Type": "text/plain",
     });
@@ -929,19 +929,19 @@ function route(pathname, request, handle, response) {
 exports.route = route;
 
 /** server.js */
-// 创建HTTP服务器
+// 建立HTTP伺服器
 const http = require("http");
 const url = require("url");
 
 const HOST = "127.0.0.1"; // http://127.0.0.1
-const PORT = 1113; // 端口号
+const PORT = 1113; // 埠號
 
 function start(route, handle) {
   function onRequest(request, response) {
     var pathname = url.parse(request.url).pathname;
     var query = url.parse(request.url).query;
     // console.log("Request for " + pathname + " received." + " query: " + query);
-    console.log(`请求:${pathname}已收到,query为${query}。`);
+    console.log(`請求:${pathname}已收到,query為${query}。`);
 
     route(pathname, query, handle, response);
   }
@@ -951,7 +951,7 @@ function start(route, handle) {
       console.log("ERRPR:", err);
       throw err;
     }
-    console.log(`服务器已启动: ${HOST}:${PORT}`);
+    console.log(`伺服器已啟動: ${HOST}:${PORT}`);
   });
   console.log("Server has started.");
 }
@@ -959,7 +959,7 @@ function start(route, handle) {
 exports.start = start;
 
 /** index.js */
-// 服务器主文件
+// 伺服器主檔案
 const server = require("./server");
 const router = require("./router");
 const requestHandlers = require("./requestHandlers");
@@ -973,163 +973,163 @@ server.start(router.route, handle);
 
 ## Stream 流
 
-- 解决 File System 模块占用那次及资源使用效率低的问题
+- 解決 File System 模組佔用那次及資源使用效率低的問題
 
 ```js
-const fs = require("fs"); // 内置 文件系统
-// 创建一个可读流
+const fs = require("fs"); // 內建 檔案系統
+// 建立一個可讀流
 const readStream = fs.createReadStream("./temp.txt");
-// 创建一个可写流
+// 建立一個可寫流
 const writeStream = fs.createWriteStream("./temp2.txt");
-// 将可读流读取的数据，通过管道pipe推送到写入流中，即temp.txt=>temp2.txt
+// 將可讀流讀取的資料，透過管道pipe推送到寫入流中，即temp.txt=>temp2.txt
 readStream.pipe(writeStream);
-// 读取出现错误，触发error事件
+// 讀取出現錯誤，觸發error事件
 readStream.on("error", (error) => {
   console.error(error);
 });
-// 写入完成时，触发finish事件
+// 寫入完成時，觸發finish事件
 writeStream.on("finish", () => {
-  console.log("finish 写入完成");
+  console.log("finish 寫入完成");
 });
 ```
 
-#### 使用 Zlib 压缩文件
+#### 使用 Zlib 壓縮檔案
 
 ```js
-const fs = require("fs"); // 内置 文件系统
-const zlib = require("zlib"); // 内置 压缩文件
-// 创建一个可读流
+const fs = require("fs"); // 內建 檔案系統
+const zlib = require("zlib"); // 內建 壓縮檔案
+// 建立一個可讀流
 const readStream = fs.createReadStream("./zl.jpg");
-// 创建一个可写流
+// 建立一個可寫流
 const writeStream = fs.createWriteStream("./zl.jpg.gz");
-// 创建一个Gzip对象，用于将文件压缩从.gz文件
+// 建立一個Gzip物件，用於將檔案壓縮從.gz檔案
 const gzip = zlib.createGzip();
-// 将可读流读取的数据，通过管道pipe推送到gzip中，再推入到写入流中。
-// 即，先压缩可读流数据，再推送到可写流
+// 將可讀流讀取的資料，透過管道pipe推送到gzip中，再推入到寫入流中。
+// 即，先壓縮可讀流資料，再推送到可寫流
 readStream.pipe(gzip).pipe(writeStream);
-// 读取出现错误，触发error事件
+// 讀取出現錯誤，觸發error事件
 readStream.on("error", (error) => {
   console.error(error);
 });
-// 写入完成时，触发finish事件
+// 寫入完成時，觸發finish事件
 writeStream.on("finish", () => {
-  console.log("finish 写入完成");
+  console.log("finish 寫入完成");
 });
 ```
 
-## Ajax 跨域处理
+## Ajax 跨域處理
 
-- 在实际项目中，不可以简单地设置 res.setHeader('Access-Control-Allow-Origin', '\*')，而是要通过 req.headers.origin 判断发起请求的域名是否合法，再设置 Access-Control-Allow-Origin 属性，以免出现安全问题。
+- 在實際專案中，不可以簡單地設定 res.setHeader('Access-Control-Allow-Origin', '\*')，而是要透過 req.headers.origin 判斷髮起請求的域名是否合法，再設定 Access-Control-Allow-Origin 屬性，以免出現安全問題。
 
 ## url
 
-- 用于对 URL 的解析，常用的是 url.parse 方法。
+- 用於對 URL 的解析，常用的是 url.parse 方法。
 
 ```js
 const url = require("url");
 const str = "http://localhost:8080/a/b?x=1&y=2&y=3&y=4";
-console.log(url.parse(str)); // 可以看到url的信息如端口号、域名、query参数等都被解析出来了。
-// 如需将query参数转为对象，则可以为url.parse函数的第二个参数传true，
+console.log(url.parse(str)); // 可以看到url的資訊如埠號、域名、query引數等都被解析出來了。
+// 如需將query引數轉為物件，則可以為url.parse函式的第二個引數傳true，
 // 如console.log(url.parse(str, true))
-// 输出：query: [Object: null prototype] { x: '1', y: [ '2', '3', '4' ] },
+// 輸出：query: [Object: null prototype] { x: '1', y: [ '2', '3', '4' ] },
 
-// 通过构造函数URL，创建一个实例，其中带有解析后的数据。
+// 透過建構函式URL，建立一個例項，其中帶有解析後的資料。
 const { URL } = require("url");
 const urlObj = new URL(str);
 console.log(urlObj);
-console.log(urlObj.toString()); // 实例有一个toString方法，可以将实例解析为字符串url。
+console.log(urlObj.toString()); // 例項有一個toString方法，可以將例項解析為字串url。
 ```
 
-## path 路径
+## path 路徑
 
-- 主要用来对文件路径进行处理，比如提取路径、后缀，拼接路径等。
+- 主要用來對檔案路徑進行處理，比如提取路徑、字尾，拼接路徑等。
 
 ```js
 const path = require("path");
 const str = "/root/a/b/1.txt";
-console.log(path.dirname(str)); // 获取文件目录：/root/a/b
-console.log(path.basename(str)); // 获取文件名：1.txt
-console.log(path.extname(str)); // 获取文件后缀：.txt
-// path.resolve方法，它可以接收任意个参数，然后根据每个路径参数之间的关系，将路径最终解析为一个绝对路径。
-console.log(path.resolve(str, "../c", "build", "strict")); // 将路径解析为绝对路径：C:\root\a\b\c\build\strict
-console.log(path.resolve(str, "../c", "build", "strict", "../..", "assets")); // 将路径解析为绝对路径：C:\root\a\b\c\assets
-// __dirname指的是当前模块所在的绝对路径名称，它的值会自动根据当前的绝对路径变化，等同于path.dirname(__dilename)的结果。
-console.log(path.resolve(__dirname, "build")); // 将路径解析为绝对路径：C:\projects\nodejs-tutorial\lesson12\build
+console.log(path.dirname(str)); // 獲取檔案目錄：/root/a/b
+console.log(path.basename(str)); // 獲取檔名：1.txt
+console.log(path.extname(str)); // 獲取檔案字尾：.txt
+// path.resolve方法，它可以接收任意個引數，然後根據每個路徑引數之間的關係，將路徑最終解析為一個絕對路徑。
+console.log(path.resolve(str, "../c", "build", "strict")); // 將路徑解析為絕對路徑：C:\root\a\b\c\build\strict
+console.log(path.resolve(str, "../c", "build", "strict", "../..", "assets")); // 將路徑解析為絕對路徑：C:\root\a\b\c\assets
+// __dirname指的是當前模組所在的絕對路徑名稱，它的值會自動根據當前的絕對路徑變化，等同於path.dirname(__dilename)的結果。
+console.log(path.resolve(__dirname, "build")); // 將路徑解析為絕對路徑：C:\projects\nodejs-tutorial\lesson12\build
 ```
 
-## querystring 解析和格式化 URL 查询字符串
+## querystring 解析和格式化 URL 查詢字串
 
 ```js
-// querystring用来对url中的query字符串进行解析，常用的方法有querystring.parse和querystring.stringify。
+// querystring用來對url中的query字串進行解析，常用的方法有querystring.parse和querystring.stringify。
 const querystring = require("querystring");
 /**
- * querystring.parse方法用于解析URL 查询字符串。
- * 解析结果为： { foo: 'bar', abc: [ 'xyz', '123' ] }
+ * querystring.parse方法用於解析URL 查詢字串。
+ * 解析結果為： { foo: 'bar', abc: [ 'xyz', '123' ] }
  */
 console.log(querystring.parse("foo=bar&abc=xyz&abc=123"));
 /**
- * querystring.stringify用于将对象转换为URL查询字符串。
- * 解析结果为: foo=bar&baz=qux&baz=quux&corge=
+ * querystring.stringify用於將物件轉換為URL查詢字串。
+ * 解析結果為: foo=bar&baz=qux&baz=quux&corge=
  */
 console.log(
   querystring.stringify({ foo: "bar", baz: ["qux", "quux"], corge: "" })
 );
 ```
 
-### 处理接受到的 GETorPOST 数据
+### 處理接受到的 GETorPOST 資料
 
-- GET:获取数据。数据放在 HTTP 请求 Header 中，通过 URL 进行传递
-- POST:发送数据。数据放在 HTTP 请求 body 中，容量大。
-- Nodejs 自带的 url 和 querystring 模块处理接收到的 GET 数据
-- 通过 request 的 data 事件获取每次传输的数据，在 end 事件调用时处理所有获取的数据
+- GET:獲取資料。資料放在 HTTP 請求 Header 中，透過 URL 進行傳遞
+- POST:傳送資料。資料放在 HTTP 請求 body 中，容量大。
+- Nodejs 自帶的 url 和 querystring 模組處理接收到的 GET 資料
+- 透過 request 的 data 事件獲取每次傳輸的資料，在 end 事件呼叫時處理所有獲取的資料
 
-```js 页面触发GET获取角色及指定角色信息，POST新增角色
-const http = require("http"); // 内置 http模块
+```js 頁面觸發GET獲取角色及指定角色資訊，POST新增角色
+const http = require("http"); // 內建 http模組
 
 const HOST = "localhost"; // 域
-const PORT = "1111"; // 端口号
+const PORT = "1111"; // 埠號
 
-const fs = require("fs"); // 内置 文件系统
-// 解析和格式化 URL 查询字符串
+const fs = require("fs"); // 內建 檔案系統
+// 解析和格式化 URL 查詢字串
 const querystring = require("querystring");
 const url = require("url");
 
-// JSON文件路径
+// JSON檔案路徑
 const fileJSON = "D:/Git/Lokavit/Satya/Concept/role/roleback.json";
 
 /**
- * 创建一个服务器
- * requset:请求体
- * response:响应体
+ * 建立一個伺服器
+ * requset:請求體
+ * response:響應體
  */
 const server = http.createServer((request, response) => {
-  // 在 request对象中，可以获取请求URL，通过URL判断请求的资源
-  console.log(`请求的URL:${request.url}`); // URL:/
-  console.log("请求方式：", request.method); // GET
-  let path = ""; // 路径
-  let postData = {}; // 存储 处理接收到的POST数据
+  // 在 request物件中，可以獲取請求URL，透過URL判斷請求的資源
+  console.log(`請求的URL:${request.url}`); // URL:/
+  console.log("請求方式：", request.method); // GET
+  let path = ""; // 路徑
+  let postData = {}; // 儲存 處理接收到的POST資料
 
   if (request.method == "POST") {
-    console.log("POST请求");
+    console.log("POST請求");
     path = request.url;
-    let bufferArray = []; // 用于存储data事件获取的Buffer数据
+    let bufferArray = []; // 用於儲存data事件獲取的Buffer資料
     request.on("data", (buffer) => {
-      bufferArray.push(buffer); // 将buffer数据存储在数据中
+      bufferArray.push(buffer); // 將buffer資料儲存在資料中
     });
-    // 注：必须调用该方法结束请求，否则前端一直处于等待状态，亦可向前端返回数据
+    // 注：必須呼叫該方法結束請求，否則前端一直處於等待狀態，亦可向前端返回資料
     request.on("end", () => {
-      // Buffer 类是一个全局变量，使用时无需 require('buffer').Buffer。
-      // Buffer.concat方法用于合并Buffer数组。
+      // Buffer 類是一個全域性變數，使用時無需 require('buffer').Buffer。
+      // Buffer.concat方法用於合併Buffer陣列。
       let buffer = Buffer.concat(bufferArray);
-      // 已知Buffer数据只是字符串，则可以直接用toString将其转换成字符串。
+      // 已知Buffer資料只是字串，則可以直接用toString將其轉換成字串。
       postData = JSON.parse(buffer.toString());
-      console.log("处理接受到的POST数据:", postData);
+      console.log("處理接受到的POST資料:", postData);
     });
   }
 
   if (request.method == "GET") {
-    console.log("GET请求");
-    // 使用url.parse解析get数据
+    console.log("GET請求");
+    // 使用url.parse解析get資料
     const { pathname, query } = url.parse(request.url, true);
     path = pathname;
     get = query;
@@ -1138,137 +1138,137 @@ const server = http.createServer((request, response) => {
       path += "index.html"; // 指向 index.html
       fs.readFile(`.${path}`, (error, data) => {
         if (error) response.writeHead(400);
-        // 向前端返回数据，该方法可调用多次，返回的数据会被拼接到一起
+        // 向前端返回資料，該方法可呼叫多次，返回的資料會被拼接到一起
         else response.write(data);
-        // 注：必须调用该方法结束请求，否则前端一直处于等待状态，亦可向前端返回数据
+        // 注：必須呼叫該方法結束請求，否則前端一直處於等待狀態，亦可向前端返回資料
         response.end();
       });
     }
   }
 
-  // 获取单个角色信息
+  // 獲取單個角色資訊
   if (path == "/getrole/satya") {
-    console.log("获取单个角色信息 PATH:", path);
+    console.log("獲取單個角色資訊 PATH:", path);
 
-    /** 读取JSON
-     * 参数一：读取的文件路径
-     * 参数二：回调函数。其中参数一为error对象(为null表示成功)，参数二为数据(可为<string>|<Buffer>)
+    /** 讀取JSON
+     * 引數一：讀取的檔案路徑
+     * 引數二：回撥函式。其中引數一為error物件(為null表示成功)，引數二為資料(可為<string>|<Buffer>)
      */
     // fs.readFile(`./${request.url}`, (error, data) => {
     fs.readFile(fileJSON, (error, data) => {
       if (error) {
-        // 若读取错误，则向前端返回404状态码，以及内容 Not Found
+        // 若讀取錯誤，則向前端返回404狀態碼，以及內容 Not Found
         response.writeHead(404);
         response.write("Not Found");
-        console.log(`文件读取失败:${error}`);
-        // 注：必须调用该方法结束请求，否则前端一直处于等待状态，亦可向前端返回数据
+        console.log(`檔案讀取失敗:${error}`);
+        // 注：必須呼叫該方法結束請求，否則前端一直處於等待狀態，亦可向前端返回資料
         response.end();
       } else {
         const roles = JSON.parse(data.toString());
-        console.log("读取JSON的数据结果：", roles);
+        console.log("讀取JSON的資料結果：", roles);
 
         const temp = roles.find((item) => item.name == "satya");
         console.log("TEMP:", temp);
 
-        // 写入响应头
+        // 寫入響應頭
         response.writeHead(200, {
-          // 内容类型: 指定字符编码，防止乱码
+          // 內容型別: 指定字元編碼，防止亂碼
           "Content-Type": "text/plain;charset=utf-8",
         });
-        // 向前端返回数据，该方法可调用多次，返回的数据会被拼接到一起
-        // 把读取到的JSON文件内容写入响应。必须转换
+        // 向前端返回資料，該方法可呼叫多次，返回的資料會被拼接到一起
+        // 把讀取到的JSON檔案內容寫入響應。必須轉換
         response.write(JSON.stringify(temp));
         response.end();
       }
     });
   }
 
-  // 获取角色数据集
+  // 獲取角色資料集
   if (path == "/getrole") {
-    console.log("获取所有角色,PATH：", path);
-    // 读取JSON
+    console.log("獲取所有角色,PATH：", path);
+    // 讀取JSON
     fs.readFile(fileJSON, (error, data) => {
       if (error) {
-        // 若读取错误，则向前端返回404状态码，以及内容 Not Found
+        // 若讀取錯誤，則向前端返回404狀態碼，以及內容 Not Found
         response.writeHead(404);
         response.write("Not Found");
-        console.log(`文件读取失败:${error}`);
+        console.log(`檔案讀取失敗:${error}`);
         response.end();
       } else {
         const roles = JSON.parse(data.toString());
-        console.log("读取JSON的数据结果：", roles);
-        // 写入响应头
+        console.log("讀取JSON的資料結果：", roles);
+        // 寫入響應頭
         response.writeHead(200, {
-          // 内容类型: 指定字符编码，防止乱码
+          // 內容型別: 指定字元編碼，防止亂碼
           "Content-Type": "text/plain;charset=utf-8",
         });
-        // 把读取到的JSON文件内容写入响应。必须转换
+        // 把讀取到的JSON檔案內容寫入響應。必須轉換
         response.write(JSON.stringify(roles));
         response.end();
       }
     });
   }
 
-  // 创建角色 POST提交过来
+  // 建立角色 POST提交過來
   if (path == "/create") {
     console.log("PATH:", path);
 
-    // 读取JSON
+    // 讀取JSON
     fs.readFile(fileJSON, (error, data) => {
       if (error) {
-        // 若读取错误，则向前端返回404状态码，以及内容 Not Found
+        // 若讀取錯誤，則向前端返回404狀態碼，以及內容 Not Found
         response.writeHead(404);
         response.write("Not Found");
-        console.log(`文件读取失败:${error}`);
+        console.log(`檔案讀取失敗:${error}`);
         response.end();
       } else {
         const roles = JSON.parse(data.toString());
-        console.log("读取JSON的数据结果：", roles);
+        console.log("讀取JSON的資料結果：", roles);
 
-        // 从读取的JSON中，遍历判断是否有重复名字的对象
+        // 從讀取的JSON中，遍歷判斷是否有重複名字的物件
         const nameIndex = roles.findIndex((item) => {
           return postData.name === item.name;
         });
         if (nameIndex > 0) {
-          // 写入响应头
+          // 寫入響應頭
           response.writeHead(200, {
-            // 内容类型: 指定字符编码，防止乱码
+            // 內容型別: 指定字元編碼，防止亂碼
             "Content-Type": "text/plain;charset=utf-8",
           });
-          // 把读取到的JSON文件内容写入响应。必须转换
+          // 把讀取到的JSON檔案內容寫入響應。必須轉換
           response.write(
             JSON.stringify({
-              msg: "角色名重复",
+              msg: "角色名重複",
             })
           );
           response.end();
         } else {
-          roles.push(postData); // 前台来的数据，加到 数据集中,用于写入JSON文件
+          roles.push(postData); // 前臺來的資料，加到 資料集中,用於寫入JSON檔案
           /**
-           * 向文件写入信息，若文件不存在，则自动创建。 把JSON以字符串形式写入
-           * 参数一：写入的文件路径
-           * 参数二：写入内容(可为<string> | <Buffer> | <TypedArray> | <DataView>)
-           * 参数三：回调函数，传入数据为error对象，其为null表示成功。
+           * 向檔案寫入資訊，若檔案不存在，則自動建立。 把JSON以字串形式寫入
+           * 引數一：寫入的檔案路徑
+           * 引數二：寫入內容(可為<string> | <Buffer> | <TypedArray> | <DataView>)
+           * 引數三：回撥函式，傳入資料為error物件，其為null表示成功。
            */
           fs.writeFile(fileJSON, JSON.stringify(roles), (error) => {
             if (error) {
               response.writeHead(404);
               response.write("Not Found");
-              console.log(`文件写入失败:${error}`);
+              console.log(`檔案寫入失敗:${error}`);
               response.end();
             } else {
-              // 写入响应头
+              // 寫入響應頭
               response.writeHead(200, {
-                // 内容类型: 指定字符编码，防止乱码
+                // 內容型別: 指定字元編碼，防止亂碼
                 "Content-Type": "text/plain;charset=utf-8",
               });
-              // 把读取到的JSON文件内容写入响应。必须转换
+              // 把讀取到的JSON檔案內容寫入響應。必須轉換
               response.write(
                 JSON.stringify({
-                  msg: "写入成功",
+                  msg: "寫入成功",
                 })
               );
-              console.log(`文件写入成功`);
+              console.log(`檔案寫入成功`);
               response.end();
             }
           });
@@ -1278,9 +1278,9 @@ const server = http.createServer((request, response) => {
   }
 });
 
-// 开启监听
+// 開啟監聽
 server.listen(PORT, () => {
-  console.log(`服务器启动成功:${HOST}:${PORT}`);
+  console.log(`伺服器啟動成功:${HOST}:${PORT}`);
 });
 ```
 
@@ -1291,47 +1291,47 @@ server.listen(PORT, () => {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>页面触发GET角色，GET指定角色，POST新建角色</title>
+    <title>頁面觸發GET角色，GET指定角色，POST新建角色</title>
   </head>
 
   <body>
     名字：<input type="text" name="name" id="name" /><br />
-    信息：<input type="text" name="info" id="info" /><br />
+    資訊：<input type="text" name="info" id="info" /><br />
     <input type="button" value="新增" id="create" />
-    <input type="button" value="获取" id="getrole" />
-    <input type="button" value="获取单个角色" id="getroleinfo" />
+    <input type="button" value="獲取" id="getrole" />
+    <input type="button" value="獲取單個角色" id="getroleinfo" />
 
     <p id="roles"></p>
     <p id="roles_info"></p>
 
     <script>
-      // 获取单个角色
+      // 獲取單個角色
       document
         .querySelector("#getroleinfo")
         .addEventListener("click", async function () {
           let name = "satya";
           const response = await fetch(`/getrole/${name}`);
           const result = await response.json();
-          console.log("单个角色信息：", result);
-          // 获取单个角色信息， 将其显示在 p标签区域
+          console.log("單個角色資訊：", result);
+          // 獲取單個角色資訊， 將其顯示在 p標籤區域
           let roleShow = document.querySelector("#roles_info");
           roleShow.innerHTML = JSON.stringify(result);
         });
-      // 获取所有角色信息
+      // 獲取所有角色資訊
       document
         .querySelector("#getrole")
         .addEventListener("click", async function () {
           // const response = await fetch(`/getrole?name=${document.querySelector('#name').value}&info=${document.querySelector('#info').value}`)
-          // 获取当前所有角色
+          // 獲取當前所有角色
           const response = await fetch(`/getrole`);
           const result = await response.json();
 
-          // 测试获取角色信息， 将其显示在 p标签区域
+          // 測試獲取角色資訊， 將其顯示在 p標籤區域
           let roleShow = document.querySelector("#roles");
           roleShow.innerHTML = JSON.stringify(result);
           console.log(result);
         });
-      // 登录
+      // 登入
       document
         .querySelector("#create")
         .addEventListener("click", async function () {
@@ -1351,78 +1351,78 @@ server.listen(PORT, () => {
 </html>
 ```
 
-> #### 服务器需具备的基本功能
+> #### 伺服器需具備的基本功能
 >
-> - 响应请求。根据客户端请求做出回应，如返回静态文件
-> - 数据交互。定义接口，客户端根据接口，与服务端进行数据交互。
-> - - 如:在购物流程中，客户端向服务端请求商品数据，展现给客户，客户购买时，客户端将购买的商品信息发送给服务端处理。
-> - 数据库。对数据库中存储的数据进行读写操作。
+> - 響應請求。根據客戶端請求做出回應，如返回靜態檔案
+> - 資料互動。定義介面，客戶端根據介面，與服務端進行資料互動。
+> - - 如:在購物流程中，客戶端向服務端請求商品資料，展現給客戶，客戶購買時，客戶端將購買的商品資訊傳送給服務端處理。
+> - 資料庫。對資料庫中儲存的資料進行讀寫操作。
 
-### http 和 fs 读取写入指定 JSON 文件
+### http 和 fs 讀取寫入指定 JSON 檔案
 
 ```js
-const http = require("http"); // 内置 http模块
+const http = require("http"); // 內建 http模組
 
 const HOST = "localhost"; // 域
-const PORT = "1111"; // 端口号
+const PORT = "1111"; // 埠號
 
-const fs = require("fs"); // 内置 文件系统
+const fs = require("fs"); // 內建 檔案系統
 
-// 待写入数据
+// 待寫入資料
 let newRole = {
   name: "Satya",
-  info: "详情",
+  info: "詳情",
 };
 
-// JSON文件路径
+// JSON檔案路徑
 const fileJSON = "D:/Git/Lokavit/Satya/Concept/role/roleback.json";
 
 /**
- * 创建一个服务器
- * requset:请求体
- * response:响应体
+ * 建立一個伺服器
+ * requset:請求體
+ * response:響應體
  */
 const server = http.createServer((request, response) => {
-  // 读取JSON
+  // 讀取JSON
   fs.readFile(fileJSON, (error, data) => {
     if (error) {
-      // 若读取错误，则向前端返回404状态码，以及内容 Not Found
+      // 若讀取錯誤，則向前端返回404狀態碼，以及內容 Not Found
       response.writeHead(404);
       response.write("Not Found");
-      console.log(`文件读取失败:${error}`);
+      console.log(`檔案讀取失敗:${error}`);
       response.end();
     } else {
       const roles = JSON.parse(data.toString());
-      console.log("读取JSON的数据结果：", roles);
-      // // 写入响应头
+      console.log("讀取JSON的資料結果：", roles);
+      // // 寫入響應頭
       // response.writeHead(200, {
-      //     // 内容类型: 指定字符编码，防止乱码
+      //     // 內容型別: 指定字元編碼，防止亂碼
       //     'Content-Type': "text/plain;charset=utf-8",
       // })
-      // // 把读取到的JSON文件内容写入响应。必须转换
+      // // 把讀取到的JSON檔案內容寫入響應。必須轉換
       // response.write(JSON.stringify(roles));
       // response.end();
 
       roles.push(newRole);
-      // 把JSON以字符串形式写入
+      // 把JSON以字串形式寫入
       fs.writeFile(fileJSON, JSON.stringify(roles), (error) => {
         if (error) {
           response.writeHead(404);
           response.write("Not Found");
-          console.log(`文件写入失败:${error}`);
+          console.log(`檔案寫入失敗:${error}`);
           response.end();
         } else {
-          // 写入响应头
+          // 寫入響應頭
           response.writeHead(200, {
-            // 内容类型: 指定字符编码，防止乱码
+            // 內容型別: 指定字元編碼，防止亂碼
             "Content-Type": "text/plain;charset=utf-8",
           });
           response.write(
             JSON.stringify({
-              msg: "写入成功",
+              msg: "寫入成功",
             })
           );
-          console.log(`文件写入成功`);
+          console.log(`檔案寫入成功`);
           response.end();
         }
       });
@@ -1430,161 +1430,161 @@ const server = http.createServer((request, response) => {
   });
 });
 
-// 开启监听
+// 開啟監聽
 server.listen(PORT, () => {
-  console.log(`服务器启动成功:${HOST}:${PORT}`);
+  console.log(`伺服器啟動成功:${HOST}:${PORT}`);
 });
 ```
 
-### 结合 http 和 fs 实现简易服务器
+### 結合 http 和 fs 實現簡易伺服器
 
-- 创建 index.html。读取本地指定文件夹中图片到页面
-- 达到在浏览器访问 1.html;读取到 01/1.html,由 HTML 文件发起对 01/zl.jpg 的请求;网页显示 HTML 内容和图片
-- **注**:此处读到的是 1.html 文件 ，而非 zl.jpg。jpg 由 HTML 文件自主发起。
+- 建立 index.html。讀取本地指定資料夾中圖片到頁面
+- 達到在瀏覽器訪問 1.html;讀取到 01/1.html,由 HTML 檔案發起對 01/zl.jpg 的請求;網頁顯示 HTML 內容和圖片
+- **注**:此處讀到的是 1.html 檔案 ，而非 zl.jpg。jpg 由 HTML 檔案自主發起。
 
 ```js
-const http = require("http"); // 内置 http模块
-const fs = require("fs"); // 内置 文件系统
+const http = require("http"); // 內建 http模組
+const fs = require("fs"); // 內建 檔案系統
 const HOST = "localhost"; // 域
-const PORT = "1111"; // 端口号
+const PORT = "1111"; // 埠號
 /**
- * 创建一个服务器
- * requset:请求体
- * response:响应体
+ * 建立一個伺服器
+ * requset:請求體
+ * response:響應體
  */
 const server = http.createServer((request, response) => {
-  // 在 request对象中，可以获取请求URL，通过URL判断请求的资源
-  console.log(`请求的URL:${request.url}`);
+  // 在 request物件中，可以獲取請求URL，透過URL判斷請求的資源
+  console.log(`請求的URL:${request.url}`);
   /**
-   * 参数一：读取的文件路径
-   * 参数二：回调函数。其中参数一为error对象(为null表示成功)，参数二为数据(可为<string>|<Buffer>)
+   * 引數一：讀取的檔案路徑
+   * 引數二：回撥函式。其中引數一為error物件(為null表示成功)，引數二為資料(可為<string>|<Buffer>)
    */
   fs.readFile(`./01${request.url}`, (error, buffer) => {
     if (error) {
-      // 若读取错误，则向前端返回404状态码，以及内容 Not Found
+      // 若讀取錯誤，則向前端返回404狀態碼，以及內容 Not Found
       response.writeHead(404);
       response.write("Not Found");
-      console.log(`文件读取失败:${error}`);
+      console.log(`檔案讀取失敗:${error}`);
     }
-    // 若需要传输给浏览器可以直接用Buffer,机器之间通信是直接用Buffer数据。
+    // 若需要傳輸給瀏覽器可以直接用Buffer,機器之間通訊是直接用Buffer資料。
     else {
       response.write(buffer);
-      console.log(`文件读取成功`);
+      console.log(`檔案讀取成功`);
     }
-    response.end(); // 关闭链接
+    response.end(); // 關閉連結
   });
 });
 
-// 开启监听
+// 開啟監聽
 server.listen(PORT, () => {
-  console.log(`服务器启动成功:${HOST}:${PORT}`);
+  console.log(`伺服器啟動成功:${HOST}:${PORT}`);
 });
 ```
 
-### FileSystem 文件系统
+### FileSystem 檔案系統
 
-- 异步文件读取 fs.readFile、异步文件写入 fs.writeFile、同步文件读取 fs.readFileSync、同步文件写入 fs.writeFileSync。由于同步可能造成阻塞，通常使用异步操作。
-- **注**:两者同在，根据输出结果可见，先执行读取，后执行写入
+- 非同步檔案讀取 fs.readFile、非同步檔案寫入 fs.writeFile、同步檔案讀取 fs.readFileSync、同步檔案寫入 fs.writeFileSync。由於同步可能造成阻塞，通常使用非同步操作。
+- **注**:兩者同在，根據輸出結果可見，先執行讀取，後執行寫入
 
 ```js
-const fs = require("fs"); // 内置 文件系统
+const fs = require("fs"); // 內建 檔案系統
 
-let text = "被写入内容"; // 待写入的内容
+let text = "被寫入內容"; // 待寫入的內容
 /**
- * 向文件写入信息，若文件不存在，则自动创建。
- * 参数一：写入的文件路径
- * 参数二：写入内容(可为<string> | <Buffer> | <TypedArray> | <DataView>)
- * 参数三：回调函数，传入数据为error对象，其为null表示成功。
+ * 向檔案寫入資訊，若檔案不存在，則自動建立。
+ * 引數一：寫入的檔案路徑
+ * 引數二：寫入內容(可為<string> | <Buffer> | <TypedArray> | <DataView>)
+ * 引數三：回撥函式，傳入資料為error物件，其為null表示成功。
  */
 fs.writeFile("./temp.txt", text, (error) => {
-  if (error) console.log(`文件写入失败:${error}`);
-  else console.log(`文件写入成功`); // 内中结果为 [object Object]
+  if (error) console.log(`檔案寫入失敗:${error}`);
+  else console.log(`檔案寫入成功`); // 內中結果為 [object Object]
 });
 
 /**
- * 参数一：读取的文件路径
- * 参数二：回调函数。其中参数一为error对象(为null表示成功)，参数二为数据(可为<string>|<Buffer>)
+ * 引數一：讀取的檔案路徑
+ * 引數二：回撥函式。其中引數一為error物件(為null表示成功)，引數二為資料(可為<string>|<Buffer>)
  */
 fs.readFile("./temp.txt", (error, data) => {
-  if (error) console.log(`文件读取失败:${error}`);
-  // 此处确定读取的为字符串，可直接用toString()将Buffer转为字符串
-  // 若需要传输给浏览器可以直接用Buffer,机器之间通信是直接用Buffer数据。
-  else console.log(`文件读取成功`, data.toString());
+  if (error) console.log(`檔案讀取失敗:${error}`);
+  // 此處確定讀取的為字串，可直接用toString()將Buffer轉為字串
+  // 若需要傳輸給瀏覽器可以直接用Buffer,機器之間通訊是直接用Buffer資料。
+  else console.log(`檔案讀取成功`, data.toString());
 });
 ```
 
-### 简易启动服务器
+### 簡易啟動伺服器
 
 ```js
-const http = require("http"); // 内置 http模块
-const childProcess = require("child_process"); // 内置模块，用于设置默认浏览器打开URL
+const http = require("http"); // 內建 http模組
+const childProcess = require("child_process"); // 內建模組，用於設定預設瀏覽器開啟URL
 
 const HOST = "localhost"; // 域
-const PORT = "1111"; // 端口号
+const PORT = "1111"; // 埠號
 
 /**
- * 创建一个服务器
- * request:请求体
- * response:响应体
+ * 建立一個伺服器
+ * request:請求體
+ * response:響應體
  */
 const server = http.createServer((request, response) => {
-  console.log(`状态码:${response.statusCode}`);
-  // 写入响应头
+  console.log(`狀態碼:${response.statusCode}`);
+  // 寫入響應頭
   response.writeHead(200, {
-    // 内容类型: 指定字符编码，防止乱码
+    // 內容型別: 指定字元編碼，防止亂碼
     "Content-Type": "text/plain;charset=utf-8",
   });
-  // 向前端返回数据，该方法可调用多次，返回的数据会被拼接到一起
-  response.write("写入");
-  // 注：必须调用该方法结束请求，否则前端一直处于等待状态，亦可向前端返回数据
-  response.end("响应内容");
+  // 向前端返回資料，該方法可呼叫多次，返回的資料會被拼接到一起
+  response.write("寫入");
+  // 注：必須呼叫該方法結束請求，否則前端一直處於等待狀態，亦可向前端返回資料
+  response.end("響應內容");
 });
 
-// 开启监听
+// 開啟監聽
 server.listen(PORT, () => {
-  console.log(`服务器启动成功:${HOST}:${PORT}`);
-  // 使用默认浏览器打开
+  console.log(`伺服器啟動成功:${HOST}:${PORT}`);
+  // 使用預設瀏覽器開啟
   childProcess.exec(`start http://${HOST}:${PORT}/`);
 });
 ```
 
-## 合并 GET 和 POST 获取数据的方法
+## 合併 GET 和 POST 獲取資料的方法
 
 ```js 改造版
 
 ```
 
-```js 基础版
-const http = require("http"); // http模块
-const fs = require("fs"); // 文件系统
+```js 基礎版
+const http = require("http"); // http模組
+const fs = require("fs"); // 檔案系統
 const url = require("url"); // url
-const path = require("path"); // 路径
+const path = require("path"); // 路徑
 
 const HOST = "127.0.0.1"; // http://127.0.0.1
-const PORT = 1113; // 端口号
+const PORT = 1113; // 埠號
 
 /**
- * 创建 路由对象 。
+ * 建立 路由物件 。
  */
 const routes = {
   /**
-   * 创建字段为 '/get' 的方法
-   * 用于稍后处理GET方式提交过来的数据。后续操作亦在内中
-   * 如：传数据给其他静态页面，或把数据存储到数据库
+   * 建立欄位為 '/get' 的方法
+   * 用於稍後處理GET方式提交過來的資料。後續操作亦在內中
+   * 如：傳資料給其他靜態頁面，或把資料儲存到資料庫
    */
   "/get": (request, response) => {
     let name = request.query.name;
     let age = request.query.age;
-    //设置响应的头部。状态值 content-Type 响应数据内容的类型
+    //設定響應的頭部。狀態值 content-Type 響應資料內容的型別
     response.writeHead(200, {
       "Content-Type": "text-plain; charset=utf-8",
     });
     response.end(`Name:${name},Age:${age}`);
   },
   /**
-   * 创建字段为 '/post'的方法
-   * 用于稍后处理POST方式提交过来的数据，后续操作亦在内中
-   * 如：传数据给其他静态页面，或把数据存储到数据库
+   * 建立欄位為 '/post'的方法
+   * 用於稍後處理POST方式提交過來的資料，後續操作亦在內中
+   * 如：傳資料給其他靜態頁面，或把資料儲存到資料庫
    */
   "/post": (request, response) => {
     let obj = {};
@@ -1595,67 +1595,67 @@ const routes = {
       "Content-Type": "text-plain; charset=utf-8",
     });
     // response.end(`Name:${obj.name},Age:${obj.age}`);
-    response.end(JSON.stringify(obj)); // 写入响应内容 (该内容输出在了页面上)
+    response.end(JSON.stringify(obj)); // 寫入響應內容 (該內容輸出在了頁面上)
   },
 };
 
 /**
- * http模块提供了createServer函数,这个函数会返回一个对象，将返回的对象赋值给server。
- * request:接收到的数据
- * response:响应数据
+ * http模組提供了createServer函式,這個函式會返回一個物件，將返回的物件賦值給server。
+ * request:接收到的資料
+ * response:響應資料
  */
 const server = http.createServer((request, response) => {
   /**
-   * request.url请求的链接（这里输出的是/index.html）
-   * url.parse方法，解析请求的url，解决链接"\"和"/"的差异问题。
-   * 解析后的request.url是个对象。
+   * request.url請求的連結（這裡輸出的是/index.html）
+   * url.parse方法，解析請求的url，解決連結"\"和"/"的差異問題。
+   * 解析後的request.url是個物件。
    */
   const pathObj = url.parse(request.url, true);
 
   /**
-   * 处理路由的代码
-   * 通过 [pathObj.pathname] 获取到请求链接的url,
-   * 然后再 routes对象中寻找是否存在这个“字段”,
+   * 處理路由的程式碼
+   * 透過 [pathObj.pathname] 獲取到請求連結的url,
+   * 然後再 routes物件中尋找是否存在這個“欄位”,
    */
   const handleFn = routes[pathObj.pathname];
-  // 如果有，该字段方法赋值给handleFn
+  // 如果有，該欄位方法賦值給handleFn
   if (handleFn) {
-    // 通过pathObj.query获取到从get方式提交过来的数据，并执行该方法
-    // 获取 从GET方式提交过来的数据
+    // 透過pathObj.query獲取到從get方式提交過來的資料，並執行該方法
+    // 獲取 從GET方式提交過來的資料
     request.query = pathObj.query;
 
-    // 通过 data书简，获取到从post方式持续提交过来的数据
+    // 透過 data書簡，獲取到從post方式持續提交過來的資料
     let msg = "";
-    // request 的监听方法 data ,chunk为Buffer
+    // request 的監聽方法 data ,chunk為Buffer
     request
       .on("data", (chunk) => {
-        msg += chunk; // 拼接获取到的后数据
+        msg += chunk; // 拼接獲取到的後資料
       })
-      // 等到数据接收完之后，end 事件触发
+      // 等到資料接收完之後，end 事件觸發
       .on("end", () => {
-        // 数据接收完触发
+        // 資料接收完觸發
         request.msg = msg; // MSG:name=Sayta&age=15
         handleFn(request, response);
       });
   } else {
-    // 如果找不到字段，就查找静态文件
+    // 如果找不到欄位，就查詢靜態檔案
     /**
-     * __dirname是全局变量,可以直接获取。表示当前执行脚本所在的目录。（这里是D:\Git\……）
-     * path.join方法，拼接目录地址
-     * staticPath拼接后的目录地址，为了跳到自己项目所在那个目录。（这里是D:\Git\……\view）
+     * __dirname是全域性變數,可以直接獲取。表示當前執行指令碼所在的目錄。（這裡是D:\Git\……）
+     * path.join方法，拼接目錄地址
+     * staticPath拼接後的目錄地址，為了跳到自己專案所在那個目錄。（這裡是D:\Git\……\view）
      */
     const staticPath = path.join(__dirname, "view");
-    // 如果没有后缀，默认显示 index.html
+    // 如果沒有後綴，預設顯示 index.html
     if (pathObj.pathname == "/") pathObj.pathname += "index.html";
     /**
-     * 从解析后的对象中获取到pathname(这里pathObj.pathname是/index.html)
-     * path.join方法，拼接完整项目目录地址。
+     * 從解析後的物件中獲取到pathname(這裡pathObj.pathname是/index.html)
+     * path.join方法，拼接完整專案目錄地址。
      */
     const filePath = path.join(staticPath, pathObj.pathname);
     /**
-     * fileContent拼接后的项目目录名字（这里是 D:\Git\……\view\index.html）
-     * fs.readFile 方法，异步读取文件数据
-     * 读取拼接完整后的目录中的文件， 'binary'表示二进制方式读取
+     * fileContent拼接後的專案目錄名字（這裡是 D:\Git\……\view\index.html）
+     * fs.readFile 方法，非同步讀取檔案資料
+     * 讀取拼接完整後的目錄中的檔案， 'binary'表示二進位制方式讀取
      */
     fs.readFile(filePath, "binary", (err, fileContent) => {
       if (err) {
@@ -1669,38 +1669,38 @@ const server = http.createServer((request, response) => {
     });
   }
 });
-// 指定服务器端口号，打开地址时，服务器会接收数据，并且响应数据
+// 指定伺服器埠號，開啟地址時，伺服器會接收資料，並且響應資料
 server.listen(PORT, (err) => {
   if (err) {
     console.log("ERRPR:", err);
     throw err;
   }
-  console.log(`服务器已启动: ${HOST}:${PORT}`);
+  console.log(`伺服器已啟動: ${HOST}:${PORT}`);
 });
 ```
 
-## 处理前端提交的 POST 请求
+## 處理前端提交的 POST 請求
 
 ```js
-const http = require("http"); // http模块
-const fs = require("fs"); // 文件系统
+const http = require("http"); // http模組
+const fs = require("fs"); // 檔案系統
 const url = require("url"); // url
-const path = require("path"); // 路径
+const path = require("path"); // 路徑
 
 const HOST = "127.0.0.1"; // http://127.0.0.1
-const PORT = 1113; // 端口号
+const PORT = 1113; // 埠號
 
 /**
- * 创建 路由对象 。
+ * 建立 路由物件 。
  */
 const routes = {
   /**
-   * 创建字段为 '/get' 的方法
-   * 用于稍后处理GET方式提交过来的数据。后续操作亦在内中
-   * 如：传数据给其他静态页面，或把数据存储到数据库
+   * 建立欄位為 '/get' 的方法
+   * 用於稍後處理GET方式提交過來的資料。後續操作亦在內中
+   * 如：傳資料給其他靜態頁面，或把資料儲存到資料庫
    */
   "/get": (request, response) => {
-    //设置响应的头部。状态值 content-Type 响应数据内容的类型
+    //設定響應的頭部。狀態值 content-Type 響應資料內容的型別
     response.writeHead(200, {
       "Content-Type": "text-plain; charset=utf-8",
     });
@@ -1709,9 +1709,9 @@ const routes = {
     response.end(`Name:${name},Age:${age}`);
   },
   /**
-   * 创建字段为 '/post'的方法
-   * 用于稍后处理POST方式提交过来的数据，后续操作亦在内中
-   * 如：传数据给其他静态页面，或把数据存储到数据库
+   * 建立欄位為 '/post'的方法
+   * 用於稍後處理POST方式提交過來的資料，後續操作亦在內中
+   * 如：傳資料給其他靜態頁面，或把資料儲存到資料庫
    */
   "/post": (request, response) => {
     let obj = {};
@@ -1726,63 +1726,63 @@ const routes = {
 };
 
 /**
- * http模块提供了createServer函数,这个函数会返回一个对象，将返回的对象赋值给server。
- * request:接收到的数据
- * response:响应数据
+ * http模組提供了createServer函式,這個函式會返回一個物件，將返回的物件賦值給server。
+ * request:接收到的資料
+ * response:響應資料
  */
 const server = http.createServer((request, response) => {
   /**
-   * request.url请求的链接（这里输出的是/index.html）
-   * url.parse方法，解析请求的url，解决链接"\"和"/"的差异问题。
-   * 解析后的request.url是个对象。
+   * request.url請求的連結（這裡輸出的是/index.html）
+   * url.parse方法，解析請求的url，解決連結"\"和"/"的差異問題。
+   * 解析後的request.url是個物件。
    */
   const pathObj = url.parse(request.url, true);
 
   /**
-   * 处理路由的代码
-   * 通过 [pathObj.pathname] 获取到请求链接的url,
-   * 然后再 routes对象中寻找是否存在这个“字段”,
+   * 處理路由的程式碼
+   * 透過 [pathObj.pathname] 獲取到請求連結的url,
+   * 然後再 routes物件中尋找是否存在這個“欄位”,
    */
   const handleFn = routes[pathObj.pathname];
-  // 如果有，该字段方法赋值给handleFn
+  // 如果有，該欄位方法賦值給handleFn
   if (handleFn) {
-    // 通过pathObj.query获取到从get方式提交过来的数据，并执行该方法
-    // // 获取 从GET方式提交过来的数据
+    // 透過pathObj.query獲取到從get方式提交過來的資料，並執行該方法
+    // // 獲取 從GET方式提交過來的資料
     // request.query = pathObj.query;
     // handleFn(request, response);
 
-    // 通过 data书简，获取到从post方式持续提交过来的数据
+    // 透過 data書簡，獲取到從post方式持續提交過來的資料
     let msg = "";
-    // request 的监听方法 data ,chunk为Buffer
+    // request 的監聽方法 data ,chunk為Buffer
     request
       .on("data", (chunk) => {
-        msg += chunk; // 拼接获取到的后数据
+        msg += chunk; // 拼接獲取到的後資料
       })
-      // 等到数据接收完之后，end 事件触发
+      // 等到資料接收完之後，end 事件觸發
       .on("end", () => {
-        // 数据接收完触发
+        // 資料接收完觸發
         request.msg = msg; // MSG:name=Sayta&age=15
         handleFn(request, response);
       });
   } else {
-    // 如果找不到字段，就查找静态文件
+    // 如果找不到欄位，就查詢靜態檔案
     /**
-     * __dirname是全局变量,可以直接获取。表示当前执行脚本所在的目录。（这里是D:\Git\……）
-     * path.join方法，拼接目录地址
-     * staticPath拼接后的目录地址，为了跳到自己项目所在那个目录。（这里是D:\Git\……\view）
+     * __dirname是全域性變數,可以直接獲取。表示當前執行指令碼所在的目錄。（這裡是D:\Git\……）
+     * path.join方法，拼接目錄地址
+     * staticPath拼接後的目錄地址，為了跳到自己專案所在那個目錄。（這裡是D:\Git\……\view）
      */
     const staticPath = path.join(__dirname, "view");
-    // 如果没有后缀，默认显示 index.html
+    // 如果沒有後綴，預設顯示 index.html
     if (pathObj.pathname == "/") pathObj.pathname += "index.html";
     /**
-     * 从解析后的对象中获取到pathname(这里pathObj.pathname是/index.html)
-     * path.join方法，拼接完整项目目录地址。
+     * 從解析後的物件中獲取到pathname(這裡pathObj.pathname是/index.html)
+     * path.join方法，拼接完整專案目錄地址。
      */
     const filePath = path.join(staticPath, pathObj.pathname);
     /**
-     * fileContent拼接后的项目目录名字（这里是 D:\Git\……\view\index.html）
-     * fs.readFile 方法，异步读取文件数据
-     * 读取拼接完整后的目录中的文件， 'binary'表示二进制方式读取
+     * fileContent拼接後的專案目錄名字（這裡是 D:\Git\……\view\index.html）
+     * fs.readFile 方法，非同步讀取檔案資料
+     * 讀取拼接完整後的目錄中的檔案， 'binary'表示二進位制方式讀取
      */
     fs.readFile(filePath, "binary", (err, fileContent) => {
       if (err) {
@@ -1796,40 +1796,40 @@ const server = http.createServer((request, response) => {
     });
   }
 });
-// 指定服务器端口号，打开地址时，服务器会接收数据，并且响应数据
+// 指定伺服器埠號，開啟地址時，伺服器會接收資料，並且響應資料
 server.listen(PORT, (err) => {
   if (err) {
     console.log("ERRPR:", err);
     throw err;
   }
-  console.log(`服务器已启动: ${HOST}:${PORT}`);
+  console.log(`伺服器已啟動: ${HOST}:${PORT}`);
 });
 ```
 
-## 处理前端提交的 GET 请求
+## 處理前端提交的 GET 請求
 
-- 运行服务器，输入内容，点击提交，可见效果
+- 執行伺服器，輸入內容，點選提交，可見效果
 
 ```js
-const http = require("http"); // http模块
-const fs = require("fs"); // 文件系统
+const http = require("http"); // http模組
+const fs = require("fs"); // 檔案系統
 const url = require("url"); // url
-const path = require("path"); // 路径
+const path = require("path"); // 路徑
 
 const HOST = "127.0.0.1"; // http://127.0.0.1
-const PORT = 1113; // 端口号
+const PORT = 1113; // 埠號
 
 /**
- * 创建 路由对象 。
+ * 建立 路由物件 。
  */
 const routes = {
   /**
-   * 创建字段为 '/get' 的方法
-   * 用于稍后处理GET方式提交过来的数据。后续操作亦在内中
-   * 如：传数据给其他静态页面，或把数据存储到数据库
+   * 建立欄位為 '/get' 的方法
+   * 用於稍後處理GET方式提交過來的資料。後續操作亦在內中
+   * 如：傳資料給其他靜態頁面，或把資料儲存到資料庫
    */
   "/get": (request, response) => {
-    //设置响应的头部。状态值 content-Type 响应数据内容的类型
+    //設定響應的頭部。狀態值 content-Type 響應資料內容的型別
     response.writeHead(200, {
       "Content-Type": "text-plain; charset=utf-8",
     });
@@ -1840,49 +1840,49 @@ const routes = {
 };
 
 /**
- * http模块提供了createServer函数,这个函数会返回一个对象，将返回的对象赋值给server。
- * request:接收到的数据
- * response:响应数据
+ * http模組提供了createServer函式,這個函式會返回一個物件，將返回的物件賦值給server。
+ * request:接收到的資料
+ * response:響應資料
  */
 const server = http.createServer((request, response) => {
   /**
-   * request.url请求的链接（这里输出的是/index.html）
-   * url.parse方法，解析请求的url，解决链接"\"和"/"的差异问题。
-   * 解析后的request.url是个对象。
+   * request.url請求的連結（這裡輸出的是/index.html）
+   * url.parse方法，解析請求的url，解決連結"\"和"/"的差異問題。
+   * 解析後的request.url是個物件。
    */
   const pathObj = url.parse(request.url, true);
 
   /**
-   * 处理路由的代码
-   * 通过 [pathObj.pathname] 获取到请求链接的url,
-   * 然后再 routes对象中寻找是否存在这个“字段”,
-   * 如果有，该字段方法赋值给handleFn
-   * 通过pathObj.query获取到从get方式提交过来的数据，并执行该方法
+   * 處理路由的程式碼
+   * 透過 [pathObj.pathname] 獲取到請求連結的url,
+   * 然後再 routes物件中尋找是否存在這個“欄位”,
+   * 如果有，該欄位方法賦值給handleFn
+   * 透過pathObj.query獲取到從get方式提交過來的資料，並執行該方法
    */
   const handleFn = routes[pathObj.pathname];
   if (handleFn) {
-    // 获取 从GET方式提交过来的数据
+    // 獲取 從GET方式提交過來的資料
     request.query = pathObj.query;
     handleFn(request, response);
   } else {
-    // 如果找不到字段，就查找静态文件
+    // 如果找不到欄位，就查詢靜態檔案
     /**
-     * __dirname是全局变量,可以直接获取。表示当前执行脚本所在的目录。（这里是D:\Git\……）
-     * path.join方法，拼接目录地址
-     * staticPath拼接后的目录地址，为了跳到自己项目所在那个目录。（这里是D:\Git\……\view）
+     * __dirname是全域性變數,可以直接獲取。表示當前執行指令碼所在的目錄。（這裡是D:\Git\……）
+     * path.join方法，拼接目錄地址
+     * staticPath拼接後的目錄地址，為了跳到自己專案所在那個目錄。（這裡是D:\Git\……\view）
      */
     const staticPath = path.join(__dirname, "view");
-    // 如果没有后缀，默认显示 index.html
+    // 如果沒有後綴，預設顯示 index.html
     if (pathObj.pathname == "/") pathObj.pathname += "index.html";
     /**
-     * 从解析后的对象中获取到pathname(这里pathObj.pathname是/index.html)
-     * path.join方法，拼接完整项目目录地址。
+     * 從解析後的物件中獲取到pathname(這裡pathObj.pathname是/index.html)
+     * path.join方法，拼接完整專案目錄地址。
      */
     const filePath = path.join(staticPath, pathObj.pathname);
     /**
-     * fileContent拼接后的项目目录名字（这里是 D:\Git\……\view\index.html）
-     * fs.readFile 方法，异步读取文件数据
-     * 读取拼接完整后的目录中的文件， 'binary'表示二进制方式读取
+     * fileContent拼接後的專案目錄名字（這裡是 D:\Git\……\view\index.html）
+     * fs.readFile 方法，非同步讀取檔案資料
+     * 讀取拼接完整後的目錄中的檔案， 'binary'表示二進位制方式讀取
      */
     fs.readFile(filePath, "binary", (err, fileContent) => {
       if (err) {
@@ -1896,12 +1896,12 @@ const server = http.createServer((request, response) => {
     });
   }
 });
-// 指定服务器端口号，打开地址时，服务器会接收数据，并且响应数据
+// 指定伺服器埠號，開啟地址時，伺服器會接收資料，並且響應資料
 server.listen(PORT, (err) => {
   if (err) {
     console.log("ERRPR:", err);
     throw err;
   }
-  console.log(`服务器已启动: ${HOST}:${PORT}`);
+  console.log(`伺服器已啟動: ${HOST}:${PORT}`);
 });
 ```

@@ -7,7 +7,7 @@ draft: false
 
 ```bash
 # nodejs -v 18
-# 装载
+# 裝載
 npm install --legacy-peer-deps
-yarn install # 装载后执行这句 后续命令 使用 yarn执行
+yarn install # 裝載後執行這句 後續命令 使用 yarn執行
 ```

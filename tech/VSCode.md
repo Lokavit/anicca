@@ -8,14 +8,14 @@ draft: false
 # VSCode Ext Note
 
 ```bash
-# 全局安装 用于生成vscode插件开发的项目 
+# 全域性安裝 用於生成vscode外掛開發的專案 
 $ sudo npm install -g yo generator-code
-# 创建项目,在此步骤简单配置
+# 建立專案,在此步驟簡單配置
 $ yo code
 ```
-## 直接复制文件夹到插件目录下
+## 直接複製資料夾到外掛目錄下
 
-## 打包成vsix插件
+## 打包成vsix外掛
 ```bash
 npm i vsce -g
 vsce package
@@ -28,28 +28,28 @@ vsce package
 
 
 
-## 发布到插件市场
+## 釋出到外掛市場
 
-- 在`marketplace`申请创建者，被`google`验证墙的死去活来。
+- 在`marketplace`申請建立者，被`google`驗證牆的死去活來。
 
 ```bash
 $ npm install -g @vscode/vsce
 $ vsce package
-# 去注册、创建发布者(墙！墙！！墙！！！)
+# 去註冊、建立釋出者(牆！牆！！牆！！！)
 $ vsce login Lokavit
-# paste your token .验证成功
+# paste your token .驗證成功
 The Personal Access Token verification succeeded for the publisher 'Your Name'.
-# 发布命令
+# 釋出命令
 $ vsce publish
-# 提示你创建仓库，顺便推送到远程github托管
-$ git remote add origin https://……/仓库名.git
+# 提示你建立倉庫，順便推送到遠端github託管
+$ git remote add origin https://……/倉庫名.git
 $ git branch -M main
 # 正常status add . commit -m
 $ git push -u origin main
-# 发布命令 注意将package.json中需要信息填写完整
-$ vsce publish # 此处依然需要开着飞机，否者无法验证通过
-# 更新时，记得更改package.json中的version。
-$ vsce publish 0.0.3 # 更新插件
+# 釋出命令 注意將package.json中需要資訊填寫完整
+$ vsce publish # 此處依然需要開著飛機，否者無法驗證透過
+# 更新時，記得更改package.json中的version。
+$ vsce publish 0.0.3 # 更新外掛
 ```
 
 ## Stupa
@@ -60,55 +60,55 @@ $ vsce publish 0.0.3 # 更新插件
 
 ```html
 <!-- 
-FileName:文件名。
-ProjectName:项目名(单本小说视为一个项目)
-FileBirthtime:文件创建时间
+FileName:檔名。
+ProjectName:專案名(單本小說視為一個專案)
+FileBirthtime:檔案建立時間
 FileMtime: 2023/9/29 17:15:21
 Author:作者
-WordCount:字数统计
+WordCount:字數統計
  -->
 
-<!-- 对于写小说可能会需要的一些功能
-左侧加一个书本的图标或emoji。
-自建以.book为后缀的文件,也支持多本小说共用一套设定文件。
-如:mybook.timeline.book:时间线相关设定。
-mybook.role.book:小说.角色设定
-mybook.gis.book:小说对于地理相关的设定。
-该文件中的一些关键词，做处理，用于正文使用时能够浮现提示。
-在写正文的时候，输入角色名，会弹出该角色在角色设定里面的内容。
-考虑将这些数据与drawio的数据互通。
+<!-- 對於寫小說可能會需要的一些功能
+左側加一個書本的圖示或emoji。
+自建以.book為字尾的檔案,也支援多本小說共用一套設定檔案。
+如:mybook.timeline.book:時間線相關設定。
+mybook.role.book:小說.角色設定
+mybook.gis.book:小說對於地理相關的設定。
+該檔案中的一些關鍵詞，做處理，用於正文使用時能夠浮現提示。
+在寫正文的時候，輸入角色名，會彈出該角色在角色設定裡面的內容。
+考慮將這些資料與drawio的資料互通。
 
  -->
 ```
 
 ```js
 /**
- * 以下代码段，适用于多个tab保存，或是多个编辑操作进行。
- * 但是，在_updateWordCount（）{}中会阻止快捷键保存事件
+ * 以下程式碼段，適用於多個tab儲存，或是多個編輯操作進行。
+ * 但是，在_updateWordCount（）{}中會阻止快捷鍵儲存事件
  */
 /**
- * 对文本多次操作使用
+ * 對文字多次操作使用
  */
 let _textEdits = [];
 /**
- * 每个文档内容替换，都push一个替换方法(范围,替换内容)
+ * 每個文件內容替換，都push一個替換方法(範圍,替換內容)
  */
 _textEdits.push(builder.replace(_range, `${_count} 字`));
 /**
- * 用于多次替换。用于同时对多个文档进行多次操作
+ * 用於多次替換。用於同時對多個文件進行多次操作
  */
 let _workspaceEdit = new vscode.WorkspaceEdit();
 /**
- * 使用set方法，传入当前文档的uri，以及替换操作的数组
+ * 使用set方法，傳入當前文件的uri，以及替換操作的陣列
  */
 _workspaceEdit.set(_doc.uri, _textEdits);
 vscode.workspace.applyEdit(_workspaceEdit);
 ```
 
-任何编程语言，任何注释模板
+任何程式語言，任何註釋模板
 
-- 自定义编程语言的注释模板
-- 自定义正则表达式
+- 自定義程式語言的註釋模板
+- 自定義正則表示式
 
 ```html
 <!-- 
@@ -120,14 +120,14 @@ vscode.workspace.applyEdit(_workspaceEdit);
 
 ```js
 /**
- * 通过传入的语言ID，寻找对应的注释块。
- * 用大数组对象，似乎太重了。
+ * 透過傳入的語言ID，尋找對應的註釋塊。
+ * 用大陣列物件，似乎太重了。
  */
 switch (lang) {
   case "html":
     ``;
 }
-// 使用者自己定义，自己布局
+// 使用者自己定義，自己佈局
 const _tempLangAndTpl = [
   {
     lang: "javascript",
@@ -143,15 +143,15 @@ const _tempLangAndTpl = [
       "WordCount: ${WordCount} 字",
       "-----",
       "Copyright © 1911 - 2023 Lokavit",
-      "    卍 · 小僧過境　衆生甦醒 · 卍",
+      "    卍 · 小僧過境　眾生甦醒 · 卍",
       "=====<< 卍 · Description · 卍 >>=====",
     ],
   },
 ];
-// _tempTPL输出为未解析的字符串，需要加一些处理。
+// _tempTPL輸出為未解析的字串，需要加一些處理。
 /** Birthtime: ${birthime} */
 // let _tempTPL = _tempLangAndTpl[0].tpl[5];
-// console.info("获取某行:", _tempTPL);
+// console.info("獲取某行:", _tempTPL);
 // const getBirth = (birthime) => `${_tempTPL.split(":")[0]}:${birthime}`;
 // const getTest = (val) => `Test:${val}`;
 
@@ -184,7 +184,7 @@ const tplArry = [
 ```
 
 ```json
-  // 头文件
+  // 標頭檔案
   "psi-header.config": {
     "forceToTop": true,
     "blankLinesAfter": 6,
@@ -202,7 +202,7 @@ const tplArry = [
     "excludeGlob": ["out/**"],
     "autoHeader": "manualSave"
   },
-  "psi-header.license-text": ["    卍 · 小僧過境　衆生甦醒 · 卍"],
+  "psi-header.license-text": ["    卍 · 小僧過境　眾生甦醒 · 卍"],
   "psi-header.variables": [
     ["company", "Lokavit"],
     ["author", "Lokavit"],
@@ -250,26 +250,26 @@ const tplArry = [
     {
       "language": "markdown",
       "template": [
-        //　版权声明 起始
+        //　版權宣告 起始
         "=====<< 卍 · Copyright · 卍 >>=====",
-        // 文件在项目中的路径及文件名后缀名
+        // 檔案在專案中的路徑及檔名字尾名
         "File: <<filerelativepath>>",
-        // 项目名
+        // 專案名
         "Project: <<projectname>>",
         // 作者
         "Author: <<author>>",
-        // 文件创建时间
+        // 檔案建立時間
         "Created Date: <<filecreated('YYYY-MM-DD h:mm:ss')>>",
         "-----",
-        // 文件最后修改时间
+        // 檔案最後修改時間
         "Last Modified: <<dateformat('YYYY-MM-DD h:mm:ss')>>",
-        // 文件最后修改人
+        // 檔案最後修改人
         // "Modified By: <<author>>",
         "-----",
-        // 版权声明
+        // 版權宣告
         "Copyright © <<yeartoyear(1911,now)>> <<company>>",
         "<<licensetext>>",
-        //　对当前文件的描述，或许要注明的更改
+        //　對當前檔案的描述，或許要註明的更改
         "=====<< 卍 · Description · 卍 >>=====",
         ""
       ]
@@ -277,29 +277,29 @@ const tplArry = [
     {
       "language": "javascript",
       "template": [
-        //　版权声明 起始
+        //　版權宣告 起始
         "=====<< 卍 · Copyright · 卍 >>=====",
         "",
-        // 文件在项目中的路径及文件名后缀名
+        // 檔案在專案中的路徑及檔名字尾名
         "File: <<filerelativepath>>",
-        // 项目名
+        // 專案名
         "Project: <<projectname>>",
         // 作者
         "Author: <<author>>",
-        // 文件创建时间
+        // 檔案建立時間
         "Created Date: <<filecreated('YYYY-MM-DD h:mm:ss')>>",
         "-----",
-        // 文件最后修改时间
+        // 檔案最後修改時間
         "Last Modified: <<dateformat('YYYY-MM-DD h:mm:ss')>>",
-        // 文件最后修改人
+        // 檔案最後修改人
         // "Modified By: <<author>>",
         "-----",
-        // 版权声明
+        // 版權宣告
         "Copyright © <<yeartoyear(1911,now)>> <<company>>",
         "",
         "<<licensetext>>",
         "",
-        //　对当前文件的描述，或许要注明的更改
+        //　對當前檔案的描述，或許要註明的更改
         "=====<< 卍 · Description · 卍 >>=====",
         ""
       ]
@@ -307,29 +307,29 @@ const tplArry = [
     {
       "language": "css",
       "template": [
-        //　版权声明 起始
+        //　版權宣告 起始
         "=====<< 卍 · Copyright · 卍 >>=====",
         "",
-        // 文件在项目中的路径及文件名后缀名
+        // 檔案在專案中的路徑及檔名字尾名
         "File: <<filerelativepath>>",
-        // 项目名
+        // 專案名
         "Project: <<projectname>>",
         // 作者
         "Author: <<author>>",
-        // 文件创建时间
+        // 檔案建立時間
         "Created Date: <<filecreated('YYYY-MM-DD h:mm:ss')>>",
         "-----",
-        // 文件最后修改时间
+        // 檔案最後修改時間
         "Last Modified: <<dateformat('YYYY-MM-DD h:mm:ss')>>",
-        // 文件最后修改人
+        // 檔案最後修改人
         // "Modified By: <<author>>",
         "-----",
-        // 版权声明
+        // 版權宣告
         "Copyright © <<yeartoyear(1911,now)>> <<company>>",
         "",
         "<<licensetext>>",
         "",
-        //　对当前文件的描述，或许要注明的更改
+        //　對當前檔案的描述，或許要註明的更改
         "=====<< 卍 · Description · 卍 >>=====",
         ""
       ]
@@ -337,29 +337,29 @@ const tplArry = [
     {
       "language": "typescript",
       "template": [
-        //　版权声明 起始
+        //　版權宣告 起始
         "=====<< 卍 · Copyright · 卍 >>=====",
         "",
-        // 文件在项目中的路径及文件名后缀名
+        // 檔案在專案中的路徑及檔名字尾名
         "File: <<filerelativepath>>",
-        // 项目名
+        // 專案名
         "Project: <<projectname>>",
         // 作者
         "Author: <<author>>",
-        // 文件创建时间
+        // 檔案建立時間
         "Created Date: <<filecreated('YYYY-MM-DD h:mm:ss')>>",
         "-----",
-        // 文件最后修改时间
+        // 檔案最後修改時間
         "Last Modified: <<dateformat('YYYY-MM-DD h:mm:ss')>>",
-        // 文件最后修改人
+        // 檔案最後修改人
         // "Modified By: <<author>>",
         "-----",
-        // 版权声明
+        // 版權宣告
         "Copyright © <<yeartoyear(1911,now)>> <<company>>",
         "",
         "<<licensetext>>",
         "",
-        //　对当前文件的描述，或许要注明的更改
+        //　對當前檔案的描述，或許要註明的更改
         "=====<< 卍 · Description · 卍 >>=====",
         ""
       ]

@@ -5,16 +5,16 @@ tags: ['code']
 draft: false
 ---
 
-## 函数式编程入门经典
+## 函數語言程式設計入門經典
 
-- 函数的原则:小,更小。
+- 函式的原則:小,更小。
 - 引用透明性
-- 声明式，抽象
+- 宣告式，抽象
 
-### 函数与方法的区别
+### 函式與方法的區別
 
 ```js
-// 函数
+// 函式
 let simple = a => {
   return a;
 };
@@ -26,53 +26,53 @@ let obj = {
     return a;
   },
 };
-obj.simple(5); // 用其名称及其关联对象调用。
+obj.simple(5); // 用其名稱及其關聯物件呼叫。
 ```
 
-### 纯函数
+### 純函式
 
-- 产生可测试的代码
-- 不应改变任意一个外部变量，就能马上理解其中含义
-- 纯函数总能够根据输入来做缓存
+- 產生可測試的程式碼
+- 不應改變任意一個外部變數，就能馬上理解其中含義
+- 純函式總能夠根據輸入來做快取
 
 ```js
-// 非纯函数
+// 非純函式
 let number = 1;
 const increment = () => (number += 1);
 increment(); // 2
 
-// 纯函数
+// 純函式
 const increment = n => n + 1;
 increment(1); // 2
 
-// 纯函数 ，加法计算。
+// 純函式 ，加法計算。
 const sum = (a, b) => a + b;
 sum(3, sum(5, 8)); // 16
 sum(1, sum(2, sum(3, 4))); // 10
 ```
 
-### 高阶函数
+### 高階函式
 
-- 函数把其他函数当做参数传递使用或者返回一个函数
-- 最常见的应用如 map, reduce. 都是以传入不同的函数来以不同的方式操作数组元素
+- 函式把其他函式當做引數傳遞使用或者返回一個函式
+- 最常見的應用如 map, reduce. 都是以傳入不同的函式來以不同的方式運算元組元素
 
-#### 函数作为返回值输出
+#### 函式作為返回值輸出
 
-- isType 函数:判断类型的时候可以通过 Object.prototype.toString.call 来获取对应对象返回的字符串
+- isType 函式:判斷型別的時候可以透過 Object.prototype.toString.call 來獲取對應物件返回的字串
 
 ```js
 let isString = obj => Object.prototype.toString.call(obj) === "[object String]";
 let isArray = obj => Object.prototype.toString.call(obj) === "[object Array]";
 let isNumber = obj => Object.prototype.toString.call(obj) === "[object Number]";
 
-// 封装成一个判断类型的方法
+// 封裝成一個判斷型別的方法
 let isType = type => obj => {
   return Object.prototype.toString.call(obj) === "[object " + type + "]";
 };
 isType("String")("123"); // true
 isType("Array")([1, 2, 3]); // true
 isType("Number")(123); // true
-// 这里就是一个高阶函数，因为 isType 函数将 obj => { ... } 这一函数作为返回值输出。
+// 這裡就是一個高階函式，因為 isType 函式將 obj => { ... } 這一函式作為返回值輸出。
 ```
 
 ```js
@@ -85,36 +85,36 @@ calculate(sum, 1, 2); // 3
 let students = [{ name: "Asura", grade: 6 }, { name: "Satya", grade: 4 }, { name: "Shakya", grade: 9 }];
 const isApproved = student => student.grade >= 6; // filter
 const byName = obj => obj.name; // map
-// 链式 使用 filter 和 map
+// 鏈式 使用 filter 和 map
 console.log(students.filter(isApproved).map(byName));
 
 // Reduce
 const totalGrades = students.reduce((sum, student) => sum + student.grade, 0);
 totalGrades; // 19
 
-// 对象排序 [逆序则将减号左右的xy互换]
+// 物件排序 [逆序則將減號左右的xy互換]
 [{ id: 1, name: "one" }, { id: 3, name: "three" }, { id: 2, name: "two" }, { id: 5, name: "five" }, { id: 4, name: "four" }].sort((x, y) => x.id - y.id);
 ```
 
-```js 命令式&声明式
-// 命令式 命令式的循环要求你必须先实例化一个数组，而且执行完这个实例化语句之后，解释器才继续执行后面的代码。然后再直接迭代 cars 列表，手动增加计数器，把各种零零散散的东西都展示出来
+```js 命令式&宣告式
+// 命令式 命令式的迴圈要求你必須先例項化一個數組，而且執行完這個例項化語句之後，直譯器才繼續執行後面的程式碼。然後再直接迭代 cars 列表，手動增加計數器，把各種零零散散的東西都展示出來
 var makes = [];
 for (i = 0; i < cars.length; i++) {
   makes.push(cars[i].make);
 }
-// 声明式
+// 宣告式
 var makes = cars.map(function(car) {
   return car.make;
 });
 
-// compose 表达式只是简单地指出了这样一个事实：用户验证是 toUser 和 logIn 两个行为的组合。
+// compose 表示式只是簡單地指出了這樣一個事實：使用者驗證是 toUser 和 logIn 兩個行為的組合。
 
 // 命令式
 var authenticate = function(form) {
   var user = toUser(form);
   return logIn(user);
 };
-// 声明式
+// 宣告式
 var authenticate = compose(
   logIn,
   toUser,
@@ -122,20 +122,20 @@ var authenticate = compose(
 ```
 
 ```js
-// 命令式   获取数组中所有偶数
+// 命令式   獲取陣列中所有偶數
 const even = n => n % 2 == 0;
 const listOfNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 listOfNumbers.filter(even); // [0, 2, 4, 6, 8, 10]
 
-/** 声明式
- *  可以理解为，将filter的条件提取出来，声明一下，然后在filter中使用
+/** 宣告式
+ *  可以理解為，將filter的條件提取出來，宣告一下，然後在filter中使用
  */
-// 获取数组中<3的数
+// 獲取陣列中<3的數
 function smaller(number) {
   return number < this;
 }
 function filterArray(x, listOfNumbers) {
-  // filter函数中的第二个参数表示上面 this， 也就是 x 值
+  // filter函式中的第二個引數表示上面 this， 也就是 x 值
   return listOfNumbers.filter(smaller, x);
 }
 let numbers = [10, 9, 8, 2, 7, 5, 1, 3, 0];
@@ -146,9 +146,9 @@ const olderThan21 = person => person.age > 21;
 const overAge = people => people.filter(olderThan21);
 overAge(people); // [{ name: 'TK', age: 26 }, { name: 'Kazumi', age: 30 }]
 
-// 购物车里类型为 books的总数
+// 購物車裡型別為 books的總數
 let shoppingCart = [{ productTitle: "Functional Programming", type: "books", amount: 10 }, { productTitle: "Kindle", type: "eletronics", amount: 30 }, { productTitle: "Shoes", type: "fashion", amount: 20 }, { productTitle: "Clean Code", type: "books", amount: 60 }];
-// 一个reduce就可以搞定：
+// 一個reduce就可以搞定：
 let sum = shoppingCart.reduce((item, next) => {
   return next.type === "books" ? item + next.amount : item;
 }, 0);
@@ -157,29 +157,29 @@ console.log(sum);
 
 ### curry 柯里化
 
-- 传递给函数一部分参数来调用它，返回一个函数去处理剩下的参数
-- 一个函数有多个参数,把每个参数通过链式的形式返回下一个函数,直到最后返回结果
+- 傳遞給函式一部分引數來呼叫它，返回一個函式去處理剩下的引數
+- 一個函式有多個引數,把每個引數透過鏈式的形式返回下一個函式,直到最後返回結果
 
 ```js
-// 加法函数柯里化   [ES6写法，也是比较正统的函数式写法]
+// 加法函式柯里化   [ES6寫法，也是比較正統的函式式寫法]
 const add = x => y => x + y;
 const increment = add(1);
 const addFive = add(5);
 increment(3); //4
 addFive(10); // 15
 
-//比较容易读懂的ES5写法
+//比較容易讀懂的ES5寫法
 var add = function(x) {
   return function(y) {
     return x + y;
   };
 };
 
-// 对象柯里化
+// 物件柯里化
 const student = name => grade => `Name: ${name} | Grade: ${grade}`;
 student("Matt")(8); // Name: Matt | Grade: 8
 
-// 柯里化函数接口
+// 柯里化函式介面
 var multiple = function(a) {
   return function(b) {
     return +b * a + "";
@@ -198,14 +198,14 @@ var concatArray = function(chars, stylishChar) {
 console.log(concatArray(["1", "2", "3"], multiple(2)));
 console.log(concatArray(["1", "2", "3"], plus(2)));
 
-// 写一个函数，可以连接字符串数组 如 f(['1','2']) => '12'
+// 寫一個函式，可以連線字串陣列 如 f(['1','2']) => '12'
 var concatArray = function(chars) {
   return chars.reduce(function(a, b) {
     return a.concat(b);
   });
 };
 concat(["1", "2", "3"]); // => '123'
-// 将所有数字+1
+// 將所有數字+1
 var concatArray = function(chars, inc) {
   return chars
     .map(function(char) {
@@ -216,7 +216,7 @@ var concatArray = function(chars, inc) {
     });
 };
 console.log(concatArray(["1", "2", "3"], 1)); // => '234'
-// 所有数字乘以2
+// 所有數字乘以2
 var multiple = function(a, b) {
   return +a * b + "";
 };
@@ -238,12 +238,12 @@ $("input[value=male]").onChange(changeGender("male"));
 $("input[value=female]").onChange(changeGender("female"));
 ```
 
-### Compose 代码组合
+### Compose 程式碼組合
 
-- 通过组合两个或更多的函数生成一个新的函数
+- 透過組合兩個或更多的函式生成一個新的函式
 
 ```js
-// 组合两个函数生成一个新的函数
+// 組合兩個函式生成一個新的函式
 const compose = (f, g) => x => f(g(x));
 const toUpperCase = x => x.toUpperCase();
 const exclaim = x => `${x}!`;
@@ -253,7 +253,7 @@ const angry = compose(
 );
 angry("stop this"); // STOP THIS!
 
-// 组合三个函数生成一个新的
+// 組合三個函式生成一個新的
 const compose = (f, g) => x => f(g(x));
 const toUpperCase = x => x.toUpperCase();
 const exclaim = x => `${x}!`;
@@ -267,9 +267,9 @@ const reallyAngry = compose(
 );
 reallyAngry("stop this"); // STOP THIS!!!!!!
 
-// 结合律: （associativity）  无论是把 g 和 h 分到一组，还是把 f 和 g 分到一组都不重要
+// 結合律: （associativity）  無論是把 g 和 h 分到一組，還是把 f 和 g 分到一組都不重要
 // var associative = compose(f, compose(g, h)) == compose(compose(f, g), h);
-// 因调用分组不重要，结果一样。所以可以写一个可变的组合
+// 因呼叫分組不重要，結果一樣。所以可以寫一個可變的組合
 
 groupedTasks = [[{ completed: false, id: 1 }, { completed: true, id: 2 }], [{ completed: false, id: 4 }, { completed: true, id: 3 }]];
 var completedAndSorted = compose(
@@ -279,9 +279,9 @@ var completedAndSorted = compose(
 map(completedAndSorted, groupedTasks);
 ```
 
-### 解构
+### 解構
 
-- 从数组中提取数据或对象使用一种语法混合数组和对象文本的建设。或“模式匹配”。
+- 從陣列中提取資料或物件使用一種語法混合陣列和物件文字的建設。或“模式匹配”。
 
 ```js
 // Select from pattern
@@ -293,7 +293,7 @@ console.log(a, b); // 1 2
 const [a, ...b] = [1, 2, 3];
 console.log(a, b); // 1 [2, 3]
 
-// 可选参数
+// 可選引數
 const ajax = ({ url = "localhost", port: p = 80 }, ...data) => console.log("Url:", url, "Port:", p, "Rest:", data);
 ajax({ url: "someHost" }, "additional", "data", "hello");
 // Url: someHost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
@@ -303,10 +303,10 @@ ajax({}, "additional", "data", "hello");
 
 #### pointfree 模式
 
-- 函数无须提及将要操作的数据是什么
+- 函式無須提及將要操作的資料是什麼
 
 ```js
-// 非 pointfree，因为提到了数据：word
+// 非 pointfree，因為提到了資料：word
 var snakeCase = function(word) {
   return word.toLowerCase().replace(/\s+/gi, "_");
 };
@@ -318,26 +318,26 @@ var snakeCase = compose(
 );
 ```
 
-#### 获取所有偶数
+#### 獲取所有偶數
 
 ```js
-// 该函数接收一个断言[值为true or false]
+// 該函式接收一個斷言[值為true or false]
 const unless = (predicate, fn) => {
   if (!predicate) fn();
 };
-// 查找列表中的偶数
+// 查詢列表中的偶數
 const times = (times, fun) => {
   for (let i = 0; i < times; i++) {
     fun(i);
   }
 };
 /**
- * 参数一:传入一个 number类型的数值
- * 参数二:一个参数为n的函数
- * 使用[unless]函数，其中参数如下:
- * 参数一:[n%2]得偶数
- * 参数二:一个匿名无参函数
- * output:最终输出[number]内所有偶数
+ * 引數一:傳入一個 number型別的數值
+ * 引數二:一個引數為n的函式
+ * 使用[unless]函式，其中引數如下:
+ * 引數一:[n%2]得偶數
+ * 引數二:一個匿名無參函式
+ * output:最終輸出[number]內所有偶數
  */
 times(100, n => {
   unless(n % 2, () => {
@@ -346,13 +346,13 @@ times(100, n => {
 });
 ```
 
-- every 检查数组的所有元素是否为 true
+- every 檢查陣列的所有元素是否為 true
 
 ```js
-/** [实际上低效,应该在遇到第一个不匹配条件的元素时就停止迭代数组]
- * @param {*} arr 传入的数组
- * @param {*} fn 传入的fn需返回一个布尔值
- * 使用[&&]运算确保所有的数组内容遵循fn给出的条件
+/** [實際上低效,應該在遇到第一個不匹配條件的元素時就停止迭代陣列]
+ * @param {*} arr 傳入的陣列
+ * @param {*} fn 傳入的fn需返回一個布林值
+ * 使用[&&]運算確保所有的陣列內容遵循fn給出的條件
  */
 const every = (arr, fn) => {
   let result = true;
@@ -367,45 +367,45 @@ console.log(every([NaN, NaN, 4], isNaN)); // false
 - sortBy 排序
 
 ```js
-/* 接收一个属性，并返回另一个函数 */
+/* 接收一個屬性，並返回另一個函式 */
 const sortBy = property => {
   return (a, b) => {
     let result = a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
     return result;
   };
 };
-// 使用。接收一个属性，并返回另一个函数,返回函数作为[比较函数]传给sort
+// 使用。接收一個屬性，並返回另一個函式,返回函式作為[比較函式]傳給sort
 arr.sort(sortBy("firstName"));
 ```
 
-- unary 函数
+- unary 函式
 
 ```js
 let array = ["1", "2", "3"];
-/* 由于[parseInt]接收两个参数(parse,radix)如果可能该函数会把传入的[parse]转换为数字.
-    如果把[parseInt]传给map函数,map会把index的值传给parseInt的tadix参数。导致结果如下: */
-array.map(parseInt); // 输出结果为: [1,NaN,NaN]
+/* 由於[parseInt]接收兩個引數(parse,radix)如果可能該函式會把傳入的[parse]轉換為數字.
+    如果把[parseInt]傳給map函式,map會把index的值傳給parseInt的tadix引數。導致結果如下: */
+array.map(parseInt); // 輸出結果為: [1,NaN,NaN]
 
 /**
- * 改善以上，使其正确输出。把parseInt函数转换为另一个只接受一个参数的函数。
+ * 改善以上，使其正確輸出。把parseInt函式轉換為另一個只接受一個引數的函式。
  * @param {*} fn
- * 接受一个给定的多参数函数，并把它转换为一个只接受一个参数的函数
- * 检查fn是否有一个长度为1的参数列表,如果没有，就返回一个新函数
- * 它只接受一个参数arg，并用该参数调用fn
+ * 接受一個給定的多引數函式，並把它轉換為一個只接受一個引數的函式
+ * 檢查fn是否有一個長度為1的引數列表,如果沒有，就返回一個新函式
+ * 它只接受一個引數arg，並用該引數呼叫fn
  */
 const unary = fn => (fn.length === 1 ? fn : arg => fn(arg));
-/* 返回了一个新函数(parseInt的克隆体),只接受一个参数。
-如此,map函数传入的index,arr参数就不会对程序产生影响 */
+/* 返回了一個新函式(parseInt的克隆體),只接受一個引數。
+如此,map函式傳入的index,arr引數就不會對程式產生影響 */
 array.map(unary(parseInt)); // [1, 2, 3]
 ```
 
-- once 函数 控制函数被调用的次数
+- once 函式 控制函式被呼叫的次數
 
 ```js
-/* 接受一个参数fn并通过调用它的apply方法返回结果 
-    声明一个done变量，初始值为false。返回的函数会形成一个覆盖它的闭包作用域.
-    返回的函数会访问并检查done是否为true，是则返回undefined,否则将done设置为true[阻止下次执行] 
-    并用必要的参数调用函数fn */
+/* 接受一個引數fn並透過呼叫它的apply方法返回結果 
+    宣告一個done變數，初始值為false。返回的函式會形成一個覆蓋它的閉包作用域.
+    返回的函式會訪問並檢查done是否為true，是則返回undefined,否則將done設定為true[阻止下次執行] 
+    並用必要的引數呼叫函式fn */
 const once = fn => {
   let done = false;
   return function() {
@@ -416,16 +416,16 @@ let doPayment = once(() => {
   console.log("Payment is done");
 });
 doPayment();
-console.log("模拟二次调用:", doPayment()); // undefined
+console.log("模擬二次呼叫:", doPayment()); // undefined
 ```
 
-- memoized 函数 使函数能够记住其计算结果
+- memoized 函式 使函式能夠記住其計算結果
 
 ```js
 const memoized = fn => {
   const lookupTable = {};
-  /* 返回函数将接受一个参数并检查它是否存在 [lookupTable]中
-        如果存在，返回对应值;否则，使用新的输入作为key，fn的结果作为value，更新[lookupTable]对象 */
+  /* 返回函式將接受一個引數並檢查它是否存在 [lookupTable]中
+        如果存在，返回對應值;否則，使用新的輸入作為key，fn的結果作為value，更新[lookupTable]物件 */
   return arg => lookupTable[arg] || (lookupTable[arg] = fn(arg));
 };
 
@@ -439,14 +439,14 @@ console.log(fastFactorial(3)); // 6
 console.log(fastFactorial(7)); //5040
 ```
 
-### 数组的函数式编程
+### 陣列的函數語言程式設計
 
 ### SVG
 
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-// 这条路径将先移动到点 (M10 10) 然后再水平移动80个单位(h 80)，然后下移8个单位 (v 8)，接着左移80个单位 (h -80)，再回到起点处 (z)。
+// 這條路徑將先移動到點 (M10 10) 然後再水平移動80個單位(h 80)，然後下移8個單位 (v 8)，接著左移80個單位 (h -80)，再回到起點處 (z)。
 let p = new Path2D("M10 10 h 80 v 8 h -80 Z");
 ctx.fill(p);
 ```
@@ -457,8 +457,8 @@ let calculateTax = value => {
   return (value / 100) * (100 + percentValue);
 };
 
-/** 优化以上代码
- * 将 [percentValue] 作为函数的参数
+/** 最佳化以上程式碼
+ * 將 [percentValue] 作為函式的引數
  */
 let calculateTax2 = (value, percentValue) => {
   return (value / 100) * (100 + percentValue);
@@ -468,12 +468,12 @@ let calculateTax2 = (value, percentValue) => {
 let identity = i => {
   return i;
 };
-// 用命令式方法迭代数组
+// 用命令式方法迭代陣列
 let arr = [1, 2, 3];
 for (let i = 0; i < arr.length; i++) {
   console.log(arr[i]);
 }
-// 用声明方式迭代数组
+// 用宣告方式迭代陣列
 arr.forEach(element => console.log(element));
 
 const sortBy = property => {
@@ -490,7 +490,7 @@ const sortBy = property => {
 const double = n => n * 2;
 const increment = n => n + 1;
 
-// 没有用管道操作符
+// 沒有用管道運算子
 double(increment(double(5))); // 22
 
 let Chain = {

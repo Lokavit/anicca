@@ -5,73 +5,73 @@ tags: ['code']
 draft: false
 ---
 
-### 语义化 commit
-Added 新添加的功能。
-Changed 对现有功能的变更。
-Deprecated 已经不建议使用，即将移除的功能。
-Removed 已经移除的功能。
-Fixed 对 bug 的修复。
-Security 对安全性的改进
+### 語義化 commit
+Added 新新增的功能。
+Changed 對現有功能的變更。
+Deprecated 已經不建議使用，即將移除的功能。
+Removed 已經移除的功能。
+Fixed 對 bug 的修復。
+Security 對安全性的改進
 
-## 删除历史提交记录
+## 刪除歷史提交記錄
 ```
 git reset --soft HEAD~1
 
 ```
 
-## 操作远程分支
+## 操作遠端分支
 
 ```bash
-git branch -a #列出本地及远程分支
-#删除远程指定分支
+git branch -a #列出本地及遠端分支
+#刪除遠端指定分支
 git push origin -d 分支名
 
 git branch 分支名 #建立分支
-git checkout 分支名 #切换至分支
-git branch -D 分支名 #删除分支
-git push origin 分支名 #推送到远程仓库
-# 将本地master推送到远程指定分支
-git push -f url master:远程分支名
+git checkout 分支名 #切換至分支
+git branch -D 分支名 #刪除分支
+git push origin 分支名 #推送到遠端倉庫
+# 將本地master推送到遠端指定分支
+git push -f url master:遠端分支名
 
-# 本地仓库分支关联远程仓库分支
+# 本地倉庫分支關聯遠端倉庫分支
 git push -set-upstream origin 分支名
 ```
-## 本地推远程仓库
+## 本地推遠端倉庫
 ```bash
-# 远程仓库建同名空仓库
-# 初始化本地项目git
+# 遠端倉庫建同名空倉庫
+# 初始化本地專案git
 $ git init
-# 关联远程仓库
-$ git remote add origin https://……/仓库名.git
-# 关联后，先pull
+# 關聯遠端倉庫
+$ git remote add origin https://……/倉庫名.git
+# 關聯後，先pull
 $ git pull origin master 
-# 此处会抛出错误[fatal: refusing to merge unrelated histories]
+# 此處會丟擲錯誤[fatal: refusing to merge unrelated histories]
 $ git pull origin main --allow-unrelated-histories
-# 将远程库里的文件pull到本地后，正常push操作即可。
+# 將遠端庫裡的檔案pull到本地後，正常push操作即可。
 ```
-## 拉取指定commit的代码
+## 拉取指定commit的程式碼
 ```bash
 # 找到commit的值(完整值)
-$ git checkout <commit的长值>
+$ git checkout <commit的長值>
 ```
 
 ## CentOS 8 & Git
 
-- - 安装 GIT 及依赖 git version 2.27.0
+- - 安裝 GIT 及依賴 git version 2.27.0
 
 ```bash
 mkdir .ssh
-创建文件 authorized_key
-把每个允许的机器的公钥放进来
+建立檔案 authorized_key
+把每個允許的機器的公鑰放進來
 ```
 
-## 卸载并装载最新 GIT
+## 解除安裝並裝載最新 GIT
 
 ```bash
-yum remove git -y # 卸载git
-# 装载基本依赖包
+yum remove git -y # 解除安裝git
+# 裝載基本依賴包
 yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel nss  gcc perl-ExtUtils-MakeMaker -y
-# 解压编译及装载
+# 解壓編譯及裝載
 cd /usr/local/src
 wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.9.5.tar.xz
 tar xf git-2.9.5.tar.xz
@@ -79,136 +79,136 @@ cd git-2.9.5
 make prefix=/usr/local/git all
 make prefix=/usr/local/git install
 
-# 配置环境变量
+# 配置環境變數
 echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
 source /etc/bashrc
-git version # 查看版本号
+git version # 檢視版本號
 ```
 
-## 搭建 GIT 服务器
+## 搭建 GIT 伺服器
 
 ```bash
-# 新建git仓库主目录 可放在/var下，用于存放所有仓库的.git(bare裸库)
+# 新建git倉庫主目錄 可放在/var下，用於存放所有倉庫的.git(bare裸庫)
 mkdir gitrepos
-# 查看用户列表
+# 檢視使用者列表
 cat /etc/passwd
-# 新建访问用户 生成于/home/zen家目录
+# 新建訪問使用者 生成於/home/zen家目錄
 useradd zen
-# 给用户设置密码，用于拉取和提交代码
+# 給使用者設定密碼，用於拉取和提交程式碼
 passwd zen
 
-# 变更git仓库的所有者到任何人 ，赋予nobody就是把权限给了所有人
+# 變更git倉庫的所有者到任何人 ，賦予nobody就是把許可權給了所有人
 chown -R nobody:nobody /var/gitrepos
 ```
 
-## 验证 git 服务器
+## 驗證 git 伺服器
 
 ```bash
-# 在/var/gitrepos下创建裸库
-git init --bare /var/gitrepos/项目名.git
-# 修改读写权限，否则会报错拒绝提交
-chmod -R 777 /var/gitrepos/项目名.git
+# 在/var/gitrepos下建立裸庫
+git init --bare /var/gitrepos/專案名.git
+# 修改讀寫許可權，否則會報錯拒絕提交
+chmod -R 777 /var/gitrepos/專案名.git
 
-# 客户端拉取，也可以在服务器找对应地方拉取该仓库
+# 客戶端拉取，也可以在伺服器找對應地方拉取該倉庫
 git clone http://114.96.107.178:88/var/gitrepos/test.git
-# 拉取下来是空仓库，添加内容，按照常用操作git形式提交
+# 拉取下來是空倉庫，新增內容，按照常用操作git形式提交
 git push
-# 在服务器上的www/wwwroot/下拉取仓库
+# 在伺服器上的www/wwwroot/下拉取倉庫
 git clone http://114.96.107.178:88/var/gitrepos/test.git
-# 后续持续推拉仓库操作
-## 在服务器上找不到push的代码。因其为仓库，而非文件系统。
+# 後續持續推拉倉庫操作
+## 在伺服器上找不到push的程式碼。因其為倉庫，而非檔案系統。
 
 git checkout master # 是否使用？
 
-# 服务器端存放的叫裸库(bare)，仓库的.git/目录下面的那些东西，不包含工作区(working space)。
-# 直接git clone --bare也可以直接拿到裸库做服务端，从裸库还原出工作区只需要git clone一次即可。
+# 伺服器端存放的叫裸庫(bare)，倉庫的.git/目錄下面的那些東西，不包含工作區(working space)。
+# 直接git clone --bare也可以直接拿到裸庫做服務端，從裸庫還原出工作區只需要git clone一次即可。
 
-# 报错
+# 報錯
 bash: git-upload-pack: command not found
 fatal: Could not read from remote repository.
 fatal: Could not read from remote repository.
 fatal: Could not read from remote repository.
-# 在linux命令行输入如下命令即可解决
+# 在linux命令列輸入如下命令即可解決
 ln -s /usr/local/git/bin/git-upload-pack /usr/bin/git-upload-pack
 ```
 
 ```bash
-git init # 初始化 使用当前目录作为Git仓库
-git init qqn # 初始化 使用指定目录作为Git仓库
-git commit -m '提交说明' # Linux
-git commit -m "提交说明" # Windows
+git init # 初始化 使用當前目錄作為Git倉庫
+git init qqn # 初始化 使用指定目錄作為Git倉庫
+git commit -m '提交說明' # Linux
+git commit -m "提交說明" # Windows
 ```
 
-## VSCode 设置同步
+## VSCode 設定同步
 
 - Settings sync on
 
 ```bash
 $ git branch modal # 新建分支
-$ git checkout modal # 切换分支
+$ git checkout modal # 切換分支
 $ git status
 $ git add .
 $ git status
-$ git checkout master # 切换到住分支
+$ git checkout master # 切換到住分支
 $ git merge modal # 提交分支
 
-$ git push origin modal # 提交分支到远程
+$ git push origin modal # 提交分支到遠端
 
-$ git fetch origin master # 下载最新的版本到origin/master分支上
-$ git log -p master..origin/master # 比较本地的master分支和origin/master分支的差别
-$ git merge origin/master # 最后进行合并
+$ git fetch origin master # 下載最新的版本到origin/master分支上
+$ git log -p master..origin/master # 比較本地的master分支和origin/master分支的差別
+$ git merge origin/master # 最後進行合併
 
-## 解决冲突之后
+## 解決衝突之後
 $ git status
 $ git add .
 $ git status
 $ git commit -m "++"
 
-## 合并到 master
+## 合併到 master
 $ git checkout master
 $ git merge modal
 $ git push origin
 
-## 删除本地及远程分支
-$ git branch -a # 查看所有分支
-$ git branch -d router # 删除本地 router分支
-$ git push origin --delete router # 删除远程 router分支
+## 刪除本地及遠端分支
+$ git branch -a # 檢視所有分支
+$ git branch -d router # 刪除本地 router分支
+$ git push origin --delete router # 刪除遠端 router分支
 ```
 
-## Git 多仓库同步
+## Git 多倉庫同步
 
 ```bash
-# GitHub与局域网GitLab共享一个项目
-# 在两个仓库里分别创建【空】项目[不含READMME.md文件]
-# 本地建立 shiperp ,并初始化 git
+# GitHub與區域網GitLab共享一個專案
+# 在兩個倉庫裡分別建立【空】專案[不含READMME.md檔案]
+# 本地建立 shiperp ,並初始化 git
 $ cd git init
-# 关联github远程仓库
+# 關聯github遠端倉庫
 $ git remote add lokavit https://github.com/Lokavit/shiperp.git
-# 关联局域网gitlab远程仓库
-$ git remote add satya http://局域网地址/frontend/shiperp.git
-$ git remote -v # 查看远程仓库
-# 新建一个 README.md文件
+# 關聯區域網gitlab遠端倉庫
+$ git remote add satya http://區域網地址/frontend/shiperp.git
+$ git remote -v # 檢視遠端倉庫
+# 新建一個 README.md檔案
 $ git status  git add .   git status
 $ git commit -m "Add README.md"
-$ git push lokavit master # 推送到 github的同名项目中
-$ git push satya master # 推送到 gitlab的同名项目中
+$ git push lokavit master # 推送到 github的同名專案中
+$ git push satya master # 推送到 gitlab的同名專案中
 ```
 
-- 以下为其他情况，或许可以排错
+- 以下為其他情況，或許可以排錯
 
 ```bash
-# 在README.md里编辑一下
-$ git status # 查看文件状态
-$ git add . # 添加文件
-$ git status # 查看暂存状态
+# 在README.md裡編輯一下
+$ git status # 檢視檔案狀態
+$ git add . # 新增檔案
+$ git status # 檢視暫存狀態
 $ git commit -m "Add Content 2" # 提交msg
-$ git pull origin master # 拉去 origin 仓库主分支
-$ git push origin master # 提交 origin 仓库主分支
-$ git pull mirror master # 拉去 mirror 仓库主分支
-$ git push mirror master # 提交 mirror 仓库主分支
+$ git pull origin master # 拉去 origin 倉庫主分支
+$ git push origin master # 提交 origin 倉庫主分支
+$ git pull mirror master # 拉去 mirror 倉庫主分支
+$ git push mirror master # 提交 mirror 倉庫主分支
 
-## 其他错误处理
-$ git pull mirror master --allow-unrelated-histories # 确定合并
+## 其他錯誤處理
+$ git pull mirror master --allow-unrelated-histories # 確定合併
 ```
 
 ```bash
@@ -223,64 +223,64 @@ $ git pull mirror master --allow-unrelated-histories # 确定合并
 	url = https://github.com/Lokavit/shiperp.git
 	fetch = +refs/heads/*:refs/remotes/lokavit/*
 [remote "satya"]
-	url = http://局域网地址/frontend/shiperp.git
+	url = http://區域網地址/frontend/shiperp.git
 	fetch = +refs/heads/*:refs/remotes/satya/*
 ```
 
-## gitBash 打开 VSCode
+## gitBash 開啟 VSCode
 
 ```Bash
-# C:\Users\username/.bash_profile文件
+# C:\Users\username/.bash_profile檔案
 # generated by Git for Windows
 test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
 
-# OPEN Program 注意空格转义及斜线转义。
+# OPEN Program 注意空格轉義及斜線轉義。
 alias vscode="D:/\Program\ Files/\Microsoft\ VS\ Code/Code.exe"
 # VUE
 alias vue='winpty vue.cmd'
 ```
 
-## 本地创建项目，连接远程仓库
+## 本地建立專案，連線遠端倉庫
 
-在 Github 上創建一個空倉庫，亦可見到如下提示
+在 Github 上建立一個空倉庫，亦可見到如下提示
 
 ```Bash
-# GitHub上创建项目(空)仓库,本地创建项目
-$ cd 项目根目录 # 进入项目根目录
+# GitHub上建立專案(空)倉庫,本地建立專案
+$ cd 專案根目錄 # 進入專案根目錄
 $ git init # 初始化
-$ git status # 查看文件状态
-$ git add .  # 添加到暂存区
-$ git status # 查看文件状态
-$ git remote add origin 仓库地址 # 连接到远程仓库
-$ git remote -v # 查看是否连接成功
-$ git push -u origin master # 当前分支关联到远程分支
+$ git status # 檢視檔案狀態
+$ git add .  # 新增到暫存區
+$ git status # 檢視檔案狀態
+$ git remote add origin 倉庫地址 # 連線到遠端倉庫
+$ git remote -v # 檢視是否連線成功
+$ git push -u origin master # 當前分支關聯到遠端分支
 ```
 
-## git 多人协作
+## git 多人協作
 
 ```Bash
 $ git branch modal # 新建分支
-$ git checkout modal # 切换分支
+$ git checkout modal # 切換分支
 $ git status
 $ git add .
 $ git status
-$ git checkout master # 切换到住分支
+$ git checkout master # 切換到住分支
 $ git merge modal # 提交分支
 
-$ git push origin modal # 提交分支到远程
+$ git push origin modal # 提交分支到遠端
 
-$ git fetch origin master # 下载最新的版本到origin/master分支上
-$ git log -p master..origin/master # 比较本地的master分支和origin/master分支的差别
-$ git merge origin/master # 最后进行合并
+$ git fetch origin master # 下載最新的版本到origin/master分支上
+$ git log -p master..origin/master # 比較本地的master分支和origin/master分支的差別
+$ git merge origin/master # 最後進行合併
 
-## 解决冲突之后
+## 解決衝突之後
 $ git status
 $ git add .
 $ git status
 $ git commit -m "++"
 
-## 合并到 master
+## 合併到 master
 $ git checkout master
 $ git merge modal
 $ git push origin
@@ -290,165 +290,165 @@ $ git push origin
 ## git bash 使用 tree
 
 ```Bash
-# 将tree.exe放入git.usr/bin中
-$ tree -d # 显示目录名称而非内容
-$ tree -L 3 # 指定层级
-# 命令集，详见末尾
+# 將tree.exe放入git.usr/bin中
+$ tree -d # 顯示目錄名稱而非內容
+$ tree -L 3 # 指定層級
+# 命令集，詳見末尾
 ```
 
 > warning: LF will be replaced by CRLF in ……………….
 
 ```Bash
-$ git config --global core.autocrlf true # 当签出代码时，LF会被转换成CRLF (Win)
-$ git config --global core.autocrlf input # 提交时把CRLF转换成LF(Mac Linux)
-$ git config --global core.autocrlf false # 仅运行在Windows上的项目
+$ git config --global core.autocrlf true # 當簽出程式碼時，LF會被轉換成CRLF (Win)
+$ git config --global core.autocrlf input # 提交時把CRLF轉換成LF(Mac Linux)
+$ git config --global core.autocrlf false # 僅執行在Windows上的專案
 ```
 
-## Git 拉取远程分支
+## Git 拉取遠端分支
 
 ```Bash
 $ git init # 本地初始化
-$ git remote add origin 仓库地址  # 连接远程仓库
-$ git fetch origin dev # dev为远程仓库的分支名
-# 在本地创建分支dev并切换到该分支
+$ git remote add origin 倉庫地址  # 連線遠端倉庫
+$ git fetch origin dev # dev為遠端倉庫的分支名
+# 在本地建立分支dev並切換到該分支
 $ git checkout -b dev origin/dev
-$ git pull origin dev # 拉取 git上dev分支上的内容
+$ git pull origin dev # 拉取 git上dev分支上的內容
 ```
 
-### Git 术语及名词解释
+### Git 術語及名詞解釋
 
-**Workspace**：工作区
+**Workspace**：工作區
 
-- 通过 *git init*创建代码库的所有文件,不包含*.git*(版本库文件)
+- 透過 *git init*建立程式碼庫的所有檔案,不包含*.git*(版本庫檔案)
 
-**Stage/Index**：暂存区/索引
+**Stage/Index**：暫存區/索引
 
-- 通过*git add ./(地址)*添加修改;
-- 通过*git status* 可以看到修改的状态.
+- 透過*git add ./(地址)*新增修改;
+- 透過*git status* 可以看到修改的狀態.
 
-**Repository**：仓库/本地存储库
+**Repository**：倉庫/本地儲存庫
 
-**Remote**：远程仓库
+**Remote**：遠端倉庫
 
-**git status -s** 查看文件状态
+**git status -s** 檢視檔案狀態
 
-- _??_：表示新添加未跟踪的文件
-- _A _：表示新添加到暂存区中的文件
-- _M _：表示修改过的文件
-- _右 M_：表示该文件被修改但未放入暂存区;
-- _左 M_：表示该文件被修改并放入暂存区;
-- _双 M_：表示工作区修改并提交到暂存区后,又在工作区中被修改,所以左右皆有.
-- _R _：表示该文件被重命名
+- _??_：表示新新增未跟蹤的檔案
+- _A _：表示新新增到暫存區中的檔案
+- _M _：表示修改過的檔案
+- _右 M_：表示該檔案被修改但未放入暫存區;
+- _左 M_：表示該檔案被修改並放入暫存區;
+- _雙 M_：表示工作區修改並提交到暫存區後,又在工作區中被修改,所以左右皆有.
+- _R _：表示該檔案被重新命名
 
 ### 基本操作流程
 
-**常规提交-推送流程**
+**常規提交-推送流程**
 
 ```Bash
-$ git status  # 查看文件状态,确定是否全部以放入暂存区
-$ git add .  # 将未放入暂存区的文件放入暂存区
+$ git status  # 檢視檔案狀態,確定是否全部以放入暫存區
+$ git add .  # 將未放入暫存區的檔案放入暫存區
 $ git commit # 提交
-$ git push  # 推送到远程仓库
+$ git push  # 推送到遠端倉庫
 ```
 
-**跳过暂存区提交流程**
+**跳過暫存區提交流程**
 
 ```Bash
-$ git status # 查看文件状态,确定是否全部以放入暂存区
-$ git commit -a -m '更新说明'
+$ git status # 檢視檔案狀態,確定是否全部以放入暫存區
+$ git commit -a -m '更新說明'
 ```
 
-**查看被打分支下的文件**
+**檢視被打分支下的檔案**
 
 ```Bash
-$ ls # 查看当前目录下的所有文件夹及文件;
-$ cd dir # 打开某文件夹,继续*ls*查看;
+$ ls # 檢視當前目錄下的所有資料夾及檔案;
+$ cd dir # 開啟某資料夾,繼續*ls*檢視;
 ```
 
-**删除文件**
+**刪除檔案**
 
 ```Bash
-$ git rm FileName  # 删除指定文件名的文件
-$ git rm FileName -r -f # 删除指定文件夹下所有文件
-$ git status -s  # 确认文件状态
-$ git commit -m 'DeleteFIle' # 提交版本的说明
-$ git push  #  推送到远程仓库
+$ git rm FileName  # 刪除指定檔名的檔案
+$ git rm FileName -r -f # 刪除指定資料夾下所有檔案
+$ git status -s  # 確認檔案狀態
+$ git commit -m 'DeleteFIle' # 提交版本的說明
+$ git push  #  推送到遠端倉庫
 ```
 
-**Git 操作目录**
+**Git 操作目錄**
 
 ```Bash
-$ cd C:/ # 切换磁盘,
-## === 进入带空格的目录=== ##
-$ cd "Program Files" # 第一种：将文件名加上""
-$ cd Program" "Files # 第二种：将空格加上""
+$ cd C:/ # 切換磁碟,
+## === 進入帶空格的目錄=== ##
+$ cd "Program Files" # 第一種：將檔名加上""
+$ cd Program" "Files # 第二種：將空格加上""
 ```
 
 ### Git 常用命令
 
 ```Bash
-$ git config --global user.name "yourname" # 配置全局用户信息
-$ git config --global user.email 123@456.com # 配置全局用户信息
+$ git config --global user.name "yourname" # 配置全域性使用者資訊
+$ git config --global user.email 123@456.com # 配置全域性使用者資訊
 
-$ git config --list  # 查看配置信息
+$ git config --list  # 檢視配置資訊
 
-$ git config --global core.editor vim # 自定义编辑器
+$ git config --global core.editor vim # 自定義編輯器
 
-$ git helep # 查看帮助手册
-$ git --help # 查看帮助手册
+$ git helep # 檢視幫助手冊
+$ git --help # 檢視幫助手冊
 
-$ git help config # 查看config命令手册
+$ git help config # 檢視config命令手冊
 
-$ git clone url(仓库地址) # 克隆仓库
-$ git clone url(仓库地址) MyGit # 克隆仓库,自定义本地存储库的名字
+$ git clone url(倉庫地址) # 克隆倉庫
+$ git clone url(倉庫地址) MyGit # 克隆倉庫,自定義本地儲存庫的名字
 
-$ git init #  初始化仓库 (该命令在需管理的本地存储库目录下执行)
+$ git init #  初始化倉庫 (該命令在需管理的本地儲存庫目錄下執行)
 
-$ git add Test.cs # 对文件跟踪 ,使文件处于暂存状态(允许该命令后再次修改的文件,需要再次允许该命令)
-$ git commit -m 'Update Version'  # 提交,备注信息自定义
+$ git add Test.cs # 對檔案跟蹤 ,使檔案處於暫存狀態(允許該命令後再次修改的檔案,需要再次允許該命令)
+$ git commit -m 'Update Version'  # 提交,備註資訊自定義
 
-$ git status # 查看当前文件处于什么状态
-$ git status -s # 查看当前文件状态(紧凑版)
+$ git status # 檢視當前檔案處於什麼狀態
+$ git status -s # 檢視當前檔案狀態(緊湊版)
 
-$ git diff #  查看文件具体修改的地方(只显示尚未暂存的改动，而非自上次提交以来的所有改动。)
-$ git diff --cached # 查看已经暂存起来的变化
+$ git diff #  檢視檔案具體修改的地方(只顯示尚未暫存的改動，而非自上次提交以來的所有改動。)
+$ git diff --cached # 檢視已經暫存起來的變化
 
-$ git rm # 移除文件(将文件从暂存区中移除)
-$ git rm log/\*.log # 删除log/目录下扩展名为.log的所有文件
-$ git rm \*~   # 删除以 ~ 结尾的所有文件。
+$ git rm # 移除檔案(將檔案從暫存區中移除)
+$ git rm log/\*.log # 刪除log/目錄下副檔名為.log的所有檔案
+$ git rm \*~   # 刪除以 ~ 結尾的所有檔案。
 
-$ git mv file_from file_to #  文件重命名
+$ git mv file_from file_to #  檔案重新命名
 
-$ git log  # 查看提交历史
-$ git log -p # 显示每次提交的差异
-$ git log -p -2 # 仅显示最近两次提交
-$ git log --stat # 查看每次提交简略的统计信息
-$ git log --pretty=online  # 将每个提交放在一行显示
+$ git log  # 檢視提交歷史
+$ git log -p # 顯示每次提交的差異
+$ git log -p -2 # 僅顯示最近兩次提交
+$ git log --stat # 檢視每次提交簡略的統計資訊
+$ git log --pretty=online  # 將每個提交放在一行顯示
 
-$git commit --amend # 重新提交(将暂存区的文件提交,如未作修改,则只变更提交信息)
+$git commit --amend # 重新提交(將暫存區的檔案提交,如未作修改,則只變更提交資訊)
 
-# 提交后发现忘记了暂存某些需要的修改
+# 提交後發現忘記了暫存某些需要的修改
 $ git commit -m 'Update commit'
-$ git add (忘记的文件)
-$ git commit --amend # 最终只有一个提交(第二次提交代替第一次提交的结果)
+$ git add (忘記的檔案)
+$ git commit --amend # 最終只有一個提交(第二次提交代替第一次提交的結果)
 
-$ git reset HEAD my.txt # 取消暂存
+$ git reset HEAD my.txt # 取消暫存
 
-$ git checkout -- my.txt # 撤销之前所做的更改
+$ git checkout -- my.txt # 撤銷之前所做的更改
 
 
-$ git remote  # 查看已配置的远程仓库服务器
-$ git remote -v  # 显示需要读写远程仓库使用的Git保存的简写与其对应的URL
+$ git remote  # 檢視已配置的遠端倉庫伺服器
+$ git remote -v  # 顯示需要讀寫遠端倉庫使用的Git儲存的簡寫與其對應的URL
 
-$ git remote add test url(远程仓库地址) # 添加新的远程仓库，并指定一个可以轻松引用的简写
-# 此时,可以用 test 来代替 url
+$ git remote add test url(遠端倉庫地址) # 新增新的遠端倉庫，並指定一個可以輕鬆引用的簡寫
+# 此時,可以用 test 來代替 url
 
-$ git fetch [remote-name] #  拉取远程仓库
-$ git fetch test  #  拉取test的远程仓库
+$ git fetch [remote-name] #  拉取遠端倉庫
+$ git fetch test  #  拉取test的遠端倉庫
 
-$ git pull  # 自动抓取后,合并远程分支到当前分支
+$ git pull  # 自動抓取後,合併遠端分支到當前分支
 
-$ git push [remote-name] [branch-name]  # 推送到远程仓库
+$ git push [remote-name] [branch-name]  # 推送到遠端倉庫
 $ git push origon master
 
 ```
@@ -457,32 +457,32 @@ $ git push origon master
 
 ## Git Bash 常用命令
 
-### 文件夹操作
+### 資料夾操作
 
 ```Bash
-$ mkdir 文件夹名  # 创建文件夹
-$ mkdir 文件夹名 && cd 文件夹名  # 创建并打开文件夹
-$ rm -r 文件夹名  # 删除文件夹
-$ cd  # 切换到某目录下
-$ cd ..  # 退回到上一目录
-$ pwd  # 显示当前目录路径
-$ ls  # 列出当前目录中所有文件
-$ ll  # 列出当前目录所有文件，详细版
+$ mkdir 資料夾名  # 建立資料夾
+$ mkdir 資料夾名 && cd 資料夾名  # 建立並開啟資料夾
+$ rm -r 資料夾名  # 刪除資料夾
+$ cd  # 切換到某目錄下
+$ cd ..  # 退回到上一目錄
+$ pwd  # 顯示當前目錄路徑
+$ ls  # 列出當前目錄中所有檔案
+$ ll  # 列出當前目錄所有檔案，詳細版
 ```
 
-### 文件操作
+### 檔案操作
 
 ```Bash
-$ touch 文件名.后缀名  # 新建文件
-$ rm 文件名.后缀名  # 删除文件
-$ vi 文件名.后缀名  # 新建文件并进入编辑状态。
-$ vi index.html encoding:utf8  # 创建文件指定编码格式
-# 注：vi为linux文本编辑器,该命令实则进入vi程序。
-默认为命令模式，按下 i 切换为编辑模式。
-输入内容，按esc退出编辑模式, 按 :x 退出并保存，回到命令行界面。
+$ touch 檔名.字尾名  # 新建檔案
+$ rm 檔名.字尾名  # 刪除檔案
+$ vi 檔名.字尾名  # 新建檔案並進入編輯狀態。
+$ vi index.html encoding:utf8  # 建立檔案指定編碼格式
+# 注：vi為linux文字編輯器,該命令實則進入vi程式。
+預設為命令模式，按下 i 切換為編輯模式。
+輸入內容，按esc退出編輯模式, 按 :x 退出並儲存，回到命令列介面。
 
-$ mv 文件名.后缀名 目标文件夹
-$ mv index.js src  # 表示把当前的index.js文件移动到src文件夹下
+$ mv 檔名.字尾名 目標資料夾
+$ mv index.js src  # 表示把當前的index.js檔案移動到src資料夾下
 
 ```
 
@@ -492,24 +492,24 @@ $ mv index.js src  # 表示把当前的index.js文件移动到src文件夹下
 $ rest  # 清屏
 ```
 
-## 在 Git Bash 中用某程序打开某文件
+## 在 Git Bash 中用某程式開啟某檔案
 
-### 在 Git Bash 中用 Chrome 打开 index.html 文件
+### 在 Git Bash 中用 Chrome 開啟 index.html 檔案
 
-- 创建一个文件，命名为需要的命令，如 chrome(无后缀名)
+- 建立一個檔案，命名為需要的命令，如 chrome(無後綴名)
 
 ```Bash
 #!/bin/sh
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" $1 &
 
-## 注释：
-第一行表示这是一个shell脚本
-第二行是chrome的装载目录
-$1 取命令之后输入的参数
-& 此命令在后台打开，不会阻塞git bash
+## 註釋：
+第一行表示這是一個shell指令碼
+第二行是chrome的裝載目錄
+$1 取命令之後輸入的引數
+& 此命令在後臺開啟，不會阻塞git bash
 ```
 
-- 将该文件保存在 Git
+- 將該檔案儲存在 Git
 
 ```Bash
 D:\Program Files\Git\mingw64\bin
@@ -518,10 +518,10 @@ D:\Program Files\Git\mingw64\bin
 - 使用方式
 
 ```Bash
-$ chrome index.html  # 即可用Chrome浏览器打开html文件
+$ chrome index.html  # 即可用Chrome瀏覽器開啟html檔案
 ```
 
-过滤掉不需要提交到远程仓库的文件
+過濾掉不需要提交到遠端倉庫的檔案
 
 ```.gitignore
 /node_modules
