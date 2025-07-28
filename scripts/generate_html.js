@@ -10,10 +10,10 @@ const CONTENT_REPO_NAME = "Anicca"; // 你的內容倉庫名
 
 // 定義頂層內容分類，用於主索引頁面和遍歷
 const topLevelContentCategories = {
-  logs: "随笔",
-  novel: "原创小说",
-  pili: "霹雳布袋戏",
-  tech: "编程遊戲",
+  logs: "隨筆",
+  novel: "原創小說",
+  pili: "霹靂布袋戲",
+  tech: "編程遊戲",
 };
 
 // --- 主題顏色配置 ---
