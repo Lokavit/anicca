@@ -10,17 +10,17 @@ const CONTENT_REPO_NAME = "Anicca"; // 你的內容倉庫名
 
 // 定義頂層內容分類，用於主索引頁面和遍歷
 const topLevelContentCategories = {
-  logs: "隨筆",
-  novel: "原創小說",
-  pili: "霹靂布袋戲",
-  tech: "編程遊戲",
+  essays: "Essays",
+  novel: "Novel",
+  pili: "PILI",
+  coding: "Coding",
 };
 
 // --- 主題顏色配置 ---
 const themeColors = {
   background: "#121212", // 暗色背景
   textColor: "#E0E0E0", // 正文文字顏色 (淺灰，確保可讀性)
-  linkPrimary: "#00CED1", // teal，非正文內容的文字顏色（用於主要鏈接）
+  linkPrimary: "#00FF41", // teal，非正文內容的文字顏色（用於主要鏈接）
   linkSecondary: "#00FFFF", // aqua，非正文內容的文字顏色（用於次要鏈接或懸停效果）
   containerBg: "#1E1E1E", // 容器背景色，比主背景稍亮
   borderColor: "#333333", // 邊框顏色

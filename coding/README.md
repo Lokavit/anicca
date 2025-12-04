@@ -1,5 +1,5 @@
 - 調整個人網站，將編程與小說完全分開，在歡迎頁面給出指向，未來可以增加模板庫、遊戲、示例等。
-- - 編程 `username.github.io/tech/`
+- - 編程 `username.github.io/coding/`
 - - 小說 `username.github.io/novel/`
 - - 遊戲 `username.github.io/games/`
 - - 模板 `username.github.io/template/`
