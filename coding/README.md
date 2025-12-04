@@ -1,16 +1,3 @@
-- 調整個人網站，將編程與小說完全分開，在歡迎頁面給出指向，未來可以增加模板庫、遊戲、示例等。
-- - 編程 `username.github.io/coding/`
-- - 小說 `username.github.io/novel/`
-- - 遊戲 `username.github.io/games/`
-- - 模板 `username.github.io/template/`
-
-成品放在 ThemeForest 或 Gumroad 上賣 $10 - $20。
-浏览器插件 (Chrome Extension)
-
-====
-
-====
-
 # IDEA & ACTION
 
 - CS50 2023
