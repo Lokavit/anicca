@@ -102,7 +102,7 @@ async function processDirectory(
     currentDirIndexContent = docHtmlContent; // 如果有 _doc.md，用它的內容作為索引頁主體
   } else {
     // 如果沒有 _doc.md，生成一個默認列表
-    currentDirIndexContent += `<h2>${currentDirTitle} - 內容列表</h2>`;
+    currentDirIndexContent += `<h2>${currentDirTitle} - List</h2>`;
   }
 
   currentDirIndexContent += `<ul>`;
@@ -128,7 +128,7 @@ async function processDirectory(
   fs.writeFileSync(
     path.join(currentOutputPath, "index.html"),
     createFullHtmlPage(
-      `${currentDirTitle} 索引`,
+      `${currentDirTitle} Index`,
       currentDirIndexContent,
       relativePathToRoot
     )
@@ -209,9 +209,7 @@ async function generateAllContent() {
     const outputPath = path.join(outputHtmlDir, folderName);
     const relativeUrlPath = folderName; // 相對於根輸出目錄的 URL 路徑
 
-    mainIndexHtmlContent += `<div class="category-section"><h2>${topLevelContentCategories[folderName]}</h2><ul>`;
-    mainIndexHtmlContent += `<li><a href="${folderName}/index.html">進入 ${topLevelContentCategories[folderName]} 目錄</a></li>`; // 每個頂層分類都有一個 index.html
-    mainIndexHtmlContent += `</ul></div>`;
+    mainIndexHtmlContent += `<div class="category-section"><a href="${folderName}/index.html"><h2>${topLevelContentCategories[folderName]}</h2></a></div>`;
 
     // 確保源文件夾存在，否則 processDirectory 會出錯
     if (fs.existsSync(sourcePath) && fs.lstatSync(sourcePath).isDirectory()) {
