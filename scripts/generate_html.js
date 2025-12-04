@@ -5,7 +5,7 @@ const marked = require("marked");
 // --- 配置部分 ---
 const contentSourceDir = process.env.CONTENT_SOURCE_DIR || "anicca-content";
 const outputHtmlDir = process.env.OUTPUT_HTML_DIR || "generated_html_output";
-const SITE_USERNAME = "Lokavit"; // 你的 GitHub 用戶名
+const SITE_USERNAME = "Monk"; // 你的 GitHub 用戶名
 const CONTENT_REPO_NAME = "Anicca"; // 你的內容倉庫名
 
 // 定義頂層內容分類，用於主索引頁面和遍歷
@@ -14,16 +14,6 @@ const topLevelContentCategories = {
   novel: "Novel",
   pili: "PILI",
   coding: "Coding",
-};
-
-// --- 主題顏色配置 ---
-const themeColors = {
-  background: "#121212", // 暗色背景
-  textColor: "#E0E0E0", // 正文文字顏色 (淺灰，確保可讀性)
-  linkPrimary: "#00FF41", // teal，非正文內容的文字顏色（用於主要鏈接）
-  linkSecondary: "#00FFFF", // aqua，非正文內容的文字顏色（用於次要鏈接或懸停效果）
-  containerBg: "#1E1E1E", // 容器背景色，比主背景稍亮
-  borderColor: "#333333", // 邊框顏色
 };
 
 // --- HTML 模板函數 ---
@@ -35,92 +25,31 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${title} - ${SITE_USERNAME}'s ${CONTENT_REPO_NAME}</title>
+            <link rel="stylesheet" href="../../index.css" />
             <style>
-                body {
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    line-height: 1.6;
-                    margin: 0;
-                    padding: 2em;
-                    background-color: ${themeColors.background};
-                    color: ${themeColors.textColor};
-                }
-                .container {
-                    max-width: 800px;
-                    margin: auto;
-                    background: ${themeColors.containerBg};
-                    padding: 20px 30px;
-                    border-radius: 8px;
-                    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-                    border: 1px solid ${themeColors.borderColor};
-                }
-                h1, h2, h3, h4, h5, h6 {
-                    color: ${themeColors.linkPrimary}; /* 標題使用 teal */
-                    border-bottom: 1px solid ${themeColors.borderColor};
-                    padding-bottom: 0.3em;
-                    margin-top: 1.5em;
-                }
-                h1 { font-size: 2.2em; }
-                h2 { font-size: 1.8em; }
-                ul { list-style-type: none; padding: 0; }
-                li { margin-bottom: 0.5em; }
-                a {
-                    color: ${themeColors.linkPrimary}; /* 鏈接使用 teal */
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                }
-                a:hover {
-                    color: ${themeColors.linkSecondary}; /* 懸停時變為 aqua */
-                    text-decoration: underline;
-                }
-                .back-link {
-                    display: block;
-                    margin-bottom: 1.5em;
-                    font-size: 0.9em;
-                    color: ${themeColors.linkSecondary}; /* 返回鏈接使用 aqua */
-                }
-                pre {
-                    background-color: #2D2D2D; /* 代碼塊背景 */
-                    padding: 1em;
-                    border-radius: 4px;
-                    overflow-x: auto;
-                    color: ${themeColors.textColor};
-                    border: 1px solid ${themeColors.borderColor};
-                }
-                code {
-                    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
-                    background-color: #3C3C3C; /* 行內代碼背景 */
-                    padding: 0.2em 0.4em;
-                    border-radius: 3px;
-                }
-                blockquote {
-                    border-left: 4px solid ${themeColors.linkPrimary};
-                    margin: 1.5em 0;
-                    padding: 0.5em 1em;
-                    background-color: #282828;
-                    color: ${themeColors.textColor};
-                }
-                table {
-                    width: 100%;
-                    border-collapse: collapse;
-                    margin: 1.5em 0;
-                }
-                th, td {
-                    border: 1px solid ${themeColors.borderColor};
-                    padding: 0.8em;
-                    text-align: left;
-                }
-                th {
-                    background-color: #282828;
-                    color: ${themeColors.linkPrimary};
-                }
+              .container {
+                padding: 20px 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                border: 1px solid #333333;
+              }
             </style>
-        </head>
-        <body>
+          </head>
+          <body>
+            <header class="flex items-center justify-between" style="gap: 8px">
+              <div>
+                <h1 class="hader_site_name">Monk's Personal Site</h1>
+                <div class="hader_site_tip">Novel. Coding. Essays. Games</div>
+              </div>
+              <div class="flex-1"></div>
+              <div></div>
+            </header>
+            <main style="padding-top: 20px">
             <div class="container">
                 <p class="back-link"><a href="${relativePathToRoot}index.html">&lt; 返回 Anicca 總索引</a></p>
                 <h1>${title}</h1>
                 ${content}
-            </div>
+            </div>  </main>
         </body>
         </html>
     `;
@@ -252,61 +181,26 @@ async function generateAllContent() {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${SITE_USERNAME}'s ${CONTENT_REPO_NAME} Content</title>
+            <link rel="stylesheet" href="../index.css" />
             <style>
-                body {
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    line-height: 1.6;
-                    margin: 0;
-                    padding: 2em;
-                    background-color: ${themeColors.background};
-                    color: ${themeColors.textColor};
-                }
-                .container {
-                    max-width: 800px;
-                    margin: auto;
-                    background: ${themeColors.containerBg};
-                    padding: 20px 30px;
-                    border-radius: 8px;
-                    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-                    border: 1px solid ${themeColors.borderColor};
-                }
-                h1, h2, h3, h4, h5, h6 {
-                    color: ${themeColors.linkPrimary};
-                    border-bottom: 1px solid ${themeColors.borderColor};
-                    padding-bottom: 0.3em;
-                    margin-top: 1.5em;
-                }
-                h1 { font-size: 2.2em; }
-                h2 { font-size: 1.8em; }
-                ul { list-style-type: none; padding: 0; }
-                li { margin-bottom: 0.5em; }
-                a {
-                    color: ${themeColors.linkPrimary};
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                }
-                a:hover {
-                    color: ${themeColors.linkSecondary};
-                    text-decoration: underline;
-                }
-                .category-section {
-                    margin-bottom: 2em;
-                    border-bottom: 1px solid ${themeColors.borderColor};
-                    padding-bottom: 1em;
-                }
-                .category-section:last-child {
-                    border-bottom: none;
-                }
-                p.welcome-text {
-                    color: ${themeColors.linkSecondary}; /* 歡迎語使用 aqua */
-                    font-style: italic;
-                }
+              .container {
+                padding: 20px 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                border: 1px solid #333333;
+              }
             </style>
         </head>
         <body>
-            <div class="container">
-                <h1>歡迎來到 ${SITE_USERNAME} 的 ${CONTENT_REPO_NAME} 內容檔案</h1>
-                <p class="welcome-text">這是我的隨筆、原創小說、霹靂布袋戲整理和編程文章的自動生成索引。</p>
+          <header class="flex items-center justify-between" style="gap: 8px">
+            <div>
+              <h1 class="hader_site_name">Monk's Personal Site</h1>
+              <div class="hader_site_tip">Novel. Coding. Essays. Games</div>
+            </div>
+            <div class="flex-1"></div>
+            <div></div>
+          </header>
+          <main style="padding-top: 20px">
     `;
 
   // 遍歷頂層分類
@@ -328,7 +222,7 @@ async function generateAllContent() {
   }
 
   mainIndexHtmlContent += `
-            </div>
+            </div>    </main>
         </body>
         </html>
     `;
