@@ -16,11 +16,11 @@ for file in ~/development/aniccaa/tech/*.md; do
 done
 ```
 
-<!-- 
+<!--
 一級導航大概會有：
-- 小說：/novels 歷來所有小說，目前在anicca倉庫下。
-- 編程：/coding 編程的筆記、技術文章等，目前在anicca倉庫下。
-- 隨筆：/essays 在小說和編程之外的文字內容，目前在anicca倉庫下。
+- 小說：/novel 歷來所有小說。
+- 編程：/code 編程的筆記、技術文章等。
+- 自傳：/bio 關於人生、童年、成長等。
 - 作品庫：/projects 只提供一個展示頁面，具體完整的web項目會連接到項目的公開庫index.html
 - 遊戲庫：/games 未來可能會制作一些在web運行的免費遊戲，同樣是在這裏展示，提供遊戲的index.html
 - 關於：/about 一個展示自己的頁面，可能會包含佈施(二維收款碼)，因爲大陸無法使用Github的Sponsors。

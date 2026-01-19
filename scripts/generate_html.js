@@ -10,11 +10,40 @@ const CONTENT_REPO_NAME = "Anicca"; // 你的內容倉庫名
 
 // 定義頂層內容分類，用於主索引頁面和遍歷
 const topLevelContentCategories = {
-  essays: "Essays",
   novel: "Novel",
-  pili: "PILI",
-  coding: "Coding",
+  code: "Code",
+  bio: "Bio",
+  // pili: "PILI",
 };
+
+// 文件名格式化爲網站顯示易讀文章標題。
+function formatTitle(fileName, relativeUrlPath) {
+  // 將路徑轉化為小寫以進行不區分大小寫的匹配
+  const pathLower = relativeUrlPath.toLowerCase();
+
+  // 1. 如果是純數字（如 001, 002），直接返回，保留章節感
+  if (/^\d+$/.test(fileName)) {
+    if (pathLower.includes("novel")) {
+      return `第 ${fileName} 章`;
+    }
+    if (pathLower.includes("pili")) {
+      return `第 ${fileName} 集`;
+    }
+    return fileName; // 其他目錄下的純數字保持原樣
+  }
+
+  // 2. 處理連字符命名 (xxx-bbb -> Xxx Bbb)
+  if (fileName.includes("-")) {
+    return fileName
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  }
+
+  // 3. 如果是單個單詞且已經是大寫開頭（如 Algorithm, Android），直接返回
+  // 如果是小寫單單詞，則將其首字母大寫
+  return fileName.charAt(0).toUpperCase() + fileName.slice(1);
+}
 
 // --- HTML 模板函數 ---
 function createFullHtmlPage(title, content, relativePathToRoot) {
@@ -25,7 +54,7 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${title} - ${SITE_USERNAME}'s ${CONTENT_REPO_NAME}</title>
-            <link rel="stylesheet" href="../../index.css" />
+            <link rel="stylesheet" href="${relativePathToRoot}index.css" />
             <style>
               .container {
                 padding: 20px 30px;
@@ -85,10 +114,11 @@ async function processDirectory(
         docHtmlContent = marked.parse(fs.readFileSync(filePath, "utf8"));
         // _doc.md 代表本目錄的索引，但在列表時不單獨列出
       } else {
+        const rawName = file.replace(".md", "");
         indexItems.push({
-          name: file.replace(".md", ""),
+          name: formatTitle(rawName, relativeUrlPath),
           type: "file",
-          path: file.replace(".md", ".html"),
+          path: rawName + ".html",
         });
       }
     }
@@ -181,7 +211,7 @@ async function generateAllContent() {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${SITE_USERNAME}'s ${CONTENT_REPO_NAME} Content</title>
-            <link rel="stylesheet" href="../index.css" />
+            <link rel="stylesheet" href="./index.css" />
             <style>
               .container {
                 padding: 20px 30px;
@@ -195,7 +225,7 @@ async function generateAllContent() {
           <header class="flex items-center justify-between" style="gap: 8px">
             <div>
               <h1 class="hader_site_name">Monk's Personal Site</h1>
-              <div class="hader_site_tip">Novel. Coding. Essays. Games</div>
+              <div class="hader_site_tip">Novel. Code. Bio. Game</div>
             </div>
             <div class="flex-1"></div>
             <div></div>
