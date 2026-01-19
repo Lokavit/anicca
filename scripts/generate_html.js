@@ -54,7 +54,8 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${title} - ${SITE_USERNAME}'s ${CONTENT_REPO_NAME}</title>
-            <link rel="stylesheet" href="${relativePathToRoot}index.css" />
+            <link rel="stylesheet" href="../../index.css" />
+            <link rel="stylesheet" href="../../../index.css" />
             <style>
               .container {
                 padding: 20px 30px;
