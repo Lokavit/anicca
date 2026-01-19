@@ -69,7 +69,7 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
             <header class="flex items-center justify-between" style="gap: 8px">
               <div>
                 <h1 class="hader_site_name">Monk's Personal Site</h1>
-                <div class="hader_site_tip">Novel. Coding. Essays. Games</div>
+                <div class="hader_site_tip">Novel. Code. Bio. Game</div>
               </div>
               <div class="flex-1"></div>
               <div></div>
@@ -77,7 +77,7 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
             <main style="padding-top: 20px">
             <div class="container">
                 <p class="back-link"><a href="${relativePathToRoot}index.html">&lt; 返回 Anicca 總索引</a></p>
-                <h1>${title}</h1>
+                
                 ${content}
             </div>  </main>
         </body>
