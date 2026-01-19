@@ -152,7 +152,7 @@ async function processDirectory(
 
   // 計算返回根索引的路徑深度
   const depth = relativeUrlPath.split("/").filter((p) => p !== "").length;
-  const relativePathToRoot = "../".repeat(depth) + (depth > 0 ? "" : "./"); // 確保深度為0時是 `./`
+  const relativePathToRoot = "../".repeat(depth) + (depth + 1 > 0 ? "" : "./"); // 確保深度為0時是 `./`
 
   // 將當前目錄的索引頁寫入文件
   fs.writeFileSync(
@@ -211,7 +211,7 @@ async function generateAllContent() {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${SITE_USERNAME}'s ${CONTENT_REPO_NAME} Content</title>
-            <link rel="stylesheet" href="./index.css" />
+            <link rel="stylesheet" href="../index.css" />
             <style>
               .container {
                 padding: 20px 30px;
