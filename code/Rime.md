@@ -1,14 +1,11 @@
----
-title: Rime
-date: '2021-01-17'
-tags: ['code']
-draft: false
----
+# Rime
 
-# 錯誤排查
+## 錯誤排查
+
 - 使用非管理員安裝
 - 無法輸入中文：啟動演算法服務
-# RIME 配置
+
+## RIME 配置
 
 - 軟體安裝完畢，輸入法右鍵選擇`輸入法設定`，對其進行配置，得到檔案`weasel.custom.yaml`
 

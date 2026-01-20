@@ -1,9 +1,4 @@
----
-title: FFmpeg
-date: '2015-01-11'
-tags: ['code']
-draft: false
----
+# FFmpeg
 
 ```bash
 # m4s -> mp4
@@ -30,7 +25,4 @@ ffmpeg  -i  "C:\input.mp4"  -s 3840x2160  -b:v 10M  -r 60  "C:\out.mp4"
 ffmpeg -i "E:\0.mkv" -vf scale=1920:1080 "E:\0-scale.mkv"
 ```
 
-
 ffmpeg -i "E:\CODE\cs50 2023\video.m4s" -i "E:\CODE\cs50 2023\audio.m4s" -c:v copy -c:a aac "E:\CODE\cs50 2023\Lecture 1 - C.mp4"
-
-

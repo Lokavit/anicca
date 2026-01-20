@@ -1,11 +1,14 @@
----
-title: Git
-date: '2013-03-11'
-tags: ['code']
-draft: false
----
+# Git
+
+## GitHub TOKEN 到期
+
+- Account -settings - Developer Settings - Personal access tokens - Tokens(classic) 創建，並勾選 repo ，將內容複製。
+- anicca/settings/secrets/actions 下點擊 DEPLOY_TOKEN 的編輯，粘貼新值，更新。
+
+<!-- - Account -settings - Developer Settings - Personal access tokens - Fine-grained tokens 如果看到到期警告點進警告，重新生成一個TOKEN, -->
 
 ### 語義化 commit
+
 Added 新新增的功能。
 Changed 對現有功能的變更。
 Deprecated 已經不建議使用，即將移除的功能。
@@ -14,6 +17,7 @@ Fixed 對 bug 的修復。
 Security 對安全性的改進
 
 ## 刪除歷史提交記錄
+
 ```
 git reset --soft HEAD~1
 
@@ -36,7 +40,9 @@ git push -f url master:遠端分支名
 # 本地倉庫分支關聯遠端倉庫分支
 git push -set-upstream origin 分支名
 ```
+
 ## 本地推遠端倉庫
+
 ```bash
 # 遠端倉庫建同名空倉庫
 # 初始化本地專案git
@@ -44,12 +50,14 @@ $ git init
 # 關聯遠端倉庫
 $ git remote add origin https://……/倉庫名.git
 # 關聯後，先pull
-$ git pull origin master 
+$ git pull origin master
 # 此處會丟擲錯誤[fatal: refusing to merge unrelated histories]
 $ git pull origin main --allow-unrelated-histories
 # 將遠端庫裡的檔案pull到本地後，正常push操作即可。
 ```
-## 拉取指定commit的程式碼
+
+## 拉取指定 commit 的程式碼
+
 ```bash
 # 找到commit的值(完整值)
 $ git checkout <commit的長值>

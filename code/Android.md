@@ -1,3 +1,5 @@
+# Android
+
 ```bash
 # 安裝 OpenJDK (推薦使用最新的 LTS 版本，例如 Java 17)
 sudo apt install openjdk-17-jre

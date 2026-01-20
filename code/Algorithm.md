@@ -1,9 +1,4 @@
----
-title: Algorithm
-date: '2011-01-11'
-tags: ['code']
-draft: false
----
+# Algorithm
 
 ## Filter
 

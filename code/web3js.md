@@ -1,37 +1,35 @@
----
-title: Web3js note
-date: '2024-01-31'
-tags: ['code']
-draft: true
----
+# Web3js
 
 - https://docs.web3js.org/#initialize-web3-with-a-provider
 
 ## web3-eth-abi
+
 - ABI：軟體包簡化了對日誌和引數的解碼、對函式呼叫和簽名的編碼以及對型別的推斷，從而實現高效的以太坊合約互動。
 
 ## web3-eth-accounts
+
 - 賬戶：軟體包提供了建立以太坊賬戶/錢包以及確保交易和資料安全簽名的工具。
 
-## web3-eth-Contract 
+## web3-eth-Contract
+
 - 合約：與智慧合約進行互動。該功能允許透過 JavaScript 或 TypeScript 物件與合約進行通訊，從而簡化了開發和互動流程。
-例項化智慧合約。智慧合約會有很多種，可以參考 [https://github.com/jordon0329/Next.js-Metamask-Vault-Contract],寫成一個個json檔案。
-```ts 
+  例項化智慧合約。智慧合約會有很多種，可以參考 [https://github.com/jordon0329/Next.js-Metamask-Vault-Contract],寫成一個個 json 檔案。
+
+```ts
 //Uniswap token address in mainnet
-const address = '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984'
+const address = "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984";
 //you can find the complete ABI in etherscan.io
-const ABI = 
-[
-    {
-    name: 'symbol',
-    outputs: [{ type: 'string' }],
-    type: 'function',
-    },
-    {
-    name: 'totalSupply',
-    outputs: [{ type: 'uint256' }],
-    type: 'function',
-    },
+const ABI = [
+  {
+    name: "symbol",
+    outputs: [{ type: "string" }],
+    type: "function",
+  },
+  {
+    name: "totalSupply",
+    outputs: [{ type: "uint256" }],
+    type: "function",
+  },
 ];
 
 //instantiate the contract
@@ -39,22 +37,28 @@ const uniswapToken = new web3.eth.Contract(ABI, address);
 console.log(`uniswapToken:`, uniswapToken);
 ```
 
-## web3-eth-ens 
+## web3-eth-ens
+
 - ENS:與區塊鏈上的以太坊名稱服務（ENS）進行通訊。
 
 ## web3-eth-iban
+
 - Iban：在以太坊地址和類似銀行的特殊地址（IBAN 或 BBAN）之間切換。
 
 ## web3-net
+
 - 網路。討論和處理以太坊節點的網路細節
 
 ## web3-eth-personal
+
 - 個人賬戶：與以太坊節點直接交流賬戶資訊，簡化開發工作流程中的賬戶管理。注意：為增強與公共節點互動時的安全性，請考慮使用 `web3-eth-accounts` 進行本地簽名操作，以確保您的私鑰和敏感資訊在本地機器上的安全。
 
-## web3-utils 
+## web3-utils
+
 - 工具包。執行一系列以太坊開發中的基本任務，包括轉換資料格式、檢查地址、編碼和解碼、雜湊、處理數字等。
 
 ## Web3-eth
+
 - Web3Eth：與以太坊區塊鏈互動的主要工具。管理你與以太坊互動的控制中心。
 
 附加支援軟體包

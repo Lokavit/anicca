@@ -1,11 +1,6 @@
----
-title: Rust
-date: '2020-01-17'
-tags: ['code']
-draft: false
----
+# Rust
 
-# 常用命令
+## 常用命令
 
 ```bash
 rustc --version # rustc 1.51.0
@@ -25,7 +20,7 @@ cargo doc --open # pull並在瀏覽器開啟文件，可進行相關函式查閱
 cargo new <name> # 建立專案
 ```
 
-# 環境及配置
+## 環境及配置
 
 - [rust-init.exe](https://www.rust-lang.org/)
 - [Microsoft C++ 生成工具](https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/)

@@ -63,6 +63,36 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
                 box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
                 border: 1px solid #333333;
               }
+ 
+              .chapter-grid {
+                display: flex;
+                flex-wrap: wrap; 
+                gap: 10px; 
+                list-style: none; 
+                padding: 0;
+              }
+ 
+              .chapter-grid li {
+                flex: 1 0 150px;  
+                max-width: 250px;  
+              }
+ 
+              .chapter-grid li a {
+                display: block;
+                padding: 8px 12px;
+                background: #f4f4f4;
+                text-decoration: none;
+                color: #333;
+                border-radius: 4px;
+                text-align: center;
+                border: 1px solid #ddd;
+                transition: background 0.2s;
+              }
+
+              .chapter-grid li a:hover {
+                background: #e0e0e0;
+                border-color: #bbb;
+              }
             </style>
           </head>
           <body>
@@ -136,7 +166,7 @@ async function processDirectory(
     currentDirIndexContent += `<h2>${currentDirTitle} - List</h2>`;
   }
 
-  currentDirIndexContent += `<ul>`;
+  currentDirIndexContent += `<ul class="chapter-grid">`;
   // 將子目錄和文件按名稱排序，以便列表更整潔
   indexItems.sort((a, b) =>
     a.name.localeCompare(b.name, undefined, {

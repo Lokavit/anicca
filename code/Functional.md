@@ -1,9 +1,4 @@
----
-title: Functional
-date: '2016-01-11'
-tags: ['code']
-draft: false
----
+# Functional
 
 ## 函數語言程式設計入門經典
 
@@ -15,14 +10,14 @@ draft: false
 
 ```js
 // 函式
-let simple = a => {
+let simple = (a) => {
   return a;
 };
 simple(5);
 
 // 方法
 let obj = {
-  simple: a => {
+  simple: (a) => {
     return a;
   },
 };
@@ -42,7 +37,7 @@ const increment = () => (number += 1);
 increment(); // 2
 
 // 純函式
-const increment = n => n + 1;
+const increment = (n) => n + 1;
 increment(1); // 2
 
 // 純函式 ，加法計算。
@@ -61,12 +56,14 @@ sum(1, sum(2, sum(3, 4))); // 10
 - isType 函式:判斷型別的時候可以透過 Object.prototype.toString.call 來獲取對應物件返回的字串
 
 ```js
-let isString = obj => Object.prototype.toString.call(obj) === "[object String]";
-let isArray = obj => Object.prototype.toString.call(obj) === "[object Array]";
-let isNumber = obj => Object.prototype.toString.call(obj) === "[object Number]";
+let isString = (obj) =>
+  Object.prototype.toString.call(obj) === "[object String]";
+let isArray = (obj) => Object.prototype.toString.call(obj) === "[object Array]";
+let isNumber = (obj) =>
+  Object.prototype.toString.call(obj) === "[object Number]";
 
 // 封裝成一個判斷型別的方法
-let isType = type => obj => {
+let isType = (type) => (obj) => {
   return Object.prototype.toString.call(obj) === "[object " + type + "]";
 };
 isType("String")("123"); // true
@@ -82,9 +79,13 @@ const calculate = (fn, x, y) => fn(x, y);
 calculate(sum, 1, 2); // 3
 
 // filter
-let students = [{ name: "Asura", grade: 6 }, { name: "Satya", grade: 4 }, { name: "Shakya", grade: 9 }];
-const isApproved = student => student.grade >= 6; // filter
-const byName = obj => obj.name; // map
+let students = [
+  { name: "Asura", grade: 6 },
+  { name: "Satya", grade: 4 },
+  { name: "Shakya", grade: 9 },
+];
+const isApproved = (student) => student.grade >= 6; // filter
+const byName = (obj) => obj.name; // map
 // 鏈式 使用 filter 和 map
 console.log(students.filter(isApproved).map(byName));
 
@@ -93,7 +94,13 @@ const totalGrades = students.reduce((sum, student) => sum + student.grade, 0);
 totalGrades; // 19
 
 // 物件排序 [逆序則將減號左右的xy互換]
-[{ id: 1, name: "one" }, { id: 3, name: "three" }, { id: 2, name: "two" }, { id: 5, name: "five" }, { id: 4, name: "four" }].sort((x, y) => x.id - y.id);
+[
+  { id: 1, name: "one" },
+  { id: 3, name: "three" },
+  { id: 2, name: "two" },
+  { id: 5, name: "five" },
+  { id: 4, name: "four" },
+].sort((x, y) => x.id - y.id);
 ```
 
 ```js 命令式&宣告式
@@ -103,27 +110,24 @@ for (i = 0; i < cars.length; i++) {
   makes.push(cars[i].make);
 }
 // 宣告式
-var makes = cars.map(function(car) {
+var makes = cars.map(function (car) {
   return car.make;
 });
 
 // compose 表示式只是簡單地指出了這樣一個事實：使用者驗證是 toUser 和 logIn 兩個行為的組合。
 
 // 命令式
-var authenticate = function(form) {
+var authenticate = function (form) {
   var user = toUser(form);
   return logIn(user);
 };
 // 宣告式
-var authenticate = compose(
-  logIn,
-  toUser,
-);
+var authenticate = compose(logIn, toUser);
 ```
 
 ```js
 // 命令式   獲取陣列中所有偶數
-const even = n => n % 2 == 0;
+const even = (n) => n % 2 == 0;
 const listOfNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 listOfNumbers.filter(even); // [0, 2, 4, 6, 8, 10]
 
@@ -142,12 +146,17 @@ let numbers = [10, 9, 8, 2, 7, 5, 1, 3, 0];
 filterArray(3, numbers); // [2, 1, 0]
 
 // 找出age>21的人
-const olderThan21 = person => person.age > 21;
-const overAge = people => people.filter(olderThan21);
+const olderThan21 = (person) => person.age > 21;
+const overAge = (people) => people.filter(olderThan21);
 overAge(people); // [{ name: 'TK', age: 26 }, { name: 'Kazumi', age: 30 }]
 
 // 購物車裡型別為 books的總數
-let shoppingCart = [{ productTitle: "Functional Programming", type: "books", amount: 10 }, { productTitle: "Kindle", type: "eletronics", amount: 30 }, { productTitle: "Shoes", type: "fashion", amount: 20 }, { productTitle: "Clean Code", type: "books", amount: 60 }];
+let shoppingCart = [
+  { productTitle: "Functional Programming", type: "books", amount: 10 },
+  { productTitle: "Kindle", type: "eletronics", amount: 30 },
+  { productTitle: "Shoes", type: "fashion", amount: 20 },
+  { productTitle: "Clean Code", type: "books", amount: 60 },
+];
 // 一個reduce就可以搞定：
 let sum = shoppingCart.reduce((item, next) => {
   return next.type === "books" ? item + next.amount : item;
@@ -162,36 +171,36 @@ console.log(sum);
 
 ```js
 // 加法函式柯里化   [ES6寫法，也是比較正統的函式式寫法]
-const add = x => y => x + y;
+const add = (x) => (y) => x + y;
 const increment = add(1);
 const addFive = add(5);
 increment(3); //4
 addFive(10); // 15
 
 //比較容易讀懂的ES5寫法
-var add = function(x) {
-  return function(y) {
+var add = function (x) {
+  return function (y) {
     return x + y;
   };
 };
 
 // 物件柯里化
-const student = name => grade => `Name: ${name} | Grade: ${grade}`;
+const student = (name) => (grade) => `Name: ${name} | Grade: ${grade}`;
 student("Matt")(8); // Name: Matt | Grade: 8
 
 // 柯里化函式介面
-var multiple = function(a) {
-  return function(b) {
+var multiple = function (a) {
+  return function (b) {
     return +b * a + "";
   };
 };
-var plus = function(a) {
-  return function(b) {
+var plus = function (a) {
+  return function (b) {
     return +b + a + "";
   };
 };
-var concatArray = function(chars, stylishChar) {
-  return chars.map(stylishChar).reduce(function(a, b) {
+var concatArray = function (chars, stylishChar) {
+  return chars.map(stylishChar).reduce(function (a, b) {
     return a.concat(b);
   });
 };
@@ -199,33 +208,33 @@ console.log(concatArray(["1", "2", "3"], multiple(2)));
 console.log(concatArray(["1", "2", "3"], plus(2)));
 
 // 寫一個函式，可以連線字串陣列 如 f(['1','2']) => '12'
-var concatArray = function(chars) {
-  return chars.reduce(function(a, b) {
+var concatArray = function (chars) {
+  return chars.reduce(function (a, b) {
     return a.concat(b);
   });
 };
 concat(["1", "2", "3"]); // => '123'
 // 將所有數字+1
-var concatArray = function(chars, inc) {
+var concatArray = function (chars, inc) {
   return chars
-    .map(function(char) {
+    .map(function (char) {
       return +char + inc + "";
     })
-    .reduce(function(a, b) {
+    .reduce(function (a, b) {
       return a.concat(b);
     });
 };
 console.log(concatArray(["1", "2", "3"], 1)); // => '234'
 // 所有數字乘以2
-var multiple = function(a, b) {
+var multiple = function (a, b) {
   return +a * b + "";
 };
-var concatArray = function(chars, inc) {
+var concatArray = function (chars, inc) {
   return chars
-    .map(function(char) {
+    .map(function (char) {
       return multiple(char, inc);
     })
-    .reduce(function(a, b) {
+    .reduce(function (a, b) {
       return a.concat(b);
     });
 };
@@ -233,7 +242,7 @@ console.log(concatArray(["1", "2", "3"], 2)); // => '246'
 ```
 
 ```js
-const changeGender = gender => () => (user.gender = gender);
+const changeGender = (gender) => () => (user.gender = gender);
 $("input[value=male]").onChange(changeGender("male"));
 $("input[value=female]").onChange(changeGender("female"));
 ```
@@ -244,37 +253,37 @@ $("input[value=female]").onChange(changeGender("female"));
 
 ```js
 // 組合兩個函式生成一個新的函式
-const compose = (f, g) => x => f(g(x));
-const toUpperCase = x => x.toUpperCase();
-const exclaim = x => `${x}!`;
-const angry = compose(
-  exclaim,
-  toUpperCase,
-);
+const compose = (f, g) => (x) => f(g(x));
+const toUpperCase = (x) => x.toUpperCase();
+const exclaim = (x) => `${x}!`;
+const angry = compose(exclaim, toUpperCase);
 angry("stop this"); // STOP THIS!
 
 // 組合三個函式生成一個新的
-const compose = (f, g) => x => f(g(x));
-const toUpperCase = x => x.toUpperCase();
-const exclaim = x => `${x}!`;
-const moreExclaim = x => `${x}!!!!!`;
-const reallyAngry = compose(
-  exclaim,
-  compose(
-    toUpperCase,
-    moreExclaim,
-  ),
-);
+const compose = (f, g) => (x) => f(g(x));
+const toUpperCase = (x) => x.toUpperCase();
+const exclaim = (x) => `${x}!`;
+const moreExclaim = (x) => `${x}!!!!!`;
+const reallyAngry = compose(exclaim, compose(toUpperCase, moreExclaim));
 reallyAngry("stop this"); // STOP THIS!!!!!!
 
 // 結合律: （associativity）  無論是把 g 和 h 分到一組，還是把 f 和 g 分到一組都不重要
 // var associative = compose(f, compose(g, h)) == compose(compose(f, g), h);
 // 因呼叫分組不重要，結果一樣。所以可以寫一個可變的組合
 
-groupedTasks = [[{ completed: false, id: 1 }, { completed: true, id: 2 }], [{ completed: false, id: 4 }, { completed: true, id: 3 }]];
+groupedTasks = [
+  [
+    { completed: false, id: 1 },
+    { completed: true, id: 2 },
+  ],
+  [
+    { completed: false, id: 4 },
+    { completed: true, id: 3 },
+  ],
+];
 var completedAndSorted = compose(
-  sortBy(task => task.id),
-  filter(task => task.completed === true),
+  sortBy((task) => task.id),
+  filter((task) => task.completed === true)
 );
 map(completedAndSorted, groupedTasks);
 ```
@@ -294,7 +303,8 @@ const [a, ...b] = [1, 2, 3];
 console.log(a, b); // 1 [2, 3]
 
 // 可選引數
-const ajax = ({ url = "localhost", port: p = 80 }, ...data) => console.log("Url:", url, "Port:", p, "Rest:", data);
+const ajax = ({ url = "localhost", port: p = 80 }, ...data) =>
+  console.log("Url:", url, "Port:", p, "Rest:", data);
 ajax({ url: "someHost" }, "additional", "data", "hello");
 // Url: someHost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
 ajax({}, "additional", "data", "hello");
@@ -307,15 +317,12 @@ ajax({}, "additional", "data", "hello");
 
 ```js
 // 非 pointfree，因為提到了資料：word
-var snakeCase = function(word) {
+var snakeCase = function (word) {
   return word.toLowerCase().replace(/\s+/gi, "_");
 };
 
 // pointfree
-var snakeCase = compose(
-  replace(/\s+/gi, "_"),
-  toLowerCase,
-);
+var snakeCase = compose(replace(/\s+/gi, "_"), toLowerCase);
 ```
 
 #### 獲取所有偶數
@@ -339,7 +346,7 @@ const times = (times, fun) => {
  * 引數二:一個匿名無參函式
  * output:最終輸出[number]內所有偶數
  */
-times(100, n => {
+times(100, (n) => {
   unless(n % 2, () => {
     console.log(`${n} is even`);
   });
@@ -368,9 +375,10 @@ console.log(every([NaN, NaN, 4], isNaN)); // false
 
 ```js
 /* 接收一個屬性，並返回另一個函式 */
-const sortBy = property => {
+const sortBy = (property) => {
   return (a, b) => {
-    let result = a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
+    let result =
+      a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
     return result;
   };
 };
@@ -393,7 +401,7 @@ array.map(parseInt); // 輸出結果為: [1,NaN,NaN]
  * 檢查fn是否有一個長度為1的引數列表,如果沒有，就返回一個新函式
  * 它只接受一個引數arg，並用該引數呼叫fn
  */
-const unary = fn => (fn.length === 1 ? fn : arg => fn(arg));
+const unary = (fn) => (fn.length === 1 ? fn : (arg) => fn(arg));
 /* 返回了一個新函式(parseInt的克隆體),只接受一個引數。
 如此,map函式傳入的index,arr引數就不會對程式產生影響 */
 array.map(unary(parseInt)); // [1, 2, 3]
@@ -406,9 +414,9 @@ array.map(unary(parseInt)); // [1, 2, 3]
     宣告一個done變數，初始值為false。返回的函式會形成一個覆蓋它的閉包作用域.
     返回的函式會訪問並檢查done是否為true，是則返回undefined,否則將done設定為true[阻止下次執行] 
     並用必要的引數呼叫函式fn */
-const once = fn => {
+const once = (fn) => {
   let done = false;
-  return function() {
+  return function () {
     return done ? undefined : ((done = true), fn.apply(this, arguments));
   };
 };
@@ -422,14 +430,14 @@ console.log("模擬二次呼叫:", doPayment()); // undefined
 - memoized 函式 使函式能夠記住其計算結果
 
 ```js
-const memoized = fn => {
+const memoized = (fn) => {
   const lookupTable = {};
   /* 返回函式將接受一個引數並檢查它是否存在 [lookupTable]中
         如果存在，返回對應值;否則，使用新的輸入作為key，fn的結果作為value，更新[lookupTable]物件 */
-  return arg => lookupTable[arg] || (lookupTable[arg] = fn(arg));
+  return (arg) => lookupTable[arg] || (lookupTable[arg] = fn(arg));
 };
 
-let fastFactorial = memoized(n => {
+let fastFactorial = memoized((n) => {
   if (n === 0) return 1;
   return n * fastFactorial(n - 1);
 });
@@ -453,7 +461,7 @@ ctx.fill(p);
 
 ```js
 let percentValue = 5;
-let calculateTax = value => {
+let calculateTax = (value) => {
   return (value / 100) * (100 + percentValue);
 };
 
@@ -465,7 +473,7 @@ let calculateTax2 = (value, percentValue) => {
 };
 
 // 引用透明性
-let identity = i => {
+let identity = (i) => {
   return i;
 };
 // 用命令式方法迭代陣列
@@ -474,11 +482,12 @@ for (let i = 0; i < arr.length; i++) {
   console.log(arr[i]);
 }
 // 用宣告方式迭代陣列
-arr.forEach(element => console.log(element));
+arr.forEach((element) => console.log(element));
 
-const sortBy = property => {
+const sortBy = (property) => {
   return (a, b) => {
-    let result = a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
+    let result =
+      a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
     return result;
   };
 };
@@ -487,21 +496,19 @@ const sortBy = property => {
 
 // page:75
 
-const double = n => n * 2;
-const increment = n => n + 1;
+const double = (n) => n * 2;
+const increment = (n) => n + 1;
 
 // 沒有用管道運算子
 double(increment(double(5))); // 22
 
 let Chain = {
   sav: "",
-  a1: function(val) {
+  a1: function (val) {
     this.sav = this.sav + val;
     return this;
   },
 };
-Chain.a1("aaa")
-  .a1("bbb")
-  .a1("ccc");
+Chain.a1("aaa").a1("bbb").a1("ccc");
 console.log(Chain.sav); //返回 aaabbbccc
 ```

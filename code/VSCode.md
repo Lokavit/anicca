@@ -1,32 +1,24 @@
----
-title: VSCodium VSCode
-date: '2019-05-11'
-tags: ['code']
-draft: false
----
+# VSCodium
 
-# VSCode Ext Note
+## VSCode Ext Note
 
 ```bash
-# 全域性安裝 用於生成vscode外掛開發的專案 
+# 全域性安裝 用於生成vscode外掛開發的專案
 $ sudo npm install -g yo generator-code
 # 建立專案,在此步驟簡單配置
 $ yo code
 ```
+
 ## 直接複製資料夾到外掛目錄下
 
-## 打包成vsix外掛
+## 打包成 vsix 外掛
+
 ```bash
 npm i vsce -g
 vsce package
 
 # VSCodium ->Extension ->...->Install from vsix
 ```
-
-
-
-
-
 
 ## 釋出到外掛市場
 

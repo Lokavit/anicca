@@ -1,9 +1,4 @@
----
-title: Kid
-date: '2016-07-11'
-tags: ['code']
-draft: false
----
+# Kid
 
 # 緣
 

@@ -1,15 +1,35 @@
----
-title: Linux
-date: '2019-07-11'
-tags: ['code']
-draft: false
----
+# Linux
 
 ~~**Arch**~~：有牆，沒做路由出境，裝不上。
 
+## arch
+
+archinstall
+檢查連線
+選擇映象源，從 VPN 所在地選。
+安裝完重啟。安裝網路
+sudo pacman -S networkManager
+sudo systemctl --type=service # 檢查已啟用的服務
+systemctl start NetworkManager.service # 如果不存在，啟用 networkManager
+
+sudo pacman -S pacman-mirrorlist # 安裝映象源
+sudo pacman -Syyu # 強制更新映象 每次修改映象之後都應該使用該命令
+
+## 直接從網站上獲取映象列表
+
+sudo curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/
+
+## sudo pacman -S pacman-contrib # 排序已存在的源
+
+## sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist # 找出最快的源
+
+sudo pacman -R pacman-contrib # 移除包
+sudo pacman -S reflector # 獲取最新源，篩選最新映象並按速度排序，寫入/etc/pacman.d/mirrorlist
+systemctl start reflector.service # 啟動服務
+
 # Garuda
 
-- ✅ **VirtualBox**: 用於裝Win10
+- ✅ **VirtualBox**: 用於裝 Win10
 - ✅ **程式設計**： VSCodium。https://vscodium.com/
 - ✅ **影音**： mpv
 - ✅ **遊戲**： Steam
@@ -17,13 +37,15 @@ draft: false
 - ✅ **Fonts**:adobe-source-code-pro-fonts
 
 ## Steam
+
 ```
-sudo pacman -S steam # select 2 or 
+sudo pacman -S steam # select 2 or
 # sudo pacman -S lib32-nvidia-utils
 sudo pacman -S wine winetricks wine-mono wine-gecko
 ```
 
 ## Fcitx5
+
 ```bash
 # 裝載
 sudo pacman -S fcitx5 fcitx5-gtk fcitx5-qt -fcitx5-rime
@@ -35,23 +57,25 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-# install 
+# install
 sudo pacman -S fcitx5-configtool
 
 # 編輯主圖 .local/share/fcitx5/themes/Monk-Theme/
 # 配置 .config/fcitx5/conf/classicui.conf
 # 配置 .config/fcitx5/conf/pinyin.conf 即，輸入法配置項
 ```
+
 - 工作列點選進入配置視窗，點選`Add Input Method`,選擇簡中分組下的`Pinyin`,點選`Add`
 - 對輸入法配置，重啟輸入。
 
 ## Change Color
+
 - 變更系統配色 `/usr/share/color-schemes/`
+
 ```bash
 # Sweet.colors 色值：0,0,0,0
 ```
 
- 
 ## 掛載移動盤
 
 ```bash
@@ -63,7 +87,7 @@ sudo fidsk -l /dev/sdb
 sudo pacman -S ntfs-3g
 # create mount point
 sudo mkdir -p /mnt/mydrive
-# use mount  
+# use mount
 sudo mount -t ntfs /dev/sdb1 /mnt/mydrive
 # check NTFS systeam
 sudo ntfsfix /dev/sdb1
@@ -74,9 +98,8 @@ sudo ntfsfix /dev/sdb1
 sudo mount /dev/sdc1 /run/media/monk
 ```
 
-
 - - **非編**： ？？？
-- - ***電子書**:calibre 
+- - **\*電子書**:calibre
 - - ffmpeg for linux
 - - calibre for linux
 - - Internet Download Manager ??
@@ -84,30 +107,30 @@ sudo mount /dev/sdc1 /run/media/monk
 - - 資料庫管理軟體
 
 ### VM Win10
-- AE、PS、PR、ME,Adobe系列
+
+- AE、PS、PR、ME,Adobe 系列
 - 百度網盤
-- 一些win系老遊戲
+- 一些 win 系老遊戲
 - 微信 QQ
 
-### share 
+### share
+
 - 建立虛擬機器時，選擇共享資料夾
 - 啟動虛擬機器中系統後，在裝置中，安裝增強，即可開啟共享資料夾。
 
-
 # Win10 to Linux
 
-- 羅列Win10下常用軟體，尋找Linux下平替
+- 羅列 Win10 下常用軟體，尋找 Linux 下平替
 - 瞭解並選擇適合的發行版
 - 在`VirtualBox`中練手
 - 從`archinstall` 開始
 
-## Linux發行版
+## Linux 發行版
+
 - Arch：有牆，沒做路由出境，裝不上。
 - Garuda：平替。當年官網還能開啟是下載映象，做雙系統。
 - - 映象 https://mirrors.bfsu.edu.cn/osdn/storage/g/g/ga/garuda-linux/
 - - https://www.tisonkun.org/2023/02/11/garudalinux/
-
-
 
 ## Arch 裝載配置
 
@@ -229,8 +252,6 @@ lsblk # to check if everything is mounted correctly
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi --removable
 ```
 
-
-
 ## OpenVPN on Arch
 
 - download xxx.ovpn
@@ -241,7 +262,7 @@ sudo systemctl enable NetworkManager.service # 啟服務
 sudo systemctl start NetworkManager.service
 sudo mkdir -p /etc/sysctl.d
 sudo nano /etc/sysctl.d/40-ipv6.conf
-# 停用 ipv6 開啟nano編輯 
+# 停用 ipv6 開啟nano編輯
 net.ipv6.conf.all.disable_ipv6=1
 net.ipv6.conf.default.disable_ipv6=1
 net.ipv6.conf.lo.disable_ipv6=1
@@ -261,6 +282,7 @@ sudo systemctl restart NetworkManager.service
 ---
 
 ## GAME
+
 ```bash
 sudo pacman -S nvidia-utils lib32-nvidia-utils
 sudo pacman -S git steam gamemode mangohud
@@ -271,8 +293,6 @@ yay -S --noconfirm goverlay
 # restart
 # 系統選單，開啟Goverlay，點選Save 關閉，再次開啟。
 ```
-
-
 
 ## proxmox
 

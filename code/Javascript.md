@@ -1,9 +1,4 @@
-﻿---
-title: Javascript
-date: '2013-07-11'
-tags: ['code']
-draft: false
----
+﻿# Javascript
 
 ```js
 /**
@@ -17,18 +12,21 @@ draft: false
 農曆/陰曆：二月初六
 */
 function calcBuddhimDate() {
-    // '2023癸卯年八月初三星期日 16:19:57'
-    // const toCnDate = date => date.toLocaleString('zh-u-ca-chinese', { dateStyle: 'full' }) + ' ' + date.toLocaleTimeString(0, { hour12: false });
-    // toCnDate(new Date);
-    // ja-JP-u-ca-japanese
-    // 'วันอาทิตย์ที่ 17 กันยายน พ.ศ. 2566 16:18:43'
-    const toCnDate = date => date.toLocaleString('th-u-ca-thai', { year: "numeric" }) + ' ' + date.toLocaleTimeString(0, { hour12: false });
-    const buddhimYear = toCnDate(new Date).split(' ')[1];
-    const dateTime = new Date().toLocaleDateString('zh').split('/');
-    return {
-        date: `${buddhimYear} 年 ${dateTime[1]} 月 ${dateTime[2]} 日`,
-        // time: new Date().toLocaleTimeString('zh'),
-    }
+  // '2023癸卯年八月初三星期日 16:19:57'
+  // const toCnDate = date => date.toLocaleString('zh-u-ca-chinese', { dateStyle: 'full' }) + ' ' + date.toLocaleTimeString(0, { hour12: false });
+  // toCnDate(new Date);
+  // ja-JP-u-ca-japanese
+  // 'วันอาทิตย์ที่ 17 กันยายน พ.ศ. 2566 16:18:43'
+  const toCnDate = (date) =>
+    date.toLocaleString("th-u-ca-thai", { year: "numeric" }) +
+    " " +
+    date.toLocaleTimeString(0, { hour12: false });
+  const buddhimYear = toCnDate(new Date()).split(" ")[1];
+  const dateTime = new Date().toLocaleDateString("zh").split("/");
+  return {
+    date: `${buddhimYear} 年 ${dateTime[1]} 月 ${dateTime[2]} 日`,
+    // time: new Date().toLocaleTimeString('zh'),
+  };
 }
 ```
 
@@ -38,12 +36,17 @@ const Coordinate = function (x, y) {
   this.x = x;
   this.y = y;
 };
-Coordinate.equals = function (a, b) {/** some code */}
-Coordinate.prototype.translate = function (tx, ty) {/** some code */}
+Coordinate.equals = function (a, b) {
+  /** some code */
+};
+Coordinate.prototype.translate = function (tx, ty) {
+  /** some code */
+};
 export default Coordinate;
 ```
 
 ### 堆、棧、佇列
+
 - 堆：存基本型別。(優先佇列、堆排序等場景)
 - 棧：存引用型別，後進先出。（字串匹配、資料反轉等場景）
 - 佇列：先進先出。（任務佇列）
@@ -58,10 +61,9 @@ export default Coordinate;
 
 解析器發現非阻塞資源，例如一張圖片，瀏覽器會請求這些資源並且繼續解析。當遇到一個 CSS 檔案時，解析也可以繼續進行，但是對於 <script> 標籤（特別是沒有 async 或者 defer 屬性的）會阻塞渲染並停止 HTML 的解析。儘管瀏覽器的預載入掃描器加速了這個過程，但過多的指令碼仍然是一個重要的瓶頸。
 
-
 ```js
-跨頁面傳值
-window.addEventListener('storage', e => {});
+跨頁面傳值;
+window.addEventListener("storage", (e) => {});
 ```
 
 # js Object
@@ -1886,15 +1888,15 @@ container.addEventListener("submit", (event) => {
 /* ③ 獲取資源帶憑證 -設定crossOrigin為匿名anonymous，將帶憑證 ->
 <script type="module" crossorigin src="1.mjs?"></script>
 
-/* ④ 獲取資源不帶憑證  import模組跨域，則設定crossOrigin為anonymous不帶憑證 */
+/* ④ 獲取資源不帶憑證 import模組跨域，則設定crossOrigin為anonymous不帶憑證 */
 <script type="module" crossorigin src="//cdn.zhangxinxu.com/.../1.mjs"></script>
 
-/* ⑤ 獲取資源帶憑證 import模組跨域，且明確設定crossOrigin為使用憑證use-credentials，則帶憑證 */
+/* ⑤ 獲取資源帶憑證
+import模組跨域，且明確設定crossOrigin為使用憑證use-credentials，則帶憑證 */
 <script
   type="module"
   crossorigin="use-credentials"
-  src="//cdn.zhangxinxu.com/.../1.mjs?"
-></script>
+  src="//cdn.zhangxinxu.com/.../1.mjs?"></script>
 ```
 
 ```js IIFE 立即呼叫函式表示式
@@ -2170,8 +2172,7 @@ button.onclick = test(); // wrong
 <div class="book" id="zfem">
   <img
     src="https://raw.githubusercontent.com/…………/master/IMG/zfem.jpg"
-    alt="ZFEM"
-  />
+    alt="ZFEM" />
 </div>
 <script>
   let zfemBtn = document.getElementById("zfem");
@@ -3672,8 +3673,7 @@ if (a == 1 && a == 2 && a == 3) {
     <div style="width:200px;height:200px;background:lightblue" id="content">
       <div
         style="width:100px;height:100px;background: lightyellow;"
-        id="btn1"
-      ></div>
+        id="btn1"></div>
     </div>
   </body>
   <script type="text/javascript">
