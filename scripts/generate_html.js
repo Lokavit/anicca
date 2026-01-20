@@ -80,9 +80,9 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
               .chapter-grid li a {
                 display: block;
                 padding: 8px 12px;
-                background: #f4f4f4;
+                background: #121212;
                 text-decoration: none;
-                color: #333;
+                color: #00ff41;
                 border-radius: 4px;
                 text-align: center;
                 border: 1px solid #ddd;
@@ -90,8 +90,8 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
               }
 
               .chapter-grid li a:hover {
-                background: #e0e0e0;
-                border-color: #bbb;
+                background: #00ff4133;
+                border-color: #00ff41;
               }
             </style>
           </head>
