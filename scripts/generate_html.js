@@ -85,7 +85,7 @@ function createFullHtmlPage(title, content, relativePathToRoot) {
                 color: #00ff41;
                 border-radius: 4px;
                 text-align: center;
-                border: 1px solid #ddd;
+                border: 1px solid #333333;
                 transition: background 0.2s;
               }
 
