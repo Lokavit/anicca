@@ -1,6 +1,6 @@
 ---
 title: "Chapter 後記"
-date: 2000-12-31
+date: 2011-12-31
 tags: ["虛構小說", "現代", "小說"]
 description: " "
 ---
