@@ -1,0 +1,134 @@
+---
+title: "Neovim"
+date: 2026-01-01
+tags: ["Neovim","Vim", "Linux", "Arch"]
+description: ""
+---
+
+# Neovim
+
+```shell
+# 使用 AppImage (免安裝，版本最精準) *Ubuntu倉庫中的版本太老。
+# 下載最新版：
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+# 賦予執行權限：
+chmod u+x nvim-linux-x86_64.appimage
+# 移動到系統路徑：
+sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+# 在終端機輸入 nvim 就會是最新版了。
+# 打開 :Tutor，開始練習最核心的文字編輯技巧。
+```
+
+
+
+
+<!-- 
+mkdir -p ~/.config/nvim
+touch ~/.config/nvim/init.lua
+
+
+cd ~/.config/nvim
+git init
+git add .
+git commit -m "Initial commit: Basic structure"
+git branch -M main
+# 這裡將下面連結替換成你的倉庫連結
+git remote add origin https://github.com/YourUsername/YourRepoName.git
+git push -u origin main
+
+
+# 1. 備份舊配置 (如果有的話)
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+
+# 2. 拉取你的配置
+git clone https://github.com/YourUsername/YourRepoName.git ~/.config/nvim
+
+git clone https://github.com/Lokavit/xxxxx ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+ -->
+
+<!-- 未來結構
+~/.config/nvim/
+├── init.lua              # 入口檔案，負責載入其他檔案
+├── lua/
+│   ├── core/
+│   │   ├── options.lua   # 基礎選項
+│   │   └── keymaps.lua   # 按鍵映射
+│   └── plugins/
+│       └── ...           # 插件配置
+└── README.md
+ -->
+
+<!-- 
+ 
+https://www.lazyvim.org/installation
+
+
+
+
+第二步：安裝插件管理器 (Lazy.nvim)
+Neovim 的強大來自插件。我們需要一個管理器來安裝像是 VimWiki（處理你的 [[連結]]）這樣的工具。這裡推薦使用最流行的 Lazy.nvim。
+
+創建配置文件目錄：
+
+Bash
+mkdir -p ~/.config/nvim
+創建一個簡單的初始化文件 init.lua：
+
+Bash
+nvim ~/.config/nvim/init.lua
+（按下 i 進入插入模式，複製下面的基礎設置，然後按下 Esc，輸入 :wq 按下回車保存並退出）
+
+Lua
+-- 基礎設置：顯示行號，啟用鼠標，開啟語法高亮
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.mouse = 'a'
+vim.o.syntax = 'on'
+vim.o.encoding = 'utf-8'
+vim.o.fileencoding = 'utf-8'
+
+-- 設置 Leader 鍵為空格
+vim.g.mapleader = ' '
+
+-- 自動換行 (寫作必備)
+vim.o.wrap = true
+vim.o.linebreak = true
+
+-- 啟動 Lazy.nvim 的代碼 (此處略，建議直接看 Lazy 官方文檔)
+-- 為節省空間，這裡不放 Lazy 的複雜安裝腳本，建議新手先熟悉基礎操作。
+第三步：Neovim 的寫作核心操作（關鍵！）
+在 Neovim 裡寫故事，你需要習慣這幾個操作模式：
+
+Normal Mode (普通模式)：按下 Esc 進入。這時你不能輸入文字，只能移動光標 (h, j, k, l)、複製 (yy)、粘貼 (p) 或刪除 (dd)。
+
+Insert Mode (插入模式)：在普通模式下按下 i 進入。這時像普通編輯器一樣輸入文字。
+
+Command Mode (命令模式)：在普通模式下按下 : 進入。輸入 :w (保存)、:q (退出)。
+
+
+
+
+
+
+
+
+
+
+ 1. Vim：寫作者的「神兵利器」（但有代價）
+Vim 在寫作者圈子（特別是黑客文學家）中極受歡迎，因為它能讓你手不離鍵盤完成所有操作。
+關鍵寫作功能分析：
+分屏與緩衝區 (Buffer)：你可以同時打開 白山丹家.md 和 03_fummie.md，左右對比寫作，切換速度極快。
+折疊功能 (Folding)：原生支持按標題折疊，完美對應你需要的「結構化階段」。
+插件生態 (Vim-Wiki / Obsidian.nvim)：
+Wiki 模式：可以像 Wikipedia 一樣點擊連結跳轉文件。
+Distraction-free：有專門的「禪模式」插件（如 Goyo.vim），隱藏所有界面元素，只留文字在中央。
+缺點：
+學習曲線：你得先花一週時間學習如何「移動光標」和「存檔」。
+配置耗時：你需要自己動手寫配置文件（.vimrc）來把它變成寫作環境。
+
+安裝 Neovim（Vim 的現代版，對插件支持更好）。
+安裝 VimWiki 插件：它能自動幫你處理 [[連結]]，這正是你管理 plots 和 factions 的核心需求。
+安裝 Goyo：進入純淨寫作模式。
+  -->
