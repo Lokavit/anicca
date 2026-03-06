@@ -24,9 +24,9 @@ $ archinstall 快速安裝
 - 選擇 Manual partitioning
 - 選擇硬盤 /dev/nvme0n1 
 - 抹除硬盤痕跡
-create  primary 2048 2099200 1GiB fat32 /boot  boot,esp
-create  primary 2099200 35653632 16GiB linux-swap 
-create primary  35653632 500115456 221.5GiB ext4 /
+- create  primary 2048 2099200 1GiB fat32 /boot  boot,esp
+- create  primary 2099200 35653632 16GiB linux-swap 
+- create primary  35653632 500115456 221.5GiB ext4 /
 
 ### Swap (內存緩衝)
 - Would you like to use swap on zaram ? No
