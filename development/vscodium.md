@@ -5,6 +5,69 @@ tags: ["VSCodium", "Extension"]
 description: ""
 ---
 
+## keybingings.json
+- ctrl+shift+p，输入`>Preferences:Open Keyboard Shortcuts(JSON) `
+
+```json
+// Place your key bindings in this file to override the defaults
+[
+    // 全角空格，适用于写作段首空两格
+    {
+        "key": "ctrl+alt+space",
+        "command": "type",
+        "args": {
+            "text": "　　"
+        },
+        "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    // 对话符号  快速插入「」并定位光标
+    {
+        "key": "ctrl+alt+9",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "「$1」"
+        },
+        "when": "editorTextFocus"
+    },
+    // 选中后加入对话符号
+    {
+        "key": "ctrl+alt+0",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "「${TM_SELECTED_TEXT}」"
+        },
+        "when": "editorTextFocus"
+    },
+    // timeline 模板
+    {
+        "key": "ctrl+alt+1",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "## ${1:1999-02-15}\n> **事件**：${2:填写事件}\n- **人物**：${3:人物列表}\n- **地点**：${4:地点}\n- **备注**：${5:备注}\n- **状态**：[${6:未使用|第x章使用}]\n\n$0"
+        },
+        "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    // 章节设计模板
+    {
+        "key": "ctrl+alt+2",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "# 第 ${1} 章：${2}\n- **时间**：${3}\n- **场景**：${4}\n- **视角**：${5}\n- **核心冲突**：${6}\n- **概括**：${7}\n## 情节列表:[5-8个最合适|主语+谓语+宾语]\n- ${8}\n\n## 章末钩子[悬念型|转折型|情感型]\n- ${9}\n"
+        },
+        "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    // # 第 1 章：标题 自动空一行
+    {
+        "key": "ctrl+alt+3",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "# 第 ${1:1} 章：${2:章节标题}\n\n$0"
+        },
+        "when": "editorTextFocus && editorLangId == 'markdown'"
+    }
+]
+```
+
 ## VSCode Ext Note
 
 ```bash
